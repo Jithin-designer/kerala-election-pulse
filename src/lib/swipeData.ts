@@ -1,0 +1,198 @@
+/**
+ * Enriched candidate profiles for the Swipe/Dating-app card view.
+ * Each entry represents one candidate worth "swiping" through —
+ * curated from celebrity seats and high-profile matchups.
+ *
+ * Image filenames map to /public/candidates/ (symlinked from candidate_images/).
+ */
+
+export interface SwipeCandidate {
+  id: string;
+  name: string;
+  party: string;
+  alliance: "ldf" | "udf" | "nda";
+  constituency: string;
+  constituencyNo: number;
+  district: string;
+  photo: string | null;          // filename in /candidates/ or null for avatar fallback
+  tagline: string;               // one-liner hook for the card
+  careerYears: number;           // years in active politics
+  criminalCases: number;         // pending criminal cases (0 = clean)
+  age: number;
+  education: string;
+  assets: string;                // human-readable total assets
+  note: string;                  // celebrity / viral context
+}
+
+export const SWIPE_CANDIDATES: SwipeCandidate[] = [
+  {
+    id: "dharmadom-ldf",
+    name: "Pinarayi Vijayan",
+    party: "CPI(M)",
+    alliance: "ldf",
+    constituency: "Dharmadom",
+    constituencyNo: 12,
+    district: "Kannur",
+    photo: null,
+    tagline: "The Chief Minister seeking a historic third-term mandate",
+    careerYears: 50,
+    criminalCases: 0,
+    age: 79,
+    education: "B.Sc, LLB",
+    assets: "₹3.8 Cr",
+    note: "Chief Minister Pinarayi Vijayan's home seat",
+  },
+  {
+    id: "dharmadom-udf",
+    name: "Abdul Rasheed",
+    party: "INC",
+    alliance: "udf",
+    constituency: "Dharmadom",
+    constituencyNo: 12,
+    district: "Kannur",
+    photo: "DHARMADOM_ABDUL_RASHEED.jpg",
+    tagline: "Congress challenger in the CM's fortress",
+    careerYears: 15,
+    criminalCases: 0,
+    age: 52,
+    education: "BA",
+    assets: "₹1.2 Cr",
+    note: "Tasked with the near-impossible — unseating the CM",
+  },
+  {
+    id: "dharmadom-nda",
+    name: "K. Ranjith",
+    party: "BJP",
+    alliance: "nda",
+    constituency: "Dharmadom",
+    constituencyNo: 12,
+    district: "Kannur",
+    photo: "DHARMADOM_K_RANJITH.jpg",
+    tagline: "BJP's young face in LDF's Kannur bastion",
+    careerYears: 8,
+    criminalCases: 0,
+    age: 38,
+    education: "MBA",
+    assets: "₹85 L",
+    note: "Part of BJP's strategy to grow in Kannur",
+  },
+  {
+    id: "manjeshwara-nda",
+    name: "K. Surendran",
+    party: "BJP",
+    alliance: "nda",
+    constituency: "Manjeshwara",
+    constituencyNo: 1,
+    district: "Kasaragodu",
+    photo: "MANJESHWARA_K_SURENDRAN.jpg",
+    tagline: "BJP Kerala chief — third time lucky?",
+    careerYears: 25,
+    criminalCases: 2,
+    age: 56,
+    education: "BA, LLB",
+    assets: "₹2.1 Cr",
+    note: "Lost Manjeshwara twice by thin margins; BJP state president",
+  },
+  {
+    id: "nemom-udf",
+    name: "K. Muraleedharan",
+    party: "INC",
+    alliance: "udf",
+    constituency: "Nemom",
+    constituencyNo: 128,
+    district: "Thiruvananthapuram",
+    photo: "NEMOM_K_MURALEEDHARAN.jpg",
+    tagline: "Son of K. Karunakaran — Congress heavyweight enters Nemom",
+    careerYears: 35,
+    criminalCases: 0,
+    age: 67,
+    education: "B.Com",
+    assets: "₹5.6 Cr",
+    note: "Former MP, tasked with reclaiming Nemom from BJP",
+  },
+  {
+    id: "aranmula-nda",
+    name: "Suresh Gopi",
+    party: "BJP",
+    alliance: "nda",
+    constituency: "Aranmula",
+    constituencyNo: 104,
+    district: "Pathanamthitta",
+    photo: null,
+    tagline: "Superstar MP — from Rajya Sabha to the Assembly ring",
+    careerYears: 5,
+    criminalCases: 0,
+    age: 66,
+    education: "B.Com",
+    assets: "₹26 Cr",
+    note: "Suresh Gopi (actor/MP) contesting for NDA",
+  },
+  {
+    id: "ottapalam-nda",
+    name: "Major Ravi",
+    party: "BJP",
+    alliance: "nda",
+    constituency: "Ottapalam",
+    constituencyNo: 52,
+    district: "Palakkad",
+    photo: null,
+    tagline: "From war films to political warfare — the director's debut",
+    careerYears: 2,
+    criminalCases: 0,
+    age: 61,
+    education: "Army Training",
+    assets: "₹4.2 Cr",
+    note: "Major Ravi (actor-director) contesting for BJP",
+  },
+  {
+    id: "peravoor-ldf",
+    name: "K. K. Shailaja",
+    party: "CPI(M)",
+    alliance: "ldf",
+    constituency: "Peravoor",
+    constituencyNo: 16,
+    district: "Kannur",
+    photo: null,
+    tagline: "COVID warrior — the Health Minister the world noticed",
+    careerYears: 30,
+    criminalCases: 0,
+    age: 68,
+    education: "M.Sc, B.Ed",
+    assets: "₹1.1 Cr",
+    note: "K. K. Shailaja (Health minister, COVID fame) LDF",
+  },
+  {
+    id: "vatakara-udf",
+    name: "K. K. Rema",
+    party: "RMPI",
+    alliance: "udf",
+    constituency: "Vatakara",
+    constituencyNo: 20,
+    district: "Kozhikode",
+    photo: null,
+    tagline: "Turned personal tragedy into a political crusade",
+    careerYears: 18,
+    criminalCases: 0,
+    age: 58,
+    education: "MA",
+    assets: "₹78 L",
+    note: "Contested independent after husband T.P. Chandrasekharan's murder",
+  },
+  {
+    id: "tvm-nda",
+    name: "Rajeev Chandrasekhar",
+    party: "BJP",
+    alliance: "nda",
+    constituency: "Thiruvananthapuram",
+    constituencyNo: 127,
+    district: "Thiruvananthapuram",
+    photo: null,
+    tagline: "Tech entrepreneur turned Union Minister — now in the Assembly arena",
+    careerYears: 18,
+    criminalCases: 0,
+    age: 61,
+    education: "B.Tech",
+    assets: "₹42 Cr",
+    note: "Rajeev Chandrasekhar vs CM-backed LDF — triangular battle",
+  },
+];
