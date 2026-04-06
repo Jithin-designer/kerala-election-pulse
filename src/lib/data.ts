@@ -3,14 +3,23 @@ import rawData from "../kerala2026_candidates.json";
 export interface PartyCandidate {
   party: string;
   candidate: string;
+  age: number | null;
+  education: string;
+  profession: string;
+  assets: string;
+  assets_value: number;
+  criminal_cases: number;
 }
 
 export interface OtherCandidate {
   candidate: string;
   party: string;
-  criminal_cases: number;
+  age: number | null;
   education: string;
+  profession: string;
   assets: string;
+  assets_value: number;
+  criminal_cases: number;
 }
 
 export interface Constituency {

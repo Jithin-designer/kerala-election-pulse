@@ -9,8 +9,9 @@ import {
   GraduationCap,
   IndianRupee,
   Briefcase,
+  AlertTriangle,
 } from "lucide-react";
-import type { Constituency, OtherCandidate } from "@/lib/data";
+import type { Constituency, OtherCandidate, PartyCandidate } from "@/lib/data";
 import { getPartyFullName } from "@/lib/data";
 import { getCandidatePhoto } from "@/lib/candidateImages";
 
@@ -35,57 +36,84 @@ const ALLIANCE = {
   },
 } as const;
 
-/* ── Main candidate row: photo + name + party + age/education/assets ── */
+function formatAssets(value: number): string {
+  if (value >= 10000000) return `₹${(value / 10000000).toFixed(1)} Cr`;
+  if (value >= 100000) return `₹${(value / 100000).toFixed(1)} L`;
+  if (value >= 1000) return `₹${(value / 1000).toFixed(0)}K`;
+  return value > 0 ? `₹${value}` : "";
+}
+
+/* ── Chip: small info tag ── */
+function Chip({ icon, text, color }: { icon: React.ReactNode; text: string; color?: string }) {
+  return (
+    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] ${color || "bg-white/[0.04] text-white/35"}`}>
+      {icon}
+      {text}
+    </span>
+  );
+}
+
+/* ── Main alliance candidate row ── */
 function CandidateRow({
-  name,
-  party,
+  candidate,
   alliance,
   constituencyName,
 }: {
-  name: string;
-  party: string;
+  candidate: PartyCandidate;
   alliance: "ldf" | "udf" | "nda";
   constituencyName: string;
 }) {
   const theme = ALLIANCE[alliance];
-  const photo = getCandidatePhoto(name, constituencyName, theme.color);
-  const fullParty = getPartyFullName(party);
+  const photo = getCandidatePhoto(candidate.candidate, constituencyName, theme.color);
+  const fullParty = getPartyFullName(candidate.party);
 
   return (
-    <div className="flex gap-3.5 py-3.5 border-b border-white/[0.04] last:border-none">
-      {/* Photo */}
-      <div className={`w-16 h-16 rounded-full ring-[2.5px] ${theme.ring} shrink-0 overflow-hidden`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={photo.src}
-          alt={name}
-          className="w-full h-full object-cover"
-          draggable={false}
-        />
-      </div>
-
-      {/* Info */}
-      <div className="flex-1 min-w-0">
-        <p className="text-white font-bold text-[15px] leading-tight truncate">
-          {name}
-        </p>
-
-        {/* Affiliation */}
-        <div className="flex items-center gap-2 mt-1.5">
-          <span className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold ${theme.pill}`}>
-            {theme.label}
-          </span>
-          <span className="text-white/50 text-[11px] truncate">
-            {party}{fullParty !== party ? ` · ${fullParty}` : ""}
-          </span>
+    <div className="py-3.5 border-b border-white/[0.04] last:border-none">
+      <div className="flex gap-3.5">
+        {/* Photo */}
+        <div className={`w-16 h-16 rounded-full ring-[2.5px] ${theme.ring} shrink-0 overflow-hidden`}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={photo.src} alt={candidate.candidate} className="w-full h-full object-cover" draggable={false} />
         </div>
 
-        {/* Detail chips: education, assets */}
-        <div className="flex flex-wrap gap-1.5 mt-2">
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/[0.04] text-white/35 text-[10px]">
-            <Briefcase className="w-2.5 h-2.5" />
-            Political Leader
-          </span>
+        {/* Info */}
+        <div className="flex-1 min-w-0">
+          <p className="text-white font-bold text-[15px] leading-tight truncate">
+            {candidate.candidate}
+            {candidate.age && (
+              <span className="text-white/30 font-normal text-xs ml-1.5">{candidate.age}y</span>
+            )}
+          </p>
+
+          {/* Affiliation */}
+          <div className="flex items-center gap-2 mt-1">
+            <span className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold ${theme.pill}`}>
+              {theme.label}
+            </span>
+            <span className="text-white/45 text-[11px] truncate">
+              {candidate.party}{fullParty !== candidate.party ? ` · ${fullParty}` : ""}
+            </span>
+          </div>
+
+          {/* Detail chips */}
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {candidate.education && (
+              <Chip icon={<GraduationCap className="w-2.5 h-2.5" />} text={candidate.education} />
+            )}
+            {candidate.profession && (
+              <Chip icon={<Briefcase className="w-2.5 h-2.5" />} text={candidate.profession} />
+            )}
+            {candidate.assets_value > 0 && (
+              <Chip icon={<IndianRupee className="w-2.5 h-2.5" />} text={formatAssets(candidate.assets_value)} />
+            )}
+            {candidate.criminal_cases > 0 && (
+              <Chip
+                icon={<AlertTriangle className="w-2.5 h-2.5" />}
+                text={`${candidate.criminal_cases} case${candidate.criminal_cases > 1 ? "s" : ""}`}
+                color="bg-red-500/10 text-red-400"
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -102,36 +130,31 @@ function OtherCandidateRow({ candidate }: { candidate: OtherCandidate }) {
     .join("");
 
   return (
-    <div className="flex items-center gap-3 py-2.5 border-b border-white/[0.03] last:border-none">
-      <div className="w-9 h-9 rounded-full bg-white/[0.06] flex items-center justify-center text-white/30 text-xs font-bold shrink-0">
+    <div className="flex items-start gap-3 py-2.5 border-b border-white/[0.03] last:border-none">
+      <div className="w-9 h-9 rounded-full bg-white/[0.06] flex items-center justify-center text-white/30 text-xs font-bold shrink-0 mt-0.5">
         {initials}
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-white/60 font-semibold text-xs truncate">
           {candidate.candidate}
+          {candidate.age && <span className="text-white/25 font-normal ml-1">{candidate.age}y</span>}
         </p>
         <p className="text-white/25 text-[10px] truncate">{candidate.party}</p>
-      </div>
-      <div className="flex items-center gap-2 shrink-0">
-        {candidate.education && (
-          <span className="flex items-center gap-0.5 text-white/20 text-[9px]">
-            <GraduationCap className="w-2.5 h-2.5" />
-            {candidate.education.length > 12
-              ? candidate.education.slice(0, 12) + "…"
-              : candidate.education}
-          </span>
-        )}
-        {candidate.assets && (
-          <span className="flex items-center gap-0.5 text-white/20 text-[9px]">
-            <IndianRupee className="w-2.5 h-2.5" />
-            {candidate.assets}
-          </span>
-        )}
-        {candidate.criminal_cases > 0 && (
-          <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-red-500/15 text-red-400 border border-red-500/20">
-            {candidate.criminal_cases} case{candidate.criminal_cases > 1 ? "s" : ""}
-          </span>
-        )}
+        <div className="flex flex-wrap gap-1 mt-1">
+          {candidate.education && (
+            <Chip icon={<GraduationCap className="w-2 h-2" />} text={candidate.education} />
+          )}
+          {candidate.assets_value > 0 && (
+            <Chip icon={<IndianRupee className="w-2 h-2" />} text={formatAssets(candidate.assets_value)} />
+          )}
+          {candidate.criminal_cases > 0 && (
+            <Chip
+              icon={<AlertTriangle className="w-2 h-2" />}
+              text={`${candidate.criminal_cases} case${candidate.criminal_cases > 1 ? "s" : ""}`}
+              color="bg-red-500/10 text-red-400"
+            />
+          )}
+        </div>
       </div>
     </div>
   );
@@ -144,12 +167,7 @@ interface Props {
   index: number;
 }
 
-export default function BrowseCard({
-  constituency,
-  isCelebrity,
-  celebrityNote,
-  index,
-}: Props) {
+export default function BrowseCard({ constituency, isCelebrity, celebrityNote, index }: Props) {
   const othersCount = constituency.others?.length ?? 0;
   const totalCandidates = 3 + othersCount;
 
@@ -171,7 +189,7 @@ export default function BrowseCard({
     >
       <div className="rounded-[20px] overflow-hidden bg-gradient-to-b from-[#111b14] to-[#0a0a0a] border border-white/[0.08] shadow-xl">
         {/* ── Header ── */}
-        <div className="px-5 pt-5 pb-3">
+        <div className="px-5 pt-5 pb-2">
           <div className="flex items-start justify-between">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
@@ -181,30 +199,25 @@ export default function BrowseCard({
                 {isCelebrity && (
                   <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-pink-500/20 to-orange-400/20 border border-pink-500/30">
                     <Flame className="w-3 h-3 text-orange-400" />
-                    <span className="text-orange-300 text-[10px] font-bold tracking-wider">
-                      HOT
-                    </span>
+                    <span className="text-orange-300 text-[10px] font-bold tracking-wider">HOT</span>
                   </span>
                 )}
               </div>
               <p className="text-white/30 text-sm flex items-center gap-1 mt-1">
                 <MapPin className="w-3 h-3" />
-                {constituency.district} District
+                {constituency.district}
                 {constituency.reserved && (
                   <span className="ml-1.5 px-1.5 py-0.5 rounded text-[9px] bg-gold/10 text-gold-light border border-gold/20">
                     {constituency.reserved}
                   </span>
                 )}
-                <span className="ml-auto text-white/15 text-[10px]">
-                  {totalCandidates} candidates
-                </span>
+                <span className="ml-auto text-white/15 text-[10px]">{totalCandidates} candidates</span>
               </p>
             </div>
             <span className="text-gold/12 text-3xl font-black font-mono ml-2 select-none">
               {String(constituency.no).padStart(3, "0")}
             </span>
           </div>
-
           {celebrityNote && (
             <p className="text-gold-light/50 text-[11px] italic border-l-2 border-gold/30 pl-2 mt-2">
               {celebrityNote}
@@ -212,20 +225,19 @@ export default function BrowseCard({
           )}
         </div>
 
-        {/* ── Main 3 candidates (always expanded) ── */}
+        {/* ── Main 3 candidates ── */}
         <div className="px-5">
           {(["ldf", "udf", "nda"] as const).map((a) => (
             <CandidateRow
               key={a}
-              name={constituency[a].candidate}
-              party={constituency[a].party}
+              candidate={constituency[a]}
               alliance={a}
               constituencyName={constituency.name}
             />
           ))}
         </div>
 
-        {/* ── Others section (always visible if present) ── */}
+        {/* ── Others ── */}
         {othersCount > 0 && (
           <div className="px-5 pt-2 pb-1">
             <div className="flex items-center gap-2 mb-1">
@@ -240,14 +252,14 @@ export default function BrowseCard({
           </div>
         )}
 
-        {/* ── Share button ── */}
+        {/* ── Share ── */}
         <div className="px-5 pb-4 pt-3">
           <button
             onClick={handleShare}
             className="w-full flex items-center justify-center gap-2 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.06] text-white/40 text-xs font-semibold hover:bg-white/[0.08] hover:text-white/60 transition-all active:scale-[0.98]"
           >
             <Share2 className="w-3.5 h-3.5" />
-            Share Constituency
+            Share
           </button>
         </div>
       </div>
