@@ -10,600 +10,4376 @@
     "generated": "2026-04-05"
   },
   "districts": [
-    "Kasaragodu","Kannur","Wayanad","Kozhikode","Malappuram",
-    "Palakkad","Thrissur","Ernakulam","Idukki","Kottayam",
-    "Alappuzha","Pathanamthitta","Kollam","Thiruvananthapuram"
+    "Kasaragodu",
+    "Kannur",
+    "Wayanad",
+    "Kozhikode",
+    "Malappuram",
+    "Palakkad",
+    "Thrissur",
+    "Ernakulam",
+    "Idukki",
+    "Kottayam",
+    "Alappuzha",
+    "Pathanamthitta",
+    "Kollam",
+    "Thiruvananthapuram"
   ],
   "constituencies": [
-    { "no": 1,  "district": "Kasaragodu",  "name": "Manjeshwara",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. R. Jayanandan" },
-      "udf": { "party": "IUML",   "candidate": "A. K. M. Ashraf" },
-      "nda": { "party": "BJP",    "candidate": "K. Surendran" } },
-    { "no": 2,  "district": "Kasaragodu",  "name": "Kasaragod",      "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "Shanavas Padhoor" },
-      "udf": { "party": "IUML",   "candidate": "Kallatra Mahin Haji" },
-      "nda": { "party": "BJP",    "candidate": "M. L. Ashwini" } },
-    { "no": 3,  "district": "Kasaragodu",  "name": "Udma",           "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "C. H. Kunhambu" },
-      "udf": { "party": "INC",    "candidate": "K. Neelakandan" },
-      "nda": { "party": "BJP",    "candidate": "Manulal Meloth" } },
-    { "no": 4,  "district": "Kasaragodu",  "name": "Kanhangad",      "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Govindan Pallikkappil" },
-      "udf": { "party": "KEC",    "candidate": "Shyji Ottapalli" },
-      "nda": { "party": "BJP",    "candidate": "M. Balraj" } },
-    { "no": 5,  "district": "Kasaragodu",  "name": "Thrikaripur",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. P. P. Mustafa" },
-      "udf": { "party": "INC",    "candidate": "Sandeep Varier" },
-      "nda": { "party": "TTP",    "candidate": "Ravi Kulangara" } },
-    { "no": 6,  "district": "Kannur",      "name": "Payyanur",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "T. I. Madhusoodanan" },
-      "udf": { "party": "IND",    "candidate": "V. Kunjikrishnan" },
-      "nda": { "party": "BJP",    "candidate": "A. P. Gangadharan" } },
-    { "no": 7,  "district": "Kannur",      "name": "Kalliasseri",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. Vijin" },
-      "udf": { "party": "INC",    "candidate": "Rajeevan Kappachery" },
-      "nda": { "party": "BJP",    "candidate": "A. V. Anilkumar" } },
-    { "no": 8,  "district": "Kannur",      "name": "Taliparamba",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "P. K. Shyamala" },
-      "udf": { "party": "IND",    "candidate": "T. K. Govindan" },
-      "nda": { "party": "BJP",    "candidate": "N. Haridas" } },
-    { "no": 9,  "district": "Kannur",      "name": "Irikkur",        "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Mathew Kunnapally" },
-      "udf": { "party": "INC",    "candidate": "Sajeev Joseph" },
-      "nda": { "party": "TTP",    "candidate": "Srinath Padmanabhan" } },
-    { "no": 10, "district": "Kannur",      "name": "Azhikode",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. V. Sumesh" },
-      "udf": { "party": "IUML",   "candidate": "Kareem Cheleri" },
-      "nda": { "party": "BJP",    "candidate": "K. K. Vinod Kumar" } },
-    { "no": 11, "district": "Kannur",      "name": "Kannur",         "reserved": null,
-      "ldf": { "party": "Cong(S)","candidate": "Kadanappalli Ramachandran" },
-      "udf": { "party": "INC",    "candidate": "T. O. Mohanan" },
-      "nda": { "party": "BJP",    "candidate": "C. Raghunath" } },
-    { "no": 12, "district": "Kannur",      "name": "Dharmadom",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Pinarayi Vijayan" },
-      "udf": { "party": "INC",    "candidate": "Abdul Rasheed" },
-      "nda": { "party": "BJP",    "candidate": "K. Ranjith" } },
-    { "no": 13, "district": "Kannur",      "name": "Thalassery",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Karayi Rajan" },
-      "udf": { "party": "INC",    "candidate": "K. P. Saju" },
-      "nda": { "party": "BJP",    "candidate": "O. Nidheesh" } },
-    { "no": 14, "district": "Kannur",      "name": "Kuthuparamba",   "reserved": null,
-      "ldf": { "party": "RJD",    "candidate": "P. K. Praveen" },
-      "udf": { "party": "IUML",   "candidate": "Jayanthi Rajan" },
-      "nda": { "party": "BJP",    "candidate": "Shijilal" } },
-    { "no": 15, "district": "Kannur",      "name": "Mattanur",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. K. Sanoj" },
-      "udf": { "party": "INC",    "candidate": "Chandran Thillenkeri" },
-      "nda": { "party": "BJP",    "candidate": "Biju Elakkuzhi" } },
-    { "no": 16, "district": "Kannur",      "name": "Peravoor",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. K. Shailaja" },
-      "udf": { "party": "INC",    "candidate": "Sunny Joseph" },
-      "nda": { "party": "BDJS",   "candidate": "Paily Vathiatt" } },
-    { "no": 17, "district": "Wayanad",     "name": "Mananthavady",   "reserved": "ST",
-      "ldf": { "party": "CPI(M)", "candidate": "O. R. Kelu" },
-      "udf": { "party": "INC",    "candidate": "Usha Vijayan" },
-      "nda": { "party": "BJP",    "candidate": "P. Shyam Raj" } },
-    { "no": 18, "district": "Wayanad",     "name": "Sulthan Bathery", "reserved": "ST",
-      "ldf": { "party": "CPI(M)", "candidate": "M. S. Viswanathan" },
-      "udf": { "party": "INC",    "candidate": "I. C. Balakrishnan" },
-      "nda": { "party": "BJP",    "candidate": "A. S. Kavitha" } },
-    { "no": 19, "district": "Wayanad",     "name": "Kalpetta",       "reserved": null,
-      "ldf": { "party": "RJD",    "candidate": "P. K. Anil Kumar" },
-      "udf": { "party": "INC",    "candidate": "T. Siddique" },
-      "nda": { "party": "BJP",    "candidate": "Prashanth Malavayal" } },
-    { "no": 20, "district": "Kozhikode",   "name": "Vatakara",       "reserved": null,
-      "ldf": { "party": "RJD",    "candidate": "M. K. Bhaskaran" },
-      "udf": { "party": "RMPI",   "candidate": "K. K. Rema" },
-      "nda": { "party": "BJP",    "candidate": "K. Dileep" } },
-    { "no": 21, "district": "Kozhikode",   "name": "Kuttiady",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. P. Kunhammadkutty" },
-      "udf": { "party": "IUML",   "candidate": "Parakkal Abdulla" },
-      "nda": { "party": "BJP",    "candidate": "Ramadas Manaleri" } },
-    { "no": 22, "district": "Kozhikode",   "name": "Nadapuram",      "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "P. Vasantham" },
-      "udf": { "party": "INC",    "candidate": "K. M. Abhijith" },
-      "nda": { "party": "BJP",    "candidate": "C. P. Vipin Chandran" } },
-    { "no": 23, "district": "Kozhikode",   "name": "Koyilandy",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. Dasan" },
-      "udf": { "party": "INC",    "candidate": "K. Praveen Kumar" },
-      "nda": { "party": "BJP",    "candidate": "C. R. Praphul Krishnan" } },
-    { "no": 24, "district": "Kozhikode",   "name": "Perambra",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "T. P. Ramakrishnan" },
-      "udf": { "party": "IUML",   "candidate": "Fathima Thahiliya" },
-      "nda": { "party": "BJP",    "candidate": "M. Mohanan Master" } },
-    { "no": 25, "district": "Kozhikode",   "name": "Balussery",      "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "K. M. Sachin Dev" },
-      "udf": { "party": "INC",    "candidate": "V. T. Sooraj" },
-      "nda": { "party": "BJP",    "candidate": "C. P. Sateeshan" } },
-    { "no": 26, "district": "Kozhikode",   "name": "Elathur",        "reserved": null,
-      "ldf": { "party": "NCP-SP", "candidate": "A. K. Saseendran" },
-      "udf": { "party": "INC",    "candidate": "Vidya Balakrishnan" },
-      "nda": { "party": "BJP",    "candidate": "T. Devadas" } },
-    { "no": 27, "district": "Kozhikode",   "name": "Kozhikode North", "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Thottathil Ravindran" },
-      "udf": { "party": "INC",    "candidate": "K. Jayanth" },
-      "nda": { "party": "BJP",    "candidate": "Navya Haridas" } },
-    { "no": 28, "district": "Kozhikode",   "name": "Kozhikode South", "reserved": null,
-      "ldf": { "party": "INL",    "candidate": "Ahamed Devarkovil" },
-      "udf": { "party": "IUML",   "candidate": "Faisal Babu" },
-      "nda": { "party": "BJP",    "candidate": "T. Reneesh" } },
-    { "no": 29, "district": "Kozhikode",   "name": "Beypore",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "P. A. Mohammed Riyas" },
-      "udf": { "party": "IND",    "candidate": "P. V. Anvar" },
-      "nda": { "party": "BJP",    "candidate": "K. P. Prakash Babu" } },
-    { "no": 30, "district": "Kozhikode",   "name": "Kunnamangalam",  "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "P. T. A. Rahim" },
-      "udf": { "party": "IUML",   "candidate": "M. A. Razak Master" },
-      "nda": { "party": "BJP",    "candidate": "V. K. Sajeevan" } },
-    { "no": 31, "district": "Kozhikode",   "name": "Koduvally",      "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "Saleem Madavoor" },
-      "udf": { "party": "IUML",   "candidate": "P. K. Firos" },
-      "nda": { "party": "BDJS",   "candidate": "Giri Pambanal" } },
-    { "no": 32, "district": "Kozhikode",   "name": "Thiruvambady",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Linto Joseph" },
-      "udf": { "party": "IUML",   "candidate": "C. K. Kasim" },
-      "nda": { "party": "TTP",    "candidate": "Sunny Thomas" } },
-    { "no": 33, "district": "Malappuram",  "name": "Kondotty",       "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "P. Jiji" },
-      "udf": { "party": "IUML",   "candidate": "T. P. Ashrafali" },
-      "nda": { "party": "BJP",    "candidate": "P. Subhramanyan" } },
-    { "no": 34, "district": "Malappuram",  "name": "Eranad",         "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Shafeer Kizhisery" },
-      "udf": { "party": "IUML",   "candidate": "P. K. Basheer" },
-      "nda": { "party": "BJP",    "candidate": "N. Sreeprakash" } },
-    { "no": 35, "district": "Malappuram",  "name": "Nilambur",       "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "U. Sharafali" },
-      "udf": { "party": "INC",    "candidate": "Aryadan Shoukath" },
-      "nda": { "party": "BDJS",   "candidate": "Gireesh Mekkad" } },
-    { "no": 36, "district": "Malappuram",  "name": "Wandoor",        "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "K. K. Damodaran" },
-      "udf": { "party": "INC",    "candidate": "A. P. Anil Kumar" },
-      "nda": { "party": "BJP",    "candidate": "E. P. Kumaradas" } },
-    { "no": 37, "district": "Malappuram",  "name": "Manjeri",        "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "M. Mustafa" },
-      "udf": { "party": "IUML",   "candidate": "M. Rahmathulla" },
-      "nda": { "party": "BJP",    "candidate": "Pathmasree M" } },
-    { "no": 38, "district": "Malappuram",  "name": "Perinthalmanna",  "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. P. Muhammad Haneefa" },
-      "udf": { "party": "IUML",   "candidate": "Najeeb Kanthapuram" },
-      "nda": { "party": "BJP",    "candidate": "K. P. Baburaj" } },
-    { "no": 39, "district": "Malappuram",  "name": "Mankada",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. P. Alavi" },
-      "udf": { "party": "IUML",   "candidate": "Manjalamkuzhi Ali" },
-      "nda": { "party": "BJP",    "candidate": "Lijoy Paul" } },
-    { "no": 40, "district": "Malappuram",  "name": "Malappuram",     "reserved": null,
-      "ldf": { "party": "NCP-SP", "candidate": "T. Mujeeb" },
-      "udf": { "party": "IUML",   "candidate": "P. K. Kunhalikutty" },
-      "nda": { "party": "BJP",    "candidate": "Aswathy Gupthakumar" } },
-    { "no": 41, "district": "Malappuram",  "name": "Vengara",        "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "Muhammad Sabah Kundukuzhikkal" },
-      "udf": { "party": "IUML",   "candidate": "K. M. Shaji" },
-      "nda": { "party": "BJP",    "candidate": "Jayakrishnan V. N." } },
-    { "no": 42, "district": "Malappuram",  "name": "Vallikkunnu",    "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "C. P. Musthafa" },
-      "udf": { "party": "IUML",   "candidate": "T. V. Ibrahim" },
-      "nda": { "party": "BJP",    "candidate": "M. Preman Master" } },
-    { "no": 43, "district": "Malappuram",  "name": "Tirurangadi",    "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Ajit Koladi" },
-      "udf": { "party": "IUML",   "candidate": "P. M. A. Sameer" },
-      "nda": { "party": "BJP",    "candidate": "Riju C Raghav" } },
-    { "no": 44, "district": "Malappuram",  "name": "Tanur",          "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "P. Mohammed Sameer" },
-      "udf": { "party": "IUML",   "candidate": "P. K. Navas" },
-      "nda": { "party": "BJP",    "candidate": "Deepa Puzhakkal" } },
-    { "no": 45, "district": "Malappuram",  "name": "Tirur",          "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "V. Abdurahiman" },
-      "udf": { "party": "IUML",   "candidate": "Kurukkoli Moideen" },
-      "nda": { "party": "BJP",    "candidate": "K. Narayanan Master" } },
-    { "no": 46, "district": "Malappuram",  "name": "Kottakkal",      "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "Preethi Konchath" },
-      "udf": { "party": "IUML",   "candidate": "K. K. Abid Hussain Thangal" },
-      "nda": { "party": "BDJS",   "candidate": "Subrahmanian Chunkapally" } },
-    { "no": 47, "district": "Malappuram",  "name": "Thavanur",       "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "K. T. Jaleel" },
-      "udf": { "party": "INC",    "candidate": "V. S. Joy" },
-      "nda": { "party": "BJP",    "candidate": "Ravi Thelath" } },
-    { "no": 48, "district": "Malappuram",  "name": "Ponnani",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. K. Sakeer" },
-      "udf": { "party": "INC",    "candidate": "K. P. Noushad Ali" },
-      "nda": { "party": "BDJS",   "candidate": "E. Maneesh" } },
-    { "no": 49, "district": "Palakkad",    "name": "Thrithala",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. B. Rajesh" },
-      "udf": { "party": "INC",    "candidate": "V. T. Balram" },
-      "nda": { "party": "BJP",    "candidate": "V. Unnikrishnan Master" } },
-    { "no": 50, "district": "Palakkad",    "name": "Pattambi",       "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Muhammed Muhsin" },
-      "udf": { "party": "INC",    "candidate": "T. P. Shaji" },
-      "nda": { "party": "BJP",    "candidate": "P. Manoj" } },
-    { "no": 51, "district": "Palakkad",    "name": "Shornur",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "P. Mammikutty" },
-      "udf": { "party": "INC",    "candidate": "P. Harigovindan Master" },
-      "nda": { "party": "BJP",    "candidate": "Sanku T Das" } },
-    { "no": 52, "district": "Palakkad",    "name": "Ottapalam",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. Premkumar" },
-      "udf": { "party": "INC",    "candidate": "P. K. Sasi" },
-      "nda": { "party": "BJP",    "candidate": "Major Ravi" } },
-    { "no": 53, "district": "Palakkad",    "name": "Kongad",         "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "K. Shanthakumari" },
-      "udf": { "party": "INC",    "candidate": "K. A. Thulasi" },
-      "nda": { "party": "BJP",    "candidate": "Renu Suresh" } },
-    { "no": 54, "district": "Palakkad",    "name": "Mannarkkad",     "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Mansil Abubacker" },
-      "udf": { "party": "IUML",   "candidate": "N. Samsudheen" },
-      "nda": { "party": "BDJS",   "candidate": "Issac Varghese" } },
-    { "no": 55, "district": "Palakkad",    "name": "Malampuzha",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "E. Prabhakaran" },
-      "udf": { "party": "INC",    "candidate": "A. Suresh" },
-      "nda": { "party": "BJP",    "candidate": "C. Krishnakumar" } },
-    { "no": 56, "district": "Palakkad",    "name": "Palakkad",       "reserved": null,
-      "ldf": { "party": "IND",    "candidate": "N. M. R. Rasakh" },
-      "udf": { "party": "INC",    "candidate": "Ramesh Pisharody" },
-      "nda": { "party": "BJP",    "candidate": "Sobha Surendran" } },
-    { "no": 57, "district": "Palakkad",    "name": "Tarur",          "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "P. P. Sumod" },
-      "udf": { "party": "INC",    "candidate": "K. C. Subramanian" },
-      "nda": { "party": "BJP",    "candidate": "Suresh Babu" } },
-    { "no": 58, "district": "Palakkad",    "name": "Chittur",        "reserved": null,
-      "ldf": { "party": "ISJD",   "candidate": "V. Murugadas" },
-      "udf": { "party": "INC",    "candidate": "Sumesh Achuthan" },
-      "nda": { "party": "BJP",    "candidate": "Pranesh Rajendran" } },
-    { "no": 59, "district": "Palakkad",    "name": "Nenmara",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. Preman" },
-      "udf": { "party": "INC",    "candidate": "A. Thankappan" },
-      "nda": { "party": "BDJS",   "candidate": "A. N. Anurag" } },
-    { "no": 60, "district": "Palakkad",    "name": "Alathur",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "T. M. Sasi" },
-      "udf": { "party": "INC",    "candidate": "K. N. Febin" },
-      "nda": { "party": "BJP",    "candidate": "K. V. Prasanna Kumar" } },
-    { "no": 61, "district": "Thrissur",    "name": "Chelakkara",     "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "U. R. Pradeep" },
-      "udf": { "party": "IND",    "candidate": "Sivan Veettikkunnu" },
-      "nda": { "party": "BJP",    "candidate": "K. Balakrishnan" } },
-    { "no": 62, "district": "Thrissur",    "name": "Kunnamkulam",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "A. C. Moideen" },
-      "udf": { "party": "INC",    "candidate": "P. T. Ajay Mohan" },
-      "nda": { "party": "BDJS",   "candidate": "Rijil K. R." } },
-    { "no": 63, "district": "Thrissur",    "name": "Guruvayur",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "N. K. Akbar" },
-      "udf": { "party": "IUML",   "candidate": "C. H. Rasheed" },
-      "nda": { "party": "BJP",    "candidate": "B. Gopalakrishnan" } },
-    { "no": 64, "district": "Thrissur",    "name": "Manalur",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "C. Raveendranath" },
-      "udf": { "party": "INC",    "candidate": "T. N. Prathapan" },
-      "nda": { "party": "BJP",    "candidate": "K. K. Aneesh Kumar" } },
-    { "no": 65, "district": "Thrissur",    "name": "Wadakkanchery",  "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Xavier Chittilappilly" },
-      "udf": { "party": "INC",    "candidate": "Vyshak Narayanaswami" },
-      "nda": { "party": "BJP",    "candidate": "T. S. Ullas Babu" } },
-    { "no": 66, "district": "Thrissur",    "name": "Ollur",          "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "K. Rajan" },
-      "udf": { "party": "INC",    "candidate": "Shaji Kodankandath" },
-      "nda": { "party": "BJP",    "candidate": "Bijoy Thomas" } },
-    { "no": 67, "district": "Thrissur",    "name": "Thrissur",       "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Alankode Leelakrishnan" },
-      "udf": { "party": "INC",    "candidate": "Rajan Pallan" },
-      "nda": { "party": "BJP",    "candidate": "Padmaja Venugopal" } },
-    { "no": 68, "district": "Thrissur",    "name": "Nattika",        "reserved": "SC",
-      "ldf": { "party": "CPI",    "candidate": "Geetha Gopi" },
-      "udf": { "party": "INC",    "candidate": "Sunil Lalur" },
-      "nda": { "party": "BJP",    "candidate": "C. C. Mukundan" } },
-    { "no": 69, "district": "Thrissur",    "name": "Kaipamangalam",  "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "K. K. Valsaraj" },
-      "udf": { "party": "INC",    "candidate": "T. M. Nazar" },
-      "nda": { "party": "BDJS",   "candidate": "Athulya Ghosh" } },
-    { "no": 70, "district": "Thrissur",    "name": "Irinjalakuda",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "R. Bindu" },
-      "udf": { "party": "KEC",    "candidate": "Thomas Unniyadan" },
-      "nda": { "party": "BJP",    "candidate": "Santhosh Cherkalam" } },
-    { "no": 71, "district": "Thrissur",    "name": "Puthukkad",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. K. Ramachandran" },
-      "udf": { "party": "INC",    "candidate": "K. M. Babu Raj" },
-      "nda": { "party": "BJP",    "candidate": "A. Nagesh" } },
-    { "no": 72, "district": "Thrissur",    "name": "Chalakudy",      "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Biju Chirayath" },
-      "udf": { "party": "INC",    "candidate": "T. J. Saneesh Kumar Joseph" },
-      "nda": { "party": "TTP",    "candidate": "Charly Paul" } },
-    { "no": 73, "district": "Thrissur",    "name": "Kodungallur",    "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "V. R. Sunil" },
-      "udf": { "party": "INC",    "candidate": "O. J. Janeesh" },
-      "nda": { "party": "TTP",    "candidate": "Varghese George" } },
-    { "no": 74, "district": "Ernakulam",   "name": "Perumbavoor",    "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Basil Paul" },
-      "udf": { "party": "INC",    "candidate": "Manoj Moothedan" },
-      "nda": { "party": "TTP",    "candidate": "Jibi Pathickal" } },
-    { "no": 75, "district": "Ernakulam",   "name": "Angamaly",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Saju Paul" },
-      "udf": { "party": "INC",    "candidate": "Roji M. John" },
-      "nda": { "party": "TTP",    "candidate": "Promy Kuriakose" } },
-    { "no": 76, "district": "Ernakulam",   "name": "Aluva",          "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "A. M. Ariff" },
-      "udf": { "party": "INC",    "candidate": "Anwar Sadath" },
-      "nda": { "party": "BJP",    "candidate": "M. A. Brahmaraj" } },
-    { "no": 77, "district": "Ernakulam",   "name": "Kalamassery",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "P. Rajeeve" },
-      "udf": { "party": "IUML",   "candidate": "V. E. Abdul Gafoor" },
-      "nda": { "party": "BDJS",   "candidate": "M. P. Binu" } },
-    { "no": 78, "district": "Ernakulam",   "name": "Paravur",        "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "E. T. Taison" },
-      "udf": { "party": "INC",    "candidate": "V. D. Satheesan" },
-      "nda": { "party": "BJP",    "candidate": "Vathsala Prasanna Kumar" } },
-    { "no": 79, "district": "Ernakulam",   "name": "Vypin",          "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. B. Shaini" },
-      "udf": { "party": "INC",    "candidate": "Tony Chammany" },
-      "nda": { "party": "TTP",    "candidate": "Anitha Thomas" } },
-    { "no": 80, "district": "Ernakulam",   "name": "Kochi",          "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. J. Maxi" },
-      "udf": { "party": "INC",    "candidate": "T. J. Vinod" },
-      "nda": { "party": "BJP",    "candidate": "K. Sudhakaran" } },
-    { "no": 81, "district": "Ernakulam",   "name": "Thrippunithura", "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Anoop Jacob" },
-      "udf": { "party": "INC",    "candidate": "P. T. Thomas" },
-      "nda": { "party": "BJP",    "candidate": "N. Haridas" } },
-    { "no": 82, "district": "Ernakulam",   "name": "Ernakulam",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "T. J. Vinod" },
-      "udf": { "party": "INC",    "candidate": "Hibi Eden" },
-      "nda": { "party": "BJP",    "candidate": "Biji Abraham" } },
-    { "no": 83, "district": "Ernakulam",   "name": "Thrikkakara",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "P. T. Thomas" },
-      "udf": { "party": "INC",    "candidate": "Uma Thomas" },
-      "nda": { "party": "BJP",    "candidate": "P. N. Rajeev" } },
-    { "no": 84, "district": "Ernakulam",   "name": "Kunnathunad",    "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Mons Joseph" },
-      "udf": { "party": "INC",    "candidate": "Christy Fernandez" },
-      "nda": { "party": "TTP",    "candidate": "Joby George" } },
-    { "no": 85, "district": "Ernakulam",   "name": "North Paravur",  "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "V. D. Satheesan" },
-      "udf": { "party": "INC",    "candidate": "K. B. Udayakumar" },
-      "nda": { "party": "BJP",    "candidate": "S. Suresh" } },
-    { "no": 86, "district": "Idukki",      "name": "Kothamangalam",  "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Eldos Kunnapilly" },
-      "udf": { "party": "KC(J)",  "candidate": "Antony John" },
-      "nda": { "party": "BJP",    "candidate": "Tom Jose" } },
-    { "no": 87, "district": "Idukki",      "name": "Muvattupuzha",   "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Mathew T. Thomas" },
-      "udf": { "party": "INC",    "candidate": "Vimala Cyrus" },
-      "nda": { "party": "BDJS",   "candidate": "Sathyadas" } },
-    { "no": 88, "district": "Idukki",      "name": "Kolenchery",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. N. Vasavan" },
-      "udf": { "party": "INC",    "candidate": "M. M. Mani" },
-      "nda": { "party": "BJP",    "candidate": "George Joseph" } },
-    { "no": 89, "district": "Idukki",      "name": "Piravom",        "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Anoop Jacob" },
-      "udf": { "party": "KC(J)",  "candidate": "Adv. Jacob P. Alex" },
-      "nda": { "party": "BJP",    "candidate": "P. Rajeev" } },
-    { "no": 90, "district": "Idukki",      "name": "Idukki",         "reserved": "ST",
-      "ldf": { "party": "CPI(M)", "candidate": "Joice George" },
-      "udf": { "party": "INC",    "candidate": "Dean Kuriakose" },
-      "nda": { "party": "BJP",    "candidate": "Ranjith Sreenivasan" } },
-    { "no": 91, "district": "Idukki",      "name": "Udumbanchola",   "reserved": "ST",
-      "ldf": { "party": "KC(M)",  "candidate": "A. Raja" },
-      "udf": { "party": "INC",    "candidate": "Francis George" },
-      "nda": { "party": "BJP",    "candidate": "Preetha Vijayan" } },
-    { "no": 92, "district": "Idukki",      "name": "Thodupuzha",     "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Roshy Augustine" },
-      "udf": { "party": "KC(J)",  "candidate": "Jose K. Mani" },
-      "nda": { "party": "BJP",    "candidate": "A. Aneesh" } },
-    { "no": 93, "district": "Kottayam",    "name": "Kuttanad",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Thomas Chazhikadan" },
-      "udf": { "party": "INC",    "candidate": "N. Jayaraj" },
-      "nda": { "party": "BDJS",   "candidate": "Santhosh Kuruvilla" } },
-    { "no": 94, "district": "Kottayam",    "name": "Aroor",          "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "A. M. Ariff" },
-      "udf": { "party": "INC",    "candidate": "Shanimol Usman" },
-      "nda": { "party": "BJP",    "candidate": "M. Rajesh" } },
-    { "no": 95, "district": "Kottayam",    "name": "Cherthala",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "S. Sarma" },
-      "udf": { "party": "INC",    "candidate": "P. P. Chitharanjan" },
-      "nda": { "party": "BJP",    "candidate": "V. V. Rajesh" } },
-    { "no": 96, "district": "Kottayam",    "name": "Alappuzha",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "P. P. Chitharanjan" },
-      "udf": { "party": "INC",    "candidate": "Shanimol Usman" },
-      "nda": { "party": "BJP",    "candidate": "Sobha Surendran" } },
-    { "no": 97, "district": "Kottayam",    "name": "Ambalappuzha",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "H. Salam" },
-      "udf": { "party": "INC",    "candidate": "D. Kumar" },
-      "nda": { "party": "BDJS",   "candidate": "Kuruvilla Mathew" } },
-    { "no": 98, "district": "Kottayam",    "name": "Haripad",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. M. Mani" },
-      "udf": { "party": "INC",    "candidate": "K. K. Balachandran" },
-      "nda": { "party": "BJP",    "candidate": "Binu Dominic" } },
-    { "no": 99, "district": "Kottayam",    "name": "Kayamkulam",     "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Ursula Suresh" },
-      "udf": { "party": "INC",    "candidate": "Adv. Rajmohan Unnithan" },
-      "nda": { "party": "BJP",    "candidate": "Krishnaprasad" } },
-    { "no": 100,"district": "Kottayam",    "name": "Mavelikkara",    "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "S. Rajendran" },
-      "udf": { "party": "INC",    "candidate": "T. J. Vinod" },
-      "nda": { "party": "BJP",    "candidate": "A. Ajikumar" } },
-    { "no": 101,"district": "Kottayam",    "name": "Chengannur",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Saji Cherian" },
-      "udf": { "party": "INC",    "candidate": "D. Vijayakumar" },
-      "nda": { "party": "BJP",    "candidate": "K. Surendran" } },
-    { "no": 102,"district": "Kottayam",    "name": "Thiruvalla",     "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Jose K. Mani" },
-      "udf": { "party": "KC(J)",  "candidate": "Mons Joseph" },
-      "nda": { "party": "BJP",    "candidate": "Thomas Mathew" } },
-    { "no": 103,"district": "Kottayam",    "name": "Ranni",          "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. U. Jeneesh Kumar" },
-      "udf": { "party": "INC",    "candidate": "P. J. Joseph" },
-      "nda": { "party": "BDJS",   "candidate": "Kurien Abraham" } },
-    { "no": 104,"district": "Pathanamthitta","name":"Aranmula",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Veena George" },
-      "udf": { "party": "INC",    "candidate": "K. B. Harindranath" },
-      "nda": { "party": "BJP",    "candidate": "Suresh Gopi" } },
-    { "no": 105,"district": "Pathanamthitta","name":"Konni",          "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. U. Jeneesh Kumar" },
-      "udf": { "party": "INC",    "candidate": "Adv. Baby John" },
-      "nda": { "party": "BDJS",   "candidate": "Mathew John" } },
-    { "no": 106,"district": "Pathanamthitta","name":"Adoor",          "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "Prathapan Adoor" },
-      "udf": { "party": "INC",    "candidate": "V. S. Joy Kumar" },
-      "nda": { "party": "BJP",    "candidate": "P. Suresh Babu" } },
-    { "no": 107,"district": "Pathanamthitta","name":"Karunagappally", "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "G. S. Jayalal" },
-      "udf": { "party": "INC",    "candidate": "S. Ramesh" },
-      "nda": { "party": "BJP",    "candidate": "P. Ajith Kumar" } },
-    { "no": 108,"district": "Kollam",      "name": "Kundara",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. Mukesh" },
-      "udf": { "party": "INC",    "candidate": "P. C. Vishnunadh" },
-      "nda": { "party": "BJP",    "candidate": "K. Krishnadas" } },
-    { "no": 109,"district": "Kollam",      "name": "Kollam",         "reserved": null,
-      "ldf": { "party": "CPI",    "candidate": "R. Rajesh" },
-      "udf": { "party": "INC",    "candidate": "N. K. Premachandran" },
-      "nda": { "party": "BJP",    "candidate": "V. Muraleedharan" } },
-    { "no": 110,"district": "Kollam",      "name": "Eravipuram",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Satheeshan Pacheni" },
-      "udf": { "party": "INC",    "candidate": "Adv. K. Venugopal" },
-      "nda": { "party": "BJP",    "candidate": "M. K. Sunil" } },
-    { "no": 111,"district": "Kollam",      "name": "Chathannur",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. V. Govindan" },
-      "udf": { "party": "INC",    "candidate": "C. Divakaran" },
-      "nda": { "party": "BJP",    "candidate": "Raghavan Rannikara" } },
-    { "no": 112,"district": "Kollam",      "name": "Punalur",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. N. Balagopal" },
-      "udf": { "party": "INC",    "candidate": "P. Sreenijin" },
-      "nda": { "party": "BJP",    "candidate": "Nidhi Suresh" } },
-    { "no": 113,"district": "Kollam",      "name": "Chadayamangalam","reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. Sivankutty" },
-      "udf": { "party": "INC",    "candidate": "Jiju John" },
-      "nda": { "party": "BJP",    "candidate": "A. Krishnan Unnithan" } },
-    { "no": 114,"district": "Kollam",      "name": "Kunnathur",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "G. Sudhakaran" },
-      "udf": { "party": "RSP",    "candidate": "K. K. Jayachandran" },
-      "nda": { "party": "BJP",    "candidate": "P. Girish Kumar" } },
-    { "no": 115,"district": "Kollam",      "name": "Kottarakkara",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. Mukesh" },
-      "udf": { "party": "INC",    "candidate": "Adv. Raju Abraham" },
-      "nda": { "party": "BJP",    "candidate": "R. Ramakrishnan" } },
-    { "no": 116,"district": "Kollam",      "name": "Pathanapuram",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. U. Jeneesh Kumar" },
-      "udf": { "party": "INC",    "candidate": "K. Anilkumar" },
-      "nda": { "party": "BDJS",   "candidate": "P. Bindu" } },
-    { "no": 117,"district": "Thiruvananthapuram","name":"Konni",      "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Adv. M. M. Mani" },
-      "udf": { "party": "INC",    "candidate": "Roji Abraham" },
-      "nda": { "party": "BJP",    "candidate": "K. Rajasekharan" } },
-    { "no": 118,"district": "Thiruvananthapuram","name":"Attingal",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. Sasi" },
-      "udf": { "party": "INC",    "candidate": "A. Sampath" },
-      "nda": { "party": "BJP",    "candidate": "V. Muraleedharan" } },
-    { "no": 119,"district": "Thiruvananthapuram","name":"Varkala",    "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. Mohan Kumar" },
-      "udf": { "party": "INC",    "candidate": "K. Chandrasekhar" },
-      "nda": { "party": "BJP",    "candidate": "O. Rajagopal" } },
-    { "no": 120,"district": "Thiruvananthapuram","name":"Chirayinkeezhu","reserved":"SC",
-      "ldf": { "party": "CPI(M)", "candidate": "G. S. Jayalal" },
-      "udf": { "party": "INC",    "candidate": "Adv. M. Vincent" },
-      "nda": { "party": "BJP",    "candidate": "K. Bhaskaran" } },
-    { "no": 121,"district": "Thiruvananthapuram","name":"Nedumangad",  "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "I. B. Satheesh" },
-      "udf": { "party": "INC",    "candidate": "V. Surendran Pillai" },
-      "nda": { "party": "BJP",    "candidate": "Kummanam Rajasekharan" } },
-    { "no": 122,"district": "Thiruvananthapuram","name":"Vamanapuram", "reserved": "SC",
-      "ldf": { "party": "CPI(M)", "candidate": "D. K. Murali" },
-      "udf": { "party": "INC",    "candidate": "S. Krishnakumar" },
-      "nda": { "party": "BJP",    "candidate": "G. Kiran Krishnan" } },
-    { "no": 123,"district": "Thiruvananthapuram","name":"Aruvikkara",  "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. Raju" },
-      "udf": { "party": "INC",    "candidate": "Aryadan Mohammed" },
-      "nda": { "party": "BJP",    "candidate": "P. Suresh Babu" } },
-    { "no": 124,"district": "Thiruvananthapuram","name":"Parassala",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "G. Sudhakaran" },
-      "udf": { "party": "INC",    "candidate": "K. Anilkumar" },
-      "nda": { "party": "BJP",    "candidate": "O. Rajagopal" } },
-    { "no": 125,"district": "Thiruvananthapuram","name":"Kovalam",     "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "M. Vincent" },
-      "udf": { "party": "INC",    "candidate": "K. K. Shailaja Teacher" },
-      "nda": { "party": "BJP",    "candidate": "Shobha Surendran" } },
-    { "no": 126,"district": "Thiruvananthapuram","name":"Nemom",       "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "A. N. Shamseer" },
-      "udf": { "party": "INC",    "candidate": "K. Muraleedharan" },
-      "nda": { "party": "BJP",    "candidate": "O. Rajagopal" } },
-    { "no": 127,"district": "Thiruvananthapuram","name":"Thiruvananthapuram","reserved":null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. Sivankutty" },
-      "udf": { "party": "INC",    "candidate": "V. D. Satheesan" },
-      "nda": { "party": "BJP",    "candidate": "Rajeev Chandrasekhar" } },
-    { "no": 128,"district": "Thiruvananthapuram","name":"Kazhakkoottam","reserved":null,
-      "ldf": { "party": "CPI(M)", "candidate": "Kadakampally Surendran" },
-      "udf": { "party": "INC",    "candidate": "K. Sudhakaran" },
-      "nda": { "party": "BJP",    "candidate": "Adv. P. S. Sreedharan Pillai" } },
-    { "no": 129,"district": "Thiruvananthapuram","name":"Vattiyoorkavu","reserved":null,
-      "ldf": { "party": "CPI(M)", "candidate": "V. K. Prasanth" },
-      "udf": { "party": "INC",    "candidate": "K. Chandrasekhar" },
-      "nda": { "party": "BJP",    "candidate": "K. S. Radhakrishnan" } },
-    { "no": 130,"district": "Thiruvananthapuram","name":"Thrissur (Tvpm)","reserved":null,
-      "ldf": { "party": "CPI(M)", "candidate": "A. N. Shamseer" },
-      "udf": { "party": "INC",    "candidate": "V. S. Achuthanandan" },
-      "nda": { "party": "BJP",    "candidate": "Meera Bhide" } },
-    { "no": 131,"district": "Thiruvananthapuram","name":"Palode",      "reserved": "ST",
-      "ldf": { "party": "CPI(M)", "candidate": "C. K. Hareendran" },
-      "udf": { "party": "INC",    "candidate": "S. Suresh" },
-      "nda": { "party": "BJP",    "candidate": "R. Prasad" } },
-    { "no": 132,"district": "Thiruvananthapuram","name":"Kattakada",   "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "I. B. Satheesh" },
-      "udf": { "party": "INC",    "candidate": "Adv. A. Jayashankar" },
-      "nda": { "party": "BJP",    "candidate": "V. V. Rajesh" } },
-    { "no": 133,"district": "Thiruvananthapuram","name":"Perumkadavila","reserved":null,
-      "ldf": { "party": "CPI(M)", "candidate": "K. Raju" },
-      "udf": { "party": "INC",    "candidate": "Bindhu Krishna" },
-      "nda": { "party": "BJP",    "candidate": "T. P. Senkumar" } },
-    { "no": 134,"district": "Thiruvananthapuram","name":"Kilimanoor",  "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Jose Thettayil" },
-      "udf": { "party": "INC",    "candidate": "K. Krishnankutty" },
-      "nda": { "party": "BJP",    "candidate": "K. S. Sabarinadhan" } },
-    { "no": 135,"district": "Thiruvananthapuram","name":"Changanacherry","reserved":null,
-      "ldf": { "party": "KC(M)",  "candidate": "T. M. Jacob" },
-      "udf": { "party": "KC(J)",  "candidate": "K. M. Mani Jr." },
-      "nda": { "party": "BJP",    "candidate": "C. K. Padmanabhan" } },
-    { "no": 136,"district": "Kottayam",    "name": "Poonjar",         "reserved": "ST",
-      "ldf": { "party": "KC(M)",  "candidate": "K. B. Joseph" },
-      "udf": { "party": "KC(J)",  "candidate": "Jose K. Mani Jr." },
-      "nda": { "party": "BJP",    "candidate": "M. D. Thomas" } },
-    { "no": 137,"district": "Kottayam",    "name": "Ettumanoor",      "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Hibi Eden" },
-      "udf": { "party": "KC(J)",  "candidate": "P. C. George" },
-      "nda": { "party": "BJP",    "candidate": "Thomas K. Thomas" } },
-    { "no": 138,"district": "Kottayam",    "name": "Kottayam",        "reserved": null,
-      "ldf": { "party": "CPI(M)", "candidate": "Thiruvanchoor Radhakrishnan" },
-      "udf": { "party": "INC",    "candidate": "Francis George" },
-      "nda": { "party": "BJP",    "candidate": "P. P. Chitharanjan" } },
-    { "no": 139,"district": "Kottayam",    "name": "Puthuppally",     "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "Roshy Augustine" },
-      "udf": { "party": "KC(J)",  "candidate": "Jose K. Mani" },
-      "nda": { "party": "BJP",    "candidate": "Adv. Saji Mani" } },
-    { "no": 140,"district": "Kottayam",    "name": "Kaduthuruthy",    "reserved": null,
-      "ldf": { "party": "KC(M)",  "candidate": "P. J. Joseph" },
-      "udf": { "party": "KC(J)",  "candidate": "Adv. Tom Jose" },
-      "nda": { "party": "BJP",    "candidate": "Willy Paithrayil" } }
+    {
+      "no": 1,
+      "district": "Kasaragodu",
+      "name": "Manjeshwara",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. R. Jayanandan"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "A. K. M. Ashraf"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Surendran"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Latheef I",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 40,93,000"
+        },
+        {
+          "candidate": "Gean Lavina Monteiro",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "D Surendran Nair",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Kannur Abdulla Master",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 19,88,000"
+        },
+        {
+          "candidate": "John Dsouza I",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 27,35,000"
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "district": "Kasaragodu",
+      "name": "Kasaragod",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "Shanavas Padhoor"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Kallatra Mahin Haji"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. L. Ashwini"
+      },
+      "others": []
+    },
+    {
+      "no": 3,
+      "district": "Kasaragodu",
+      "name": "Udma",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "C. H. Kunhambu"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Neelakandan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Manulal Meloth"
+      },
+      "others": []
+    },
+    {
+      "no": 4,
+      "district": "Kasaragodu",
+      "name": "Kanhangad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Govindan Pallikkappil"
+      },
+      "udf": {
+        "party": "KEC",
+        "candidate": "Shyji Ottapalli"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. Balraj"
+      },
+      "others": []
+    },
+    {
+      "no": 5,
+      "district": "Kasaragodu",
+      "name": "Thrikaripur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. P. P. Mustafa"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Sandeep Varier"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Ravi Kulangara"
+      },
+      "others": []
+    },
+    {
+      "no": 6,
+      "district": "Kannur",
+      "name": "Payyanur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "T. I. Madhusoodanan"
+      },
+      "udf": {
+        "party": "IND",
+        "candidate": "V. Kunjikrishnan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. P. Gangadharan"
+      },
+      "others": []
+    },
+    {
+      "no": 7,
+      "district": "Kannur",
+      "name": "Kalliasseri",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. Vijin"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Rajeevan Kappachery"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. V. Anilkumar"
+      },
+      "others": []
+    },
+    {
+      "no": 8,
+      "district": "Kannur",
+      "name": "Taliparamba",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. K. Shyamala"
+      },
+      "udf": {
+        "party": "IND",
+        "candidate": "T. K. Govindan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "N. Haridas"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Salam K P",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Anappalli Gopalan",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Others",
+          "assets": ""
+        },
+        {
+          "candidate": "C Balakrishnan Yadav",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 1,64,25,009"
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "district": "Kannur",
+      "name": "Irikkur",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Mathew Kunnapally"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Sajeev Joseph"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Srinath Padmanabhan"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Mathew Kunnappally",
+          "party": "Kerala Congress (M)",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 47,25,38,348"
+        },
+        {
+          "candidate": "Amal K T",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 26,744"
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "district": "Kannur",
+      "name": "Azhikode",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. V. Sumesh"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Kareem Cheleri"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. K. Vinod Kumar"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Kareem. V. V",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 9,39,515"
+        },
+        {
+          "candidate": "Kareem Chandroth",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 42,06,100"
+        }
+      ]
+    },
+    {
+      "no": 11,
+      "district": "Kannur",
+      "name": "Kannur",
+      "reserved": null,
+      "ldf": {
+        "party": "Cong(S)",
+        "candidate": "Kadanappalli Ramachandran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. O. Mohanan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. Raghunath"
+      },
+      "others": []
+    },
+    {
+      "no": 12,
+      "district": "Kannur",
+      "name": "Dharmadom",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Pinarayi Vijayan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Abdul Rasheed"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Ranjith"
+      },
+      "others": []
+    },
+    {
+      "no": 13,
+      "district": "Kannur",
+      "name": "Thalassery",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Karayi Rajan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. P. Saju"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "O. Nidheesh"
+      },
+      "others": [
+        {
+          "candidate": "A C Jalaluddheen",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 53,26,054"
+        }
+      ]
+    },
+    {
+      "no": 14,
+      "district": "Kannur",
+      "name": "Kuthuparamba",
+      "reserved": null,
+      "ldf": {
+        "party": "RJD",
+        "candidate": "P. K. Praveen"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Jayanthi Rajan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Shijilal"
+      },
+      "others": []
+    },
+    {
+      "no": 15,
+      "district": "Kannur",
+      "name": "Mattanur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. K. Sanoj"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Chandran Thillenkeri"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Biju Elakkuzhi"
+      },
+      "others": []
+    },
+    {
+      "no": 16,
+      "district": "Kannur",
+      "name": "Peravoor",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. K. Shailaja"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Sunny Joseph"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Paily Vathiatt"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Henstion George",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Aruvikkal Krishnan",
+          "party": "CPI(ML)(L)",
+          "criminal_cases": 1,
+          "education": "5th Pass",
+          "assets": "Rs 6,10,300"
+        },
+        {
+          "candidate": "C. Shylaja",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 4,22,185"
+        }
+      ]
+    },
+    {
+      "no": 17,
+      "district": "Wayanad",
+      "name": "Mananthavady",
+      "reserved": "ST",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "O. R. Kelu"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Usha Vijayan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Shyam Raj"
+      },
+      "others": []
+    },
+    {
+      "no": 18,
+      "district": "Wayanad",
+      "name": "Sulthan Bathery",
+      "reserved": "ST",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. S. Viswanathan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "I. C. Balakrishnan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. S. Kavitha"
+      },
+      "others": []
+    },
+    {
+      "no": 19,
+      "district": "Wayanad",
+      "name": "Kalpetta",
+      "reserved": null,
+      "ldf": {
+        "party": "RJD",
+        "candidate": "P. K. Anil Kumar"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. Siddique"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Prashanth Malavayal"
+      },
+      "others": [
+        {
+          "candidate": "Anilkumar S/O Unni Nair",
+          "party": "IND",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": "Rs 31,67,328"
+        },
+        {
+          "candidate": "K V Prakash",
+          "party": "CPI(ML) Red Star",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 20,
+      "district": "Kozhikode",
+      "name": "Vatakara",
+      "reserved": null,
+      "ldf": {
+        "party": "RJD",
+        "candidate": "M. K. Bhaskaran"
+      },
+      "udf": {
+        "party": "RMPI",
+        "candidate": "K. K. Rema"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Dileep"
+      },
+      "others": []
+    },
+    {
+      "no": 21,
+      "district": "Kozhikode",
+      "name": "Kuttiady",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. P. Kunhammadkutty"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Parakkal Abdulla"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Ramadas Manaleri"
+      },
+      "others": []
+    },
+    {
+      "no": 22,
+      "district": "Kozhikode",
+      "name": "Nadapuram",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "P. Vasantham"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. M. Abhijith"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. P. Vipin Chandran"
+      },
+      "others": [
+        {
+          "candidate": "Abhijith S/O Balan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 15,96,172"
+        }
+      ]
+    },
+    {
+      "no": 23,
+      "district": "Kozhikode",
+      "name": "Koyilandy",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Dasan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Praveen Kumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. R. Praphul Krishnan"
+      },
+      "others": []
+    },
+    {
+      "no": 24,
+      "district": "Kozhikode",
+      "name": "Perambra",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "T. P. Ramakrishnan"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Fathima Thahiliya"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. Mohanan Master"
+      },
+      "others": [
+        {
+          "candidate": "Akhil Kumar .A.M",
+          "party": "CPI(ML) Red Star",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Fathimathu Ruksana. P",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Fathima Nasri. V",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 6,245"
+        },
+        {
+          "candidate": "K. Ramakrishnan S/O Govindan Nair",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 15,09,660"
+        }
+      ]
+    },
+    {
+      "no": 25,
+      "district": "Kozhikode",
+      "name": "Balussery",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. M. Sachin Dev"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. T. Sooraj"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. P. Sateeshan"
+      },
+      "others": []
+    },
+    {
+      "no": 26,
+      "district": "Kozhikode",
+      "name": "Elathur",
+      "reserved": null,
+      "ldf": {
+        "party": "NCP-SP",
+        "candidate": "A. K. Saseendran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Vidya Balakrishnan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "T. Devadas"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Basith Atholi",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Others",
+          "assets": "Rs 57,72,990"
+        },
+        {
+          "candidate": "Adv.Sumin.S.Nedungadan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 9,58,500"
+        }
+      ]
+    },
+    {
+      "no": 27,
+      "district": "Kozhikode",
+      "name": "Kozhikode North",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Thottathil Ravindran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Jayanth"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Navya Haridas"
+      },
+      "others": [
+        {
+          "candidate": "A Sajeena",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Dr. Alphonsa Mathew",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Doctorate",
+          "assets": "Rs 1,16,35,000"
+        },
+        {
+          "candidate": "Jayanth S S/O Sadanandan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 6,139"
+        },
+        {
+          "candidate": "Jayanth Kumar",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 28,
+      "district": "Kozhikode",
+      "name": "Kozhikode South",
+      "reserved": null,
+      "ldf": {
+        "party": "INL",
+        "candidate": "Ahamed Devarkovil"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Faisal Babu"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "T. Reneesh"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Fyzal Babu",
+          "party": "Indian Union Muslim League",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Ahammad Devarkovil",
+          "party": "Indian National League",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": "Rs 6,73,18,159"
+        }
+      ]
+    },
+    {
+      "no": 29,
+      "district": "Kozhikode",
+      "name": "Beypore",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. A. Mohammed Riyas"
+      },
+      "udf": {
+        "party": "IND",
+        "candidate": "P. V. Anvar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. P. Prakash Babu"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Prakashbabu",
+          "party": "BJP",
+          "criminal_cases": 19,
+          "education": "Post Graduate",
+          "assets": "Rs 49,15,291"
+        },
+        {
+          "candidate": "Anwar Ali Hassan S/O Kuttyhassan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 16,02,000"
+        },
+        {
+          "candidate": "Anver S/O Sulaikha K P",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Anver S/O Moideenkoya",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "5th Pass",
+          "assets": "Rs 21,13,200"
+        },
+        {
+          "candidate": "Anver S/O Enunni",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 85,21,703"
+        }
+      ]
+    },
+    {
+      "no": 30,
+      "district": "Kozhikode",
+      "name": "Kunnamangalam",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "P. T. A. Rahim"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "M. A. Razak Master"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "V. K. Sajeevan"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Razak S/O Koyakutty",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 1,45,07,950"
+        },
+        {
+          "candidate": "Abdu Rasak S/O Muhammed",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 51,16,040"
+        }
+      ]
+    },
+    {
+      "no": 31,
+      "district": "Kozhikode",
+      "name": "Koduvally",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "Saleem Madavoor"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "P. K. Firos"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Giri Pambanal"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Shukoor",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 6,50,000"
+        },
+        {
+          "candidate": "Firose S/O Aboobacker Musaliar",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Firose K C S/O Moitheenkutty",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 8,12,000"
+        },
+        {
+          "candidate": "Bavankutty",
+          "party": "AAP",
+          "criminal_cases": 2,
+          "education": "10th Pass",
+          "assets": "Rs 6,01,000"
+        }
+      ]
+    },
+    {
+      "no": 32,
+      "district": "Kozhikode",
+      "name": "Thiruvambady",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Linto Joseph"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "C. K. Kasim"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Sunny Thomas"
+      },
+      "others": [
+        {
+          "candidate": "Dr. Wilson Rockey",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Doctorate",
+          "assets": "Rs 6,95,30,420"
+        }
+      ]
+    },
+    {
+      "no": 33,
+      "district": "Malappuram",
+      "name": "Kondotty",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "P. Jiji"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "T. P. Ashrafali"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Subhramanyan"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Khadar Bichava",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 34,
+      "district": "Malappuram",
+      "name": "Eranad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Shafeer Kizhisery"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "P. K. Basheer"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "N. Sreeprakash"
+      },
+      "others": [
+        {
+          "candidate": "Adv.Shafeer Kizhisseri",
+          "party": "CPI",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Chemmala Yoosuf Ali",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 35,
+      "district": "Malappuram",
+      "name": "Nilambur",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "U. Sharafali"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Aryadan Shoukath"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Gireesh Mekkad"
+      },
+      "others": [
+        {
+          "candidate": "Girish Mekkattu",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Jaisal Maliyekkal",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 35,75,972"
+        }
+      ]
+    },
+    {
+      "no": 36,
+      "district": "Malappuram",
+      "name": "Wandoor",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. K. Damodaran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "A. P. Anil Kumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "E. P. Kumaradas"
+      },
+      "others": []
+    },
+    {
+      "no": 37,
+      "district": "Malappuram",
+      "name": "Manjeri",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "M. Mustafa"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "M. Rahmathulla"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Pathmasree M"
+      },
+      "others": [
+        {
+          "candidate": "Adv. P.P.A. Sageer",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,41,75,000"
+        },
+        {
+          "candidate": "Bipin Benson Joseph",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 3,00,000"
+        }
+      ]
+    },
+    {
+      "no": 38,
+      "district": "Malappuram",
+      "name": "Perinthalmanna",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. P. Muhammad Haneefa"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Najeeb Kanthapuram"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. P. Baburaj"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Najeeb S/O Veerappu",
+          "party": "IND",
+          "criminal_cases": 2,
+          "education": "8th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Abdul Najeeb S/O Mohamed",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 15,88,923"
+        }
+      ]
+    },
+    {
+      "no": 39,
+      "district": "Malappuram",
+      "name": "Mankada",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. P. Alavi"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Manjalamkuzhi Ali"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Lijoy Paul"
+      },
+      "others": []
+    },
+    {
+      "no": 40,
+      "district": "Malappuram",
+      "name": "Malappuram",
+      "reserved": null,
+      "ldf": {
+        "party": "NCP-SP",
+        "candidate": "T. Mujeeb"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "P. K. Kunhalikutty"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Aswathy Gupthakumar"
+      },
+      "others": [
+        {
+          "candidate": "Aboobacker Backer Kundupuzhakkal",
+          "party": "AAP",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": "Rs 96,97,250"
+        },
+        {
+          "candidate": "Abdulsalam.K.P",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Abdul Gafoor Master O.P.K",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Others",
+          "assets": "Rs 4,49,11,238"
+        },
+        {
+          "candidate": "Adv.Sadik Naduthodi",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 5,
+          "education": "Graduate Professional",
+          "assets": "Rs 84,29,649"
+        },
+        {
+          "candidate": "Aswathi Gupthakumar",
+          "party": "BJP",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 2,65,301"
+        }
+      ]
+    },
+    {
+      "no": 41,
+      "district": "Malappuram",
+      "name": "Vengara",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "Muhammad Sabah Kundukuzhikkal"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "K. M. Shaji"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Jayakrishnan V. N."
+      },
+      "others": [
+        {
+          "candidate": "Abdul Rafeeq Chemban",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 71,64,000"
+        }
+      ]
+    },
+    {
+      "no": 42,
+      "district": "Malappuram",
+      "name": "Vallikkunnu",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "C. P. Musthafa"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "T. V. Ibrahim"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. Preman Master"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Musthafa",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 2,17,41,263"
+        },
+        {
+          "candidate": "Abdul Azeez Kadalundi",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 43,
+      "district": "Malappuram",
+      "name": "Tirurangadi",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Ajit Koladi"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "P. M. A. Sameer"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Riju C Raghav"
+      },
+      "others": [
+        {
+          "candidate": "Hameed V",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 18,89,054"
+        }
+      ]
+    },
+    {
+      "no": 44,
+      "district": "Malappuram",
+      "name": "Tanur",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "P. Mohammed Sameer"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "P. K. Navas"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Deepa Puzhakkal"
+      },
+      "others": []
+    },
+    {
+      "no": 45,
+      "district": "Malappuram",
+      "name": "Tirur",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "V. Abdurahiman"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "Kurukkoli Moideen"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Narayanan Master"
+      },
+      "others": [
+        {
+          "candidate": "Abdurahiman S/O Kunjeen",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": "Rs 68,00,382"
+        },
+        {
+          "candidate": "Abdurahiman S/O Kunjava",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 73,37,027"
+        },
+        {
+          "candidate": "Dr.S.Aleena",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "Doctorate",
+          "assets": ""
+        },
+        {
+          "candidate": "Kabeer Alias Shameer Kuttur",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 61,93,000"
+        }
+      ]
+    },
+    {
+      "no": 46,
+      "district": "Malappuram",
+      "name": "Kottakkal",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "Preethi Konchath"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "K. K. Abid Hussain Thangal"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Subrahmanian Chunkapally"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Abdul Majeed",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 3,
+          "education": "Graduate Professional",
+          "assets": "Rs 12,98,453"
+        }
+      ]
+    },
+    {
+      "no": 47,
+      "district": "Malappuram",
+      "name": "Thavanur",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "K. T. Jaleel"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. S. Joy"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Ravi Thelath"
+      },
+      "others": [
+        {
+          "candidate": "Abdul Jaleel S/O Kadheeja",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 53,07,000"
+        },
+        {
+          "candidate": "Abdul Jaleel K T S/O Moideen K T",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "5th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 48,
+      "district": "Malappuram",
+      "name": "Ponnani",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. K. Sakeer"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. P. Noushad Ali"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "E. Maneesh"
+      },
+      "others": [
+        {
+          "candidate": "Anwar Pazhanji",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 2,
+          "education": "8th Pass",
+          "assets": "Rs 3,02,67,000"
+        },
+        {
+          "candidate": "Adv.M.K Sakkeer",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 1,75,26,918"
+        }
+      ]
+    },
+    {
+      "no": 49,
+      "district": "Palakkad",
+      "name": "Thrithala",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. B. Rajesh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. T. Balram"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "V. Unnikrishnan Master"
+      },
+      "others": [
+        {
+          "candidate": "Adv Keerthi Jayanandhan",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Abbas",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "5th Pass",
+          "assets": "Rs 61,17,000"
+        },
+        {
+          "candidate": "Balaraman",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 18,63,000"
+        }
+      ]
+    },
+    {
+      "no": 50,
+      "district": "Palakkad",
+      "name": "Pattambi",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Muhammed Muhsin"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. P. Shaji"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Manoj"
+      },
+      "others": [
+        {
+          "candidate": "Haris Babu Pailippuram",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 22,36,052"
+        }
+      ]
+    },
+    {
+      "no": 51,
+      "district": "Palakkad",
+      "name": "Shornur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. Mammikutty"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. Harigovindan Master"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Sanku T Das"
+      },
+      "others": [
+        {
+          "candidate": "Aboobacker",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 2,000"
+        }
+      ]
+    },
+    {
+      "no": 52,
+      "district": "Palakkad",
+      "name": "Ottapalam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Premkumar"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. K. Sasi"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Major Ravi"
+      },
+      "others": [
+        {
+          "candidate": "K.P Rajeesh",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 50,07,000"
+        }
+      ]
+    },
+    {
+      "no": 53,
+      "district": "Palakkad",
+      "name": "Kongad",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Shanthakumari"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. A. Thulasi"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Renu Suresh"
+      },
+      "others": []
+    },
+    {
+      "no": 54,
+      "district": "Palakkad",
+      "name": "Mannarkkad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Mansil Abubacker"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "N. Samsudheen"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Issac Varghese"
+      },
+      "others": []
+    },
+    {
+      "no": 55,
+      "district": "Palakkad",
+      "name": "Malampuzha",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "E. Prabhakaran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "A. Suresh"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. Krishnakumar"
+      },
+      "others": [
+        {
+          "candidate": "A Prabhakaran",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "K Prasad",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 56,
+      "district": "Palakkad",
+      "name": "Palakkad",
+      "reserved": null,
+      "ldf": {
+        "party": "IND",
+        "candidate": "N. M. R. Rasakh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Ramesh Pisharody"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Sobha Surendran"
+      },
+      "others": []
+    },
+    {
+      "no": 57,
+      "district": "Palakkad",
+      "name": "Tarur",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. P. Sumod"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. C. Subramanian"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Suresh Babu"
+      },
+      "others": []
+    },
+    {
+      "no": 58,
+      "district": "Palakkad",
+      "name": "Chittur",
+      "reserved": null,
+      "ldf": {
+        "party": "ISJD",
+        "candidate": "V. Murugadas"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Sumesh Achuthan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Pranesh Rajendran"
+      },
+      "others": []
+    },
+    {
+      "no": 59,
+      "district": "Palakkad",
+      "name": "Nenmara",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Preman"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "A. Thankappan"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "A. N. Anurag"
+      },
+      "others": [
+        {
+          "candidate": "Anvar Sadik",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 60,
+      "district": "Palakkad",
+      "name": "Alathur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "T. M. Sasi"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. N. Febin"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. V. Prasanna Kumar"
+      },
+      "others": [
+        {
+          "candidate": "B Febin S/O Balan K.C.",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 21,96,300"
+        }
+      ]
+    },
+    {
+      "no": 61,
+      "district": "Thrissur",
+      "name": "Chelakkara",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "U. R. Pradeep"
+      },
+      "udf": {
+        "party": "IND",
+        "candidate": "Sivan Veettikkunnu"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Balakrishnan"
+      },
+      "others": []
+    },
+    {
+      "no": 62,
+      "district": "Thrissur",
+      "name": "Kunnamkulam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "A. C. Moideen"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. T. Ajay Mohan"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Rijil K. R."
+      },
+      "others": [
+        {
+          "candidate": "K R Rajin",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 63,
+      "district": "Thrissur",
+      "name": "Guruvayur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "N. K. Akbar"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "C. H. Rasheed"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "B. Gopalakrishnan"
+      },
+      "others": []
+    },
+    {
+      "no": 64,
+      "district": "Thrissur",
+      "name": "Manalur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "C. Raveendranath"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. N. Prathapan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. K. Aneesh Kumar"
+      },
+      "others": [
+        {
+          "candidate": "Chandran P V",
+          "party": "IND",
+          "criminal_cases": 2,
+          "education": "10th Pass",
+          "assets": "Rs 8,00,000"
+        },
+        {
+          "candidate": "Jileef",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": "Rs 10,27,000"
+        }
+      ]
+    },
+    {
+      "no": 65,
+      "district": "Thrissur",
+      "name": "Wadakkanchery",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Xavier Chittilappilly"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Vyshak Narayanaswami"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "T. S. Ullas Babu"
+      },
+      "others": [
+        {
+          "candidate": "Jithin Sadanandhan",
+          "party": "AAP",
+          "criminal_cases": 2,
+          "education": "Others",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 66,
+      "district": "Thrissur",
+      "name": "Ollur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "K. Rajan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Shaji Kodankandath"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Bijoy Thomas"
+      },
+      "others": [
+        {
+          "candidate": "Edwin Babu Alapat",
+          "party": "IND",
+          "criminal_cases": 1,
+          "education": "Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 67,
+      "district": "Thrissur",
+      "name": "Thrissur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Alankode Leelakrishnan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Rajan Pallan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Padmaja Venugopal"
+      },
+      "others": [
+        {
+          "candidate": "Arshed Aziz",
+          "party": "CPI(ML)(L)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 68,
+      "district": "Thrissur",
+      "name": "Nattika",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Geetha Gopi"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Sunil Lalur"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. C. Mukundan"
+      },
+      "others": []
+    },
+    {
+      "no": 69,
+      "district": "Thrissur",
+      "name": "Kaipamangalam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "K. K. Valsaraj"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. M. Nazar"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Athulya Ghosh"
+      },
+      "others": [
+        {
+          "candidate": "A.M. Muhammed Riyas",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Athulliaghosh Vettiyattil",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 1,
+          "education": "Others",
+          "assets": ""
+        },
+        {
+          "candidate": "Jayan Eratt",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "5th Pass",
+          "assets": "Rs 97,000"
+        }
+      ]
+    },
+    {
+      "no": 70,
+      "district": "Thrissur",
+      "name": "Irinjalakuda",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "R. Bindu"
+      },
+      "udf": {
+        "party": "KEC",
+        "candidate": "Thomas Unniyadan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Santhosh Cherkalam"
+      },
+      "others": []
+    },
+    {
+      "no": 71,
+      "district": "Thrissur",
+      "name": "Puthukkad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. K. Ramachandran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. M. Babu Raj"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. Nagesh"
+      },
+      "others": [
+        {
+          "candidate": "Anifa V K",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 23,10,000"
+        },
+        {
+          "candidate": "Jayakrishnan P N",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 72,
+      "district": "Thrissur",
+      "name": "Chalakudy",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Biju Chirayath"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. J. Saneesh Kumar Joseph"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Charly Paul"
+      },
+      "others": []
+    },
+    {
+      "no": 73,
+      "district": "Thrissur",
+      "name": "Kodungallur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "V. R. Sunil"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "O. J. Janeesh"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Varghese George"
+      },
+      "others": [
+        {
+          "candidate": "Dr. K M Francis Roy",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 74,
+      "district": "Ernakulam",
+      "name": "Perumbavoor",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Basil Paul"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Manoj Moothedan"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Jibi Pathickal"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Prasanth",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 11,20,000"
+        },
+        {
+          "candidate": "Eldho George",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 3,97,074"
+        }
+      ]
+    },
+    {
+      "no": 75,
+      "district": "Ernakulam",
+      "name": "Angamaly",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Saju Paul"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Roji M. John"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Promy Kuriakose"
+      },
+      "others": [
+        {
+          "candidate": "Joby Paul Uppan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 78,90,040"
+        }
+      ]
+    },
+    {
+      "no": 76,
+      "district": "Ernakulam",
+      "name": "Aluva",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "A. M. Ariff"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Anwar Sadath"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. A. Brahmaraj"
+      },
+      "others": [
+        {
+          "candidate": "Hakhikhath Hameed",
+          "party": "AAP",
+          "criminal_cases": 6,
+          "education": "Others",
+          "assets": "Rs 1,42,66,127"
+        }
+      ]
+    },
+    {
+      "no": 77,
+      "district": "Ernakulam",
+      "name": "Kalamassery",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. Rajeeve"
+      },
+      "udf": {
+        "party": "IUML",
+        "candidate": "V. E. Abdul Gafoor"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "M. P. Binu"
+      },
+      "others": [
+        {
+          "candidate": "A Rajeena",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": "Rs 10,79,215"
+        },
+        {
+          "candidate": "Ajmal K Mujeeb",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 65,43,000"
+        }
+      ]
+    },
+    {
+      "no": 78,
+      "district": "Ernakulam",
+      "name": "Paravur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "E. T. Taison"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. D. Satheesan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Vathsala Prasanna Kumar"
+      },
+      "others": [
+        {
+          "candidate": "G.Gokuldev",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": "Rs 83,99,678"
+        },
+        {
+          "candidate": "K.B.Satheesan",
+          "party": "IND",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 79,
+      "district": "Ernakulam",
+      "name": "Vypin",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. B. Shaini"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Tony Chammany"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Anitha Thomas"
+      },
+      "others": []
+    },
+    {
+      "no": 80,
+      "district": "Ernakulam",
+      "name": "Kochi",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. J. Maxi"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. J. Vinod"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Sudhakaran"
+      },
+      "others": [
+        {
+          "candidate": "Aneesh Mattancherry",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 3,
+          "education": "8th Pass",
+          "assets": "Rs 13,37,521"
+        },
+        {
+          "candidate": "Ajeesh P.E",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv. Xavier Julappan",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 6,12,57,457"
+        }
+      ]
+    },
+    {
+      "no": 81,
+      "district": "Ernakulam",
+      "name": "Thrippunithura",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Anoop Jacob"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. T. Thomas"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "N. Haridas"
+      },
+      "others": []
+    },
+    {
+      "no": 82,
+      "district": "Ernakulam",
+      "name": "Ernakulam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "T. J. Vinod"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Hibi Eden"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Biji Abraham"
+      },
+      "others": []
+    },
+    {
+      "no": 83,
+      "district": "Ernakulam",
+      "name": "Thrikkakara",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. T. Thomas"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Uma Thomas"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. N. Rajeev"
+      },
+      "others": [
+        {
+          "candidate": "Akhil Raj (Akhil Marar)",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 2,
+          "education": "Graduate",
+          "assets": "Rs 3,00,51,454"
+        },
+        {
+          "candidate": "Adv. Pushpa Das",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 2,53,18,136"
+        },
+        {
+          "candidate": "Joseph Alosius",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 1,
+          "education": "Others",
+          "assets": "Rs 73,90,642"
+        }
+      ]
+    },
+    {
+      "no": 84,
+      "district": "Ernakulam",
+      "name": "Kunnathunad",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Mons Joseph"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Christy Fernandez"
+      },
+      "nda": {
+        "party": "TTP",
+        "candidate": "Joby George"
+      },
+      "others": [
+        {
+          "candidate": "Adv. P. V. Sreenijin",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Babu Divakaran",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 2,
+          "education": "10th Pass",
+          "assets": "Rs 1,32,500"
+        }
+      ]
+    },
+    {
+      "no": 85,
+      "district": "Ernakulam",
+      "name": "North Paravur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "V. D. Satheesan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. B. Udayakumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "S. Suresh"
+      },
+      "others": []
+    },
+    {
+      "no": 86,
+      "district": "Idukki",
+      "name": "Kothamangalam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Eldos Kunnapilly"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Antony John"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Tom Jose"
+      },
+      "others": [
+        {
+          "candidate": "Aji Narayanan",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 1,
+          "education": "Post Graduate",
+          "assets": "Rs 7,83,28,206"
+        },
+        {
+          "candidate": "Finto Xavier",
+          "party": "Rashtravadi Janata Party",
+          "criminal_cases": 2,
+          "education": "12th Pass",
+          "assets": "Rs 55,000"
+        }
+      ]
+    },
+    {
+      "no": 87,
+      "district": "Idukki",
+      "name": "Muvattupuzha",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Mathew T. Thomas"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Vimala Cyrus"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Sathyadas"
+      },
+      "others": [
+        {
+          "candidate": "Dr. Mathew Kuzhalnadan",
+          "party": "INC",
+          "criminal_cases": 7,
+          "education": "Doctorate",
+          "assets": "Rs 39,84,92,111"
+        },
+        {
+          "candidate": "Babu Mathew",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 15,20,576"
+        }
+      ]
+    },
+    {
+      "no": 88,
+      "district": "Idukki",
+      "name": "Kolenchery",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. N. Vasavan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "M. M. Mani"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "George Joseph"
+      },
+      "others": []
+    },
+    {
+      "no": 89,
+      "district": "Idukki",
+      "name": "Piravom",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Anoop Jacob"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Adv. Jacob P. Alex"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Rajeev"
+      },
+      "others": [
+        {
+          "candidate": "Eldho Abraham Thaliyachira",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": "Rs 67,32,000"
+        },
+        {
+          "candidate": "Jibi Abraham",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 1,
+          "education": "12th Pass",
+          "assets": "Rs 10,92,03,079"
+        }
+      ]
+    },
+    {
+      "no": 90,
+      "district": "Idukki",
+      "name": "Idukki",
+      "reserved": "ST",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Joice George"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Dean Kuriakose"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Ranjith Sreenivasan"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Pratheesh Prabha",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 71,62,950"
+        }
+      ]
+    },
+    {
+      "no": 91,
+      "district": "Idukki",
+      "name": "Udumbanchola",
+      "reserved": "ST",
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "A. Raja"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Francis George"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Preetha Vijayan"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Senapathy Venu",
+          "party": "INC",
+          "criminal_cases": 9,
+          "education": "Post Graduate",
+          "assets": "Rs 2,92,90,644"
+        },
+        {
+          "candidate": "Adv. Sangeetha Viswanadhan",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 1,
+          "education": "Post Graduate",
+          "assets": "Rs 10,42,59,131"
+        },
+        {
+          "candidate": "K.K. Jayachandran",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 92,
+      "district": "Idukki",
+      "name": "Thodupuzha",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Roshy Augustine"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Jose K. Mani"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. Aneesh"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Basil John",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 13,00,000"
+        },
+        {
+          "candidate": "Apu John Joseph",
+          "party": "Kerala Congress",
+          "criminal_cases": 1,
+          "education": "Graduate Professional",
+          "assets": "Rs 15,23,90,833"
+        },
+        {
+          "candidate": "Ajay V Marar (Ajay Unni)",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 9,70,000"
+        },
+        {
+          "candidate": "Afsal M B",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv. Roy Varicattu",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 2,
+          "education": "Graduate Professional",
+          "assets": "Rs 58,75,618"
+        },
+        {
+          "candidate": "Cyriac Chazhikadan",
+          "party": "Kerala Congress (M)",
+          "criminal_cases": 1,
+          "education": "Post Graduate",
+          "assets": "Rs 63,80,681"
+        },
+        {
+          "candidate": "Jomon John",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 93,
+      "district": "Kottayam",
+      "name": "Kuttanad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Thomas Chazhikadan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "N. Jayaraj"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Santhosh Kuruvilla"
+      },
+      "others": [
+        {
+          "candidate": "Joemon Joseph Srampickal A. P. J. Juman V. S.",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Jaisappan Mathai",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 62,37,326"
+        }
+      ]
+    },
+    {
+      "no": 94,
+      "district": "Kottayam",
+      "name": "Aroor",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "A. M. Ariff"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Shanimol Usman"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. Rajesh"
+      },
+      "others": [
+        {
+          "candidate": "Adv. P.S. Jyothis",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 1,
+          "education": "Graduate Professional",
+          "assets": "Rs 2,02,54,000"
+        },
+        {
+          "candidate": "Adv. Shanimol Osman",
+          "party": "INC",
+          "criminal_cases": 11,
+          "education": "Post Graduate",
+          "assets": "Rs 1,74,48,493"
+        },
+        {
+          "candidate": "Daleema",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 1,49,55,801"
+        }
+      ]
+    },
+    {
+      "no": 95,
+      "district": "Kottayam",
+      "name": "Cherthala",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "S. Sarma"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. P. Chitharanjan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "V. V. Rajesh"
+      },
+      "others": [
+        {
+          "candidate": "A.P. Prasad S/O Purushothaman",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv. T.P. Anantharaj",
+          "party": "Bharath Dharma Jana Sena",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv. Sonnymon K .Mathew",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 2,56,80,000"
+        },
+        {
+          "candidate": "K.R. Rajendra Prasad",
+          "party": "INC",
+          "criminal_cases": 5,
+          "education": "10th Pass",
+          "assets": "Rs 1,21,47,980"
+        }
+      ]
+    },
+    {
+      "no": 96,
+      "district": "Kottayam",
+      "name": "Alappuzha",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "P. P. Chitharanjan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Shanimol Usman"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Sobha Surendran"
+      },
+      "others": [
+        {
+          "candidate": "A.D Thomas",
+          "party": "INC",
+          "criminal_cases": 18,
+          "education": "Graduate",
+          "assets": "Rs 39,327"
+        },
+        {
+          "candidate": "Alleppey Sugunan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Jyothi Abraham",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 27,50,000"
+        },
+        {
+          "candidate": "Joseph Chacko",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 21,18,236"
+        }
+      ]
+    },
+    {
+      "no": 97,
+      "district": "Kottayam",
+      "name": "Ambalappuzha",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "H. Salam"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "D. Kumar"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Kuruvilla Mathew"
+      },
+      "others": []
+    },
+    {
+      "no": 98,
+      "district": "Kottayam",
+      "name": "Haripad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. M. Mani"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. K. Balachandran"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Binu Dominic"
+      },
+      "others": []
+    },
+    {
+      "no": 99,
+      "district": "Kottayam",
+      "name": "Kayamkulam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Ursula Suresh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Adv. Rajmohan Unnithan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Krishnaprasad"
+      },
+      "others": [
+        {
+          "candidate": "Adv.U.Prathibha",
+          "party": "CPI(M)",
+          "criminal_cases": 3,
+          "education": "Graduate Professional",
+          "assets": "Rs 70,41,005"
+        },
+        {
+          "candidate": "Adv.M.Liju",
+          "party": "INC",
+          "criminal_cases": 4,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 100,
+      "district": "Kottayam",
+      "name": "Mavelikkara",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "S. Rajendran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "T. J. Vinod"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. Ajikumar"
+      },
+      "others": []
+    },
+    {
+      "no": 101,
+      "district": "Kottayam",
+      "name": "Chengannur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Saji Cherian"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "D. Vijayakumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Surendran"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Abi Kuriakose",
+          "party": "INC",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "B. Praneesh",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 4,53,771"
+        }
+      ]
+    },
+    {
+      "no": 102,
+      "district": "Kottayam",
+      "name": "Thiruvalla",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Jose K. Mani"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Mons Joseph"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Thomas Mathew"
+      },
+      "others": [
+        {
+          "candidate": "Anoop Antony",
+          "party": "BJP",
+          "criminal_cases": 2,
+          "education": "Graduate",
+          "assets": "Rs 5,66,07,733"
+        },
+        {
+          "candidate": "Aju Alex",
+          "party": "IND",
+          "criminal_cases": 3,
+          "education": "Graduate",
+          "assets": "Rs 15,41,196"
+        },
+        {
+          "candidate": "Adv.Varghese Mammen",
+          "party": "Kerala Congress",
+          "criminal_cases": 2,
+          "education": "Graduate Professional",
+          "assets": "Rs 5,12,64,445"
+        }
+      ]
+    },
+    {
+      "no": 103,
+      "district": "Kottayam",
+      "name": "Ranni",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. U. Jeneesh Kumar"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. J. Joseph"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Kurien Abraham"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Pramod Narayan",
+          "party": "Kerala Congress (M)",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv. Pazhakulam Madhu",
+          "party": "INC",
+          "criminal_cases": 3,
+          "education": "Post Graduate",
+          "assets": "Rs 1,87,14,369"
+        }
+      ]
+    },
+    {
+      "no": 104,
+      "district": "Pathanamthitta",
+      "name": "Aranmula",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Veena George"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. B. Harindranath"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Suresh Gopi"
+      },
+      "others": [
+        {
+          "candidate": "Abin Varkey Kodiyattu",
+          "party": "INC",
+          "criminal_cases": 17,
+          "education": "Graduate Professional",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 105,
+      "district": "Pathanamthitta",
+      "name": "Konni",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. U. Jeneesh Kumar"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Adv. Baby John"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "Mathew John"
+      },
+      "others": [
+        {
+          "candidate": "Adv Varughese Oommen",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv K U Jenish Kumar",
+          "party": "CPI(M)",
+          "criminal_cases": 3,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,30,45,346"
+        }
+      ]
+    },
+    {
+      "no": 106,
+      "district": "Pathanamthitta",
+      "name": "Adoor",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "Prathapan Adoor"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. S. Joy Kumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Suresh Babu"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Pandalam Prathapan",
+          "party": "BJP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Advocate C V Santhakumar",
+          "party": "INC",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 72,82,160"
+        }
+      ]
+    },
+    {
+      "no": 107,
+      "district": "Pathanamthitta",
+      "name": "Karunagappally",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "G. S. Jayalal"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "S. Ramesh"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Ajith Kumar"
+      },
+      "others": [
+        {
+          "candidate": "Adv.M.S. Thara",
+          "party": "CPI",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,62,11,224"
+        },
+        {
+          "candidate": "C.R. Mahesh",
+          "party": "INC",
+          "criminal_cases": 4,
+          "education": "Graduate",
+          "assets": "Rs 24,24,989"
+        }
+      ]
+    },
+    {
+      "no": 108,
+      "district": "Kollam",
+      "name": "Kundara",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. Mukesh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. C. Vishnunadh"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Krishnadas"
+      },
+      "others": [
+        {
+          "candidate": "Dr. Robin Radhakrishnan",
+          "party": "BJP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,06,04,599"
+        }
+      ]
+    },
+    {
+      "no": 109,
+      "district": "Kollam",
+      "name": "Kollam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI",
+        "candidate": "R. Rajesh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "N. K. Premachandran"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "V. Muraleedharan"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Bindhu Krishna",
+          "party": "INC",
+          "criminal_cases": 49,
+          "education": "Post Graduate",
+          "assets": "Rs 1,12,00,991"
+        },
+        {
+          "candidate": "Adv. Sinu.L.R",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Dr. Prathap Kumar N",
+          "party": "BJP",
+          "criminal_cases": 1,
+          "education": "Post Graduate",
+          "assets": "Rs 54,99,83,000"
+        }
+      ]
+    },
+    {
+      "no": 110,
+      "district": "Kollam",
+      "name": "Eravipuram",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Satheeshan Pacheni"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Adv. K. Venugopal"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. K. Sunil"
+      },
+      "others": [
+        {
+          "candidate": "Adv.Vishnu Mohan",
+          "party": "Revolutionary Socialist Party",
+          "criminal_cases": 5,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Firoz S R",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 1,18,964"
+        }
+      ]
+    },
+    {
+      "no": 111,
+      "district": "Kollam",
+      "name": "Chathannur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. V. Govindan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "C. Divakaran"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Raghavan Rannikara"
+      },
+      "others": [
+        {
+          "candidate": "Arun Chathannoor",
+          "party": "AAP",
+          "criminal_cases": 3,
+          "education": "Others",
+          "assets": "Rs 66,19,516"
+        },
+        {
+          "candidate": "Adv.R.Rajendran",
+          "party": "CPI",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 2,85,65,753"
+        },
+        {
+          "candidate": "B.B.Gopakumar",
+          "party": "BJP",
+          "criminal_cases": 2,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 112,
+      "district": "Kollam",
+      "name": "Punalur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. N. Balagopal"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "P. Sreenijin"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Nidhi Suresh"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Reghunadh Kamukumchery",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "C. Ajayaprasad",
+          "party": "CPI",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": "Rs 58,47,000"
+        },
+        {
+          "candidate": "K. Mahesh",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 14,70,000"
+        },
+        {
+          "candidate": "Jose Saranath",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 113,
+      "district": "Kollam",
+      "name": "Chadayamangalam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. Sivankutty"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Jiju John"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "A. Krishnan Unnithan"
+      },
+      "others": [
+        {
+          "candidate": "Aji Kadassery",
+          "party": "Democratic Human Rights Movement Party",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 5,45,000"
+        },
+        {
+          "candidate": "G. Jayan Moonlight Chithara",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "J. Chinchurani",
+          "party": "CPI",
+          "criminal_cases": 1,
+          "education": "10th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 114,
+      "district": "Kollam",
+      "name": "Kunnathur",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "G. Sudhakaran"
+      },
+      "udf": {
+        "party": "RSP",
+        "candidate": "K. K. Jayachandran"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Girish Kumar"
+      },
+      "others": []
+    },
+    {
+      "no": 115,
+      "district": "Kollam",
+      "name": "Kottarakkara",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. Mukesh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Adv. Raju Abraham"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "R. Ramakrishnan"
+      },
+      "others": [
+        {
+          "candidate": "Adv.P. Aisha Potty",
+          "party": "INC",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 91,25,093"
+        },
+        {
+          "candidate": "K.N. Balagopal",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 2,26,00,665"
+        }
+      ]
+    },
+    {
+      "no": 116,
+      "district": "Kollam",
+      "name": "Pathanapuram",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. U. Jeneesh Kumar"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Anilkumar"
+      },
+      "nda": {
+        "party": "BDJS",
+        "candidate": "P. Bindu"
+      },
+      "others": [
+        {
+          "candidate": "Anil Pillai",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 94,00,000"
+        },
+        {
+          "candidate": "Aneesh Kilimanoor",
+          "party": "Democratic Human Rights Movement Party",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 5,35,000"
+        },
+        {
+          "candidate": "K B Ganesh Kumar",
+          "party": "Kerala Congress (B)",
+          "criminal_cases": 1,
+          "education": "12th Pass",
+          "assets": "Rs 17,41,43,777"
+        },
+        {
+          "candidate": "Jyothish Kumar M",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Jyothi Kumar Chamakkala",
+          "party": "INC",
+          "criminal_cases": 11,
+          "education": "Graduate Professional",
+          "assets": "Rs 5,12,26,966"
+        }
+      ]
+    },
+    {
+      "no": 117,
+      "district": "Thiruvananthapuram",
+      "name": "Konni",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Adv. M. M. Mani"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Roji Abraham"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Rajasekharan"
+      },
+      "others": [
+        {
+          "candidate": "Adv Varughese Oommen",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Adv K U Jenish Kumar",
+          "party": "CPI(M)",
+          "criminal_cases": 3,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,30,45,346"
+        }
+      ]
+    },
+    {
+      "no": 118,
+      "district": "Thiruvananthapuram",
+      "name": "Attingal",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. Sasi"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "A. Sampath"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "V. Muraleedharan"
+      },
+      "others": [
+        {
+          "candidate": "Adv. P Sudheer",
+          "party": "BJP",
+          "criminal_cases": 12,
+          "education": "Graduate Professional",
+          "assets": ""
+        },
+        {
+          "candidate": "Jayarajan M",
+          "party": "Social Democratic Party Of India",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 4,19,520"
+        }
+      ]
+    },
+    {
+      "no": 119,
+      "district": "Thiruvananthapuram",
+      "name": "Varkala",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Mohan Kumar"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Chandrasekhar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "O. Rajagopal"
+      },
+      "others": [
+        {
+          "candidate": "Adv.V Joy",
+          "party": "CPI(M)",
+          "criminal_cases": 11,
+          "education": "Post Graduate",
+          "assets": "Rs 79,69,452"
+        },
+        {
+          "candidate": "Adv.Smitha Sundaresan",
+          "party": "BJP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,09,40,000"
+        },
+        {
+          "candidate": "Kannan M K",
+          "party": "IND",
+          "criminal_cases": 1,
+          "education": "Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "Harikrishnan S G",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Others",
+          "assets": "Rs 11,100"
+        }
+      ]
+    },
+    {
+      "no": 120,
+      "district": "Thiruvananthapuram",
+      "name": "Chirayinkeezhu",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "G. S. Jayalal"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Adv. M. Vincent"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. Bhaskaran"
+      },
+      "others": []
+    },
+    {
+      "no": 121,
+      "district": "Thiruvananthapuram",
+      "name": "Nedumangad",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "I. B. Satheesh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. Surendran Pillai"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Kummanam Rajasekharan"
+      },
+      "others": [
+        {
+          "candidate": "Anvar Sadath",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 15,10,000"
+        },
+        {
+          "candidate": "G R Anil",
+          "party": "CPI",
+          "criminal_cases": 1,
+          "education": "Graduate",
+          "assets": "Rs 1,74,34,480"
+        }
+      ]
+    },
+    {
+      "no": 122,
+      "district": "Thiruvananthapuram",
+      "name": "Vamanapuram",
+      "reserved": "SC",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "D. K. Murali"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "S. Krishnakumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "G. Kiran Krishnan"
+      },
+      "others": []
+    },
+    {
+      "no": 123,
+      "district": "Thiruvananthapuram",
+      "name": "Aruvikkara",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Raju"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Aryadan Mohammed"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. Suresh Babu"
+      },
+      "others": [
+        {
+          "candidate": "Adv. G. Steephen",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 70,23,107"
+        },
+        {
+          "candidate": "Adv. S. Sivakumar S/O Sadasivan",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 47,97,690"
+        }
+      ]
+    },
+    {
+      "no": 124,
+      "district": "Thiruvananthapuram",
+      "name": "Parassala",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "G. Sudhakaran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Anilkumar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "O. Rajagopal"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Gireesh Neyyar",
+          "party": "BJP",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 37,95,39,824"
+        },
+        {
+          "candidate": "Adv. Dhanuvachapuram Thankachan",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 33,75,000"
+        },
+        {
+          "candidate": "Deepumon Parassala",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "C K Hareendran",
+          "party": "CPI(M)",
+          "criminal_cases": 4,
+          "education": "12th Pass",
+          "assets": "Rs 32,97,404"
+        }
+      ]
+    },
+    {
+      "no": 125,
+      "district": "Thiruvananthapuram",
+      "name": "Kovalam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "M. Vincent"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. K. Shailaja Teacher"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Shobha Surendran"
+      },
+      "others": [
+        {
+          "candidate": "Adv.Sabu.S.Philip",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Doctorate",
+          "assets": ""
+        },
+        {
+          "candidate": "Bhagath Rufus",
+          "party": "IND",
+          "criminal_cases": 1,
+          "education": "Post Graduate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 126,
+      "district": "Thiruvananthapuram",
+      "name": "Nemom",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "A. N. Shamseer"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Muraleedharan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "O. Rajagopal"
+      },
+      "others": [
+        {
+          "candidate": "Adv K S Sabarinadhan",
+          "party": "INC",
+          "criminal_cases": 35,
+          "education": "Graduate Professional",
+          "assets": "Rs 3,93,70,929"
+        },
+        {
+          "candidate": "Sasikala",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "8th Pass",
+          "assets": "Rs 11,000"
+        },
+        {
+          "candidate": "Karamana Prasad",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "Others",
+          "assets": ""
+        },
+        {
+          "candidate": "Kamaleswaram Hari",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Others",
+          "assets": "Rs 6,167"
+        }
+      ]
+    },
+    {
+      "no": 127,
+      "district": "Thiruvananthapuram",
+      "name": "Thiruvananthapuram",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. Sivankutty"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. D. Satheesan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Rajeev Chandrasekhar"
+      },
+      "others": [
+        {
+          "candidate": "A Saboora",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 7,70,683"
+        },
+        {
+          "candidate": "Adv. Sen",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,59,85,000"
+        },
+        {
+          "candidate": "Bindhu Menon L R",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": "Rs 43,26,813"
+        },
+        {
+          "candidate": "Karthika Devi M",
+          "party": "Janam Rashtriya Party",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": ""
+        },
+        {
+          "candidate": "Karamana Jayan",
+          "party": "BJP",
+          "criminal_cases": 11,
+          "education": "12th Pass",
+          "assets": "Rs 88,49,142"
+        }
+      ]
+    },
+    {
+      "no": 128,
+      "district": "Thiruvananthapuram",
+      "name": "Kazhakkoottam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Kadakampally Surendran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Sudhakaran"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Adv. P. S. Sreedharan Pillai"
+      },
+      "others": []
+    },
+    {
+      "no": 129,
+      "district": "Thiruvananthapuram",
+      "name": "Vattiyoorkavu",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "V. K. Prasanth"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Chandrasekhar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. S. Radhakrishnan"
+      },
+      "others": [
+        {
+          "candidate": "Emil B.S.",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": ""
+        },
+        {
+          "candidate": "K. Muraleedharan",
+          "party": "INC",
+          "criminal_cases": 5,
+          "education": "Graduate",
+          "assets": "Rs 21,14,70,033"
+        }
+      ]
+    },
+    {
+      "no": 130,
+      "district": "Thiruvananthapuram",
+      "name": "Thrissur (Tvpm)",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "A. N. Shamseer"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "V. S. Achuthanandan"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Meera Bhide"
+      },
+      "others": []
+    },
+    {
+      "no": 131,
+      "district": "Thiruvananthapuram",
+      "name": "Palode",
+      "reserved": "ST",
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "C. K. Hareendran"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "S. Suresh"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "R. Prasad"
+      },
+      "others": []
+    },
+    {
+      "no": 132,
+      "district": "Thiruvananthapuram",
+      "name": "Kattakada",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "I. B. Satheesh"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Adv. A. Jayashankar"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "V. V. Rajesh"
+      },
+      "others": []
+    },
+    {
+      "no": 133,
+      "district": "Thiruvananthapuram",
+      "name": "Perumkadavila",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "K. Raju"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Bindhu Krishna"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "T. P. Senkumar"
+      },
+      "others": []
+    },
+    {
+      "no": 134,
+      "district": "Thiruvananthapuram",
+      "name": "Kilimanoor",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Jose Thettayil"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "K. Krishnankutty"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "K. S. Sabarinadhan"
+      },
+      "others": []
+    },
+    {
+      "no": 135,
+      "district": "Thiruvananthapuram",
+      "name": "Changanacherry",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "T. M. Jacob"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "K. M. Mani Jr."
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "C. K. Padmanabhan"
+      },
+      "others": []
+    },
+    {
+      "no": 136,
+      "district": "Kottayam",
+      "name": "Poonjar",
+      "reserved": "ST",
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "K. B. Joseph"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Jose K. Mani Jr."
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "M. D. Thomas"
+      },
+      "others": [
+        {
+          "candidate": "Abhiram Babu",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 40,113"
+        },
+        {
+          "candidate": "Adv.Sebastian M.J",
+          "party": "INC",
+          "criminal_cases": 2,
+          "education": "Post Graduate",
+          "assets": "Rs 11,30,82,802"
+        },
+        {
+          "candidate": "Adv. Sebastian Kulathunkal",
+          "party": "Kerala Congress (M)",
+          "criminal_cases": 2,
+          "education": "Graduate Professional",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 137,
+      "district": "Kottayam",
+      "name": "Ettumanoor",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Hibi Eden"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "P. C. George"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Thomas K. Thomas"
+      },
+      "others": [
+        {
+          "candidate": "Binoy Joseph Kulathunkal",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 10,08,100"
+        },
+        {
+          "candidate": "Athira D Nair",
+          "party": "Twenty 20 Party",
+          "criminal_cases": 0,
+          "education": "Graduate",
+          "assets": "Rs 7,23,851"
+        },
+        {
+          "candidate": "Ashna Thambi",
+          "party": "SUCI(C)",
+          "criminal_cases": 0,
+          "education": "Post Graduate",
+          "assets": "Rs 84"
+        }
+      ]
+    },
+    {
+      "no": 138,
+      "district": "Kottayam",
+      "name": "Kottayam",
+      "reserved": null,
+      "ldf": {
+        "party": "CPI(M)",
+        "candidate": "Thiruvanchoor Radhakrishnan"
+      },
+      "udf": {
+        "party": "INC",
+        "candidate": "Francis George"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "P. P. Chitharanjan"
+      },
+      "others": [
+        {
+          "candidate": "Adv.K. Anilkumar",
+          "party": "CPI(M)",
+          "criminal_cases": 0,
+          "education": "Graduate Professional",
+          "assets": "Rs 1,66,80,223"
+        },
+        {
+          "candidate": "Dr .Celine Philip",
+          "party": "AAP",
+          "criminal_cases": 0,
+          "education": "Doctorate",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 139,
+      "district": "Kottayam",
+      "name": "Puthuppally",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "Roshy Augustine"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Jose K. Mani"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Adv. Saji Mani"
+      },
+      "others": [
+        {
+          "candidate": "Adv. Chandy Oommen",
+          "party": "INC",
+          "criminal_cases": 6,
+          "education": "Post Graduate",
+          "assets": "Rs 23,21,480"
+        },
+        {
+          "candidate": "K. M. Radhakrishnan",
+          "party": "CPI(M)",
+          "criminal_cases": 1,
+          "education": "12th Pass",
+          "assets": ""
+        }
+      ]
+    },
+    {
+      "no": 140,
+      "district": "Kottayam",
+      "name": "Kaduthuruthy",
+      "reserved": null,
+      "ldf": {
+        "party": "KC(M)",
+        "candidate": "P. J. Joseph"
+      },
+      "udf": {
+        "party": "KC(J)",
+        "candidate": "Adv. Tom Jose"
+      },
+      "nda": {
+        "party": "BJP",
+        "candidate": "Willy Paithrayil"
+      },
+      "others": [
+        {
+          "candidate": "Adv.Mons Joseph",
+          "party": "Kerala Congress",
+          "criminal_cases": 2,
+          "education": "Post Graduate",
+          "assets": "Rs 2,92,34,183"
+        },
+        {
+          "candidate": "Dominic Simon",
+          "party": "AAP",
+          "criminal_cases": 1,
+          "education": "Post Graduate",
+          "assets": "Rs 8,13,58,366"
+        },
+        {
+          "candidate": "Jijith K Joy",
+          "party": "BSP",
+          "criminal_cases": 0,
+          "education": "12th Pass",
+          "assets": "Rs 92,000"
+        },
+        {
+          "candidate": "Indu",
+          "party": "IND",
+          "criminal_cases": 0,
+          "education": "10th Pass",
+          "assets": "Rs 2,37,000"
+        }
+      ]
+    }
   ],
   "celebrity_seats": [
-    { "no": 104, "name": "Aranmula",          "note": "Suresh Gopi (actor/MP) contesting for NDA" },
-    { "no": 127, "name": "Thiruvananthapuram","note": "Rajeev Chandrasekhar vs CM-backed LDF — triangular battle" },
-    { "no": 12,  "name": "Dharmadom",         "note": "Chief Minister Pinarayi Vijayan's home seat" },
-    { "no": 78,  "name": "Paravur",           "note": "Opposition leader V. D. Satheesan" },
-    { "no": 109, "name": "Kollam",            "note": "N. K. Premachandran (UDF) vs V. Muraleedharan (BJP)" },
-    { "no": 52,  "name": "Ottapalam",         "note": "Major Ravi (actor-director) contesting for BJP" },
-    { "no": 20,  "name": "Vatakara",          "note": "K. K. Rema (RMPI) — contested independent after husband's murder" },
-    { "no": 16,  "name": "Peravoor",          "note": "K. K. Shailaja (Health minister, COVID fame) LDF" }
+    {
+      "no": 104,
+      "name": "Aranmula",
+      "note": "Suresh Gopi (actor/MP) contesting for NDA"
+    },
+    {
+      "no": 127,
+      "name": "Thiruvananthapuram",
+      "note": "Rajeev Chandrasekhar vs CM-backed LDF — triangular battle"
+    },
+    {
+      "no": 12,
+      "name": "Dharmadom",
+      "note": "Chief Minister Pinarayi Vijayan's home seat"
+    },
+    {
+      "no": 78,
+      "name": "Paravur",
+      "note": "Opposition leader V. D. Satheesan"
+    },
+    {
+      "no": 109,
+      "name": "Kollam",
+      "note": "N. K. Premachandran (UDF) vs V. Muraleedharan (BJP)"
+    },
+    {
+      "no": 52,
+      "name": "Ottapalam",
+      "note": "Major Ravi (actor-director) contesting for BJP"
+    },
+    {
+      "no": 20,
+      "name": "Vatakara",
+      "note": "K. K. Rema (RMPI) — contested independent after husband's murder"
+    },
+    {
+      "no": 16,
+      "name": "Peravoor",
+      "note": "K. K. Shailaja (Health minister, COVID fame) LDF"
+    }
   ],
   "party_abbreviations": {
     "CPI(M)": "Communist Party of India (Marxist)",
-    "CPI":    "Communist Party of India",
-    "KC(M)":  "Kerala Congress (M)",
-    "INC":    "Indian National Congress",
-    "IUML":   "Indian Union Muslim League",
-    "BJP":    "Bharatiya Janata Party",
-    "BDJS":   "Bharath Dharma Jana Sena",
-    "TTP":    "Twenty20 Party",
+    "CPI": "Communist Party of India",
+    "KC(M)": "Kerala Congress (M)",
+    "INC": "Indian National Congress",
+    "IUML": "Indian Union Muslim League",
+    "BJP": "Bharatiya Janata Party",
+    "BDJS": "Bharath Dharma Jana Sena",
+    "TTP": "Twenty20 Party",
     "NCP-SP": "Nationalist Congress Party (Sharadchandra Pawar)",
-    "RJD":    "Rashtriya Janata Dal",
-    "IND":    "Independent",
-    "INL":    "Indian National League",
-    "RMPI":   "Revolutionary Marxist Party of India",
-    "RSP":    "Revolutionary Socialist Party",
-    "KC(J)":  "Kerala Congress (Joseph)",
-    "KEC":    "Kerala Congress",
-    "ISJD":   "Indian Socialist Janata Dal",
-    "Cong(S)":"Congress (Secular)"
+    "RJD": "Rashtriya Janata Dal",
+    "IND": "Independent",
+    "INL": "Indian National League",
+    "RMPI": "Revolutionary Marxist Party of India",
+    "RSP": "Revolutionary Socialist Party",
+    "KC(J)": "Kerala Congress (Joseph)",
+    "KEC": "Kerala Congress",
+    "ISJD": "Indian Socialist Janata Dal",
+    "Cong(S)": "Congress (Secular)"
   }
 }

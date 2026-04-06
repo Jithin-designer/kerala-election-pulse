@@ -5,6 +5,14 @@ export interface PartyCandidate {
   candidate: string;
 }
 
+export interface OtherCandidate {
+  candidate: string;
+  party: string;
+  criminal_cases: number;
+  education: string;
+  assets: string;
+}
+
 export interface Constituency {
   no: number;
   district: string;
@@ -13,6 +21,7 @@ export interface Constituency {
   ldf: PartyCandidate;
   udf: PartyCandidate;
   nda: PartyCandidate;
+  others: OtherCandidate[];
 }
 
 export interface CelebritySeat {
