@@ -263,15 +263,14 @@ export default function BrowsePage() {
         )}
       </div>
 
-      {/* ═══════ CONTENT ═══════ */}
+      {/* ═══════ CONTENT — vertical scroll ═══════ */}
       <main className="pb-12">
         {groupedByDistrict ? (
-          /* ── ALL DISTRICTS VIEW: horizontal scroll per district ── */
-          <div className="space-y-8">
+          /* ── ALL DISTRICTS VIEW ── */
+          <div className="space-y-10">
             {groupedByDistrict.map((group) => (
               <section key={group.district}>
-                {/* District header */}
-                <div className="flex items-center justify-between px-5 mb-3">
+                <div className="flex items-center justify-between px-5 mb-4">
                   <div>
                     <h2 className="text-white font-bold text-lg">
                       {group.district}
@@ -291,43 +290,38 @@ export default function BrowsePage() {
                   </button>
                 </div>
 
-                {/* Horizontal scroll */}
-                <div className="overflow-x-auto scrollbar-hide pl-5 pr-2">
-                  <div className="flex gap-4 pb-2 w-max">
-                    {group.constituencies.map((c, i) => {
-                      const celeb = celebSeats.find((cs) => cs.no === c.no);
-                      return (
-                        <BrowseCard
-                          key={c.no}
-                          constituency={c}
-                          index={i}
-                          isCelebrity={celebNos.has(c.no)}
-                          celebrityNote={celeb?.note}
-                        />
-                      );
-                    })}
-                  </div>
+                <div className="px-4 space-y-4">
+                  {group.constituencies.map((c, i) => {
+                    const celeb = celebSeats.find((cs) => cs.no === c.no);
+                    return (
+                      <BrowseCard
+                        key={c.no}
+                        constituency={c}
+                        index={i}
+                        isCelebrity={celebNos.has(c.no)}
+                        celebrityNote={celeb?.note}
+                      />
+                    );
+                  })}
                 </div>
               </section>
             ))}
           </div>
         ) : (
-          /* ── FILTERED VIEW: horizontal scroll for results ── */
-          <div className="overflow-x-auto scrollbar-hide pl-5 pr-2 pt-2">
-            <div className="flex gap-4 pb-4 w-max">
-              {filteredConstituencies.map((c, i) => {
-                const celeb = celebSeats.find((cs) => cs.no === c.no);
-                return (
-                  <BrowseCard
-                    key={c.no}
-                    constituency={c}
-                    index={i}
-                    isCelebrity={celebNos.has(c.no)}
-                    celebrityNote={celeb?.note}
-                  />
-                );
-              })}
-            </div>
+          /* ── FILTERED VIEW ── */
+          <div className="px-4 space-y-4 pt-2">
+            {filteredConstituencies.map((c, i) => {
+              const celeb = celebSeats.find((cs) => cs.no === c.no);
+              return (
+                <BrowseCard
+                  key={c.no}
+                  constituency={c}
+                  index={i}
+                  isCelebrity={celebNos.has(c.no)}
+                  celebrityNote={celeb?.note}
+                />
+              );
+            })}
           </div>
         )}
 
