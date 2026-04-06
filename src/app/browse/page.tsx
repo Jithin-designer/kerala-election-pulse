@@ -267,16 +267,16 @@ export default function BrowsePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{ background: "var(--theme-bg)" }}>
       {/* ── Sticky Header ── */}
-      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+      <header className="sticky top-0 z-50 backdrop-blur-xl" style={{ background: "color-mix(in srgb, var(--theme-bg) 80%, transparent)", borderBottom: "1px solid var(--theme-border)" }}>
         <div className="flex items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center gap-2 text-white/50 hover:text-white/80 transition-colors">
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium hidden sm:inline">Home</span>
           </Link>
-          <h1 className="text-white font-black text-lg tracking-tight">
-            Browse <span className="text-gold">Battles</span>
+          <h1 className="theme-text font-black text-lg tracking-tight">
+            Browse <span className="theme-accent">Battles</span>
           </h1>
           <button
             onClick={() => { setShowSearch(!showSearch); if (showSearch) setSearchQuery(""); }}

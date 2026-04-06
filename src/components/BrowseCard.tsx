@@ -46,7 +46,9 @@ function formatAssets(value: number): string {
 /* ── Chip: small info tag ── */
 function Chip({ icon, text, color }: { icon: React.ReactNode; text: string; color?: string }) {
   return (
-    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] ${color || "bg-white/[0.04] text-white/35"}`}>
+    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] ${color || "theme-text-muted"}`}
+      style={!color ? { background: "var(--theme-border)" } : undefined}
+    >
       {icon}
       {text}
     </span>
@@ -68,7 +70,7 @@ function CandidateRow({
   const fullParty = getPartyFullName(candidate.party);
 
   return (
-    <div className="py-3.5 border-b border-white/[0.04] last:border-none">
+    <div className="py-3.5 last:border-none" style={{ borderBottom: "1px solid var(--theme-border)" }}>
       <div className="flex gap-3.5">
         {/* Photo */}
         <div className={`w-16 h-16 rounded-full ring-[2.5px] ${theme.ring} shrink-0 overflow-hidden`}>
@@ -78,10 +80,10 @@ function CandidateRow({
 
         {/* Info */}
         <div className="flex-1 min-w-0">
-          <p className="text-white font-bold text-[15px] leading-tight truncate">
+          <p className="theme-text font-bold text-[15px] leading-tight truncate">
             {candidate.candidate}
             {candidate.age && (
-              <span className="text-white/30 font-normal text-xs ml-1.5">{candidate.age}y</span>
+              <span className="theme-text-muted font-normal text-xs ml-1.5">{candidate.age}y</span>
             )}
           </p>
 
@@ -90,7 +92,7 @@ function CandidateRow({
             <span className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold ${theme.pill}`}>
               {theme.label}
             </span>
-            <span className="text-white/45 text-[11px] truncate">
+            <span className="theme-text-secondary text-[11px] truncate" style={{ opacity: 0.7 }}>
               {candidate.party}{fullParty !== candidate.party ? ` · ${fullParty}` : ""}
             </span>
           </div>
@@ -130,16 +132,16 @@ function OtherCandidateRow({ candidate }: { candidate: OtherCandidate }) {
     .join("");
 
   return (
-    <div className="flex items-start gap-3 py-2.5 border-b border-white/[0.03] last:border-none">
-      <div className="w-9 h-9 rounded-full bg-white/[0.06] flex items-center justify-center text-white/30 text-xs font-bold shrink-0 mt-0.5">
+    <div className="flex items-start gap-3 py-2.5 last:border-none" style={{ borderBottom: "1px solid var(--theme-border)" }}>
+      <div className="w-9 h-9 rounded-full flex items-center justify-center theme-text-muted text-xs font-bold shrink-0 mt-0.5" style={{ background: "var(--theme-border)" }}>
         {initials}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-white/60 font-semibold text-xs truncate">
+        <p className="theme-text-secondary font-semibold text-xs truncate">
           {candidate.candidate}
-          {candidate.age && <span className="text-white/25 font-normal ml-1">{candidate.age}y</span>}
+          {candidate.age && <span className="theme-text-muted font-normal ml-1">{candidate.age}y</span>}
         </p>
-        <p className="text-white/25 text-[10px] truncate">{candidate.party}</p>
+        <p className="theme-text-muted text-[10px] truncate">{candidate.party}</p>
         <div className="flex flex-wrap gap-1 mt-1">
           {candidate.education && (
             <Chip icon={<GraduationCap className="w-2 h-2" />} text={candidate.education} />
@@ -187,13 +189,13 @@ export default function BrowseCard({ constituency, isCelebrity, celebrityNote, i
       transition={{ delay: Math.min(index * 0.03, 0.3), duration: 0.3, ease: "easeOut" }}
       className="w-full"
     >
-      <div className="rounded-[20px] overflow-hidden bg-gradient-to-b from-[#111b14] to-[#0a0a0a] border border-white/[0.08] shadow-xl">
+      <div className="theme-card overflow-hidden">
         {/* ── Header ── */}
         <div className="px-5 pt-5 pb-2">
           <div className="flex items-start justify-between">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-white text-xl font-black leading-tight">
+                <h3 className="theme-text text-xl font-black leading-tight">
                   {constituency.name}
                 </h3>
                 {isCelebrity && (
@@ -203,23 +205,23 @@ export default function BrowseCard({ constituency, isCelebrity, celebrityNote, i
                   </span>
                 )}
               </div>
-              <p className="text-white/30 text-sm flex items-center gap-1 mt-1">
+              <p className="theme-text-muted text-sm flex items-center gap-1 mt-1">
                 <MapPin className="w-3 h-3" />
                 {constituency.district}
                 {constituency.reserved && (
-                  <span className="ml-1.5 px-1.5 py-0.5 rounded text-[9px] bg-gold/10 text-gold-light border border-gold/20">
+                  <span className="ml-1.5 px-1.5 py-0.5 rounded text-[9px]" style={{ background: "var(--theme-border)", color: "var(--theme-accent)" }}>
                     {constituency.reserved}
                   </span>
                 )}
-                <span className="ml-auto text-white/15 text-[10px]">{totalCandidates} candidates</span>
+                <span className="ml-auto theme-text-muted text-[10px]">{totalCandidates} candidates</span>
               </p>
             </div>
-            <span className="text-gold/12 text-3xl font-black font-mono ml-2 select-none">
+            <span className="text-3xl font-black font-mono ml-2 select-none" style={{ color: "var(--theme-accent)", opacity: 0.12 }}>
               {String(constituency.no).padStart(3, "0")}
             </span>
           </div>
           {celebrityNote && (
-            <p className="text-gold-light/50 text-[11px] italic border-l-2 border-gold/30 pl-2 mt-2">
+            <p className="text-[11px] italic pl-2 mt-2" style={{ color: "var(--theme-accent-light)", opacity: 0.6, borderLeft: "2px solid var(--theme-accent)" }}>
               {celebrityNote}
             </p>
           )}
@@ -241,8 +243,8 @@ export default function BrowseCard({ constituency, isCelebrity, celebrityNote, i
         {othersCount > 0 && (
           <div className="px-5 pt-2 pb-1">
             <div className="flex items-center gap-2 mb-1">
-              <Users className="w-3 h-3 text-white/15" />
-              <p className="text-white/15 text-[10px] font-bold uppercase tracking-widest">
+              <Users className="w-3 h-3 theme-text-muted" />
+              <p className="theme-text-muted text-[10px] font-bold uppercase tracking-widest">
                 +{othersCount} Other{othersCount > 1 ? "s" : ""}
               </p>
             </div>
@@ -256,7 +258,8 @@ export default function BrowseCard({ constituency, isCelebrity, celebrityNote, i
         <div className="px-5 pb-4 pt-3">
           <button
             onClick={handleShare}
-            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-full bg-white/[0.04] border border-white/[0.06] text-white/40 text-xs font-semibold hover:bg-white/[0.08] hover:text-white/60 transition-all active:scale-[0.98]"
+            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-full theme-text-muted text-xs font-semibold transition-all active:scale-[0.98] cursor-pointer"
+            style={{ background: "var(--theme-border)", border: "var(--theme-card-border)" }}
           >
             <Share2 className="w-3.5 h-3.5" />
             Share
