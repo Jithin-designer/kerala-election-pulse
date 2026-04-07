@@ -50,6 +50,7 @@
   --theme-text-muted: rgba(184,176,160,0.4);
   --theme-accent: #d4a843;
   --theme-accent-light: #e8c86a;
+  --theme-accent-contrast: #060e09;
   --theme-glow: #147a52;
   --theme-card-shadow: 0 4px 24px rgba(0,0,0,0.3);
   --theme-card-radius: 20px;
@@ -70,6 +71,7 @@
   --theme-text-muted: rgba(0,0,0,0.35);
   --theme-accent: #DC2626;
   --theme-accent-light: #EF4444;
+  --theme-accent-contrast: #FFFFFF;
   --theme-glow: #DC2626;
   --theme-card-shadow: 0 1px 3px rgba(0,0,0,0.06);
   --theme-card-radius: 4px;
@@ -90,6 +92,7 @@
   --theme-text-muted: rgba(0,0,0,0.45);
   --theme-accent: #FF5252;
   --theme-accent-light: #FF8A80;
+  --theme-accent-contrast: #FFFFFF;
   --theme-glow: #2196F3;
   --theme-card-shadow: 5px 5px 0px #000000;
   --theme-card-radius: 0px;

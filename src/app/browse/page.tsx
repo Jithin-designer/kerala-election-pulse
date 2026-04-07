@@ -305,24 +305,6 @@ export default function BrowsePage() {
           )}
         </AnimatePresence>
 
-        {/* ── Tabs ── */}
-        <div className="px-4 pb-2 flex gap-1">
-          {TABS.map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => { setActiveTab(tab.key); clearFilters(); }}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold transition-all ${
-                activeTab === tab.key
-                  ? "bg-gold text-black shadow-lg shadow-gold/20"
-                  : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
-              }`}
-            >
-              {tab.icon}
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
         {/* District filter (only for constituencies tab) */}
         {activeTab === "constituencies" && (
           <div className="px-4 pb-3 overflow-x-auto scrollbar-hide">
@@ -397,7 +379,7 @@ export default function BrowsePage() {
       )}
 
       {/* ═══════ CONTENT ═══════ */}
-      <main className="pb-12">
+      <main className="pb-32">
 
         {/* ── TAB: Constituencies ── */}
         {activeTab === "constituencies" && (
@@ -513,6 +495,49 @@ export default function BrowsePage() {
           </div>
         )}
       </main>
+
+      {/* ═══════ Pinned Bottom Nav Tabs ═══════ */}
+      <nav
+        className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-xl"
+        style={{
+          background: "color-mix(in srgb, var(--theme-bg) 90%, transparent)",
+          borderTop: "1px solid var(--theme-border)",
+          paddingBottom: "env(safe-area-inset-bottom)",
+        }}
+      >
+        <div className="flex items-center justify-around max-w-2xl mx-auto px-2 py-2">
+          {TABS.map((tab) => {
+            const isActive = activeTab === tab.key;
+            return (
+              <button
+                key={tab.key}
+                onClick={() => {
+                  setActiveTab(tab.key);
+                  clearFilters();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer"
+                style={{
+                  color: isActive ? "var(--theme-accent)" : "var(--theme-text-muted)",
+                }}
+              >
+                <div
+                  className="flex items-center justify-center w-9 h-9 rounded-full transition-all"
+                  style={{
+                    background: isActive ? "var(--theme-accent)" : "transparent",
+                    color: isActive ? "var(--theme-accent-contrast)" : "var(--theme-text-muted)",
+                  }}
+                >
+                  {tab.icon}
+                </div>
+                <span className="text-[10px] font-bold tracking-wide">
+                  {tab.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </nav>
     </div>
   );
 }
