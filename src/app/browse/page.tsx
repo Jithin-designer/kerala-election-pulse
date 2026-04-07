@@ -27,7 +27,9 @@ import {
 } from "@/lib/data";
 import BrowseCard from "@/components/BrowseCard";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
-import ConstituencyDetailModal from "@/components/ConstituencyDetailModal";
+import CandidateDetailModal, {
+  type DetailCandidate,
+} from "@/components/CandidateDetailModal";
 
 /* ── Tab types ── */
 type Tab = "constituencies" | "cases" | "networth" | "party";
@@ -193,7 +195,7 @@ export default function BrowsePage() {
   const [selectedConstituency, setSelectedConstituency] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
-  const [detailConstituency, setDetailConstituency] = useState<Constituency | null>(null);
+  const [detailCandidate, setDetailCandidate] = useState<DetailCandidate | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const districts = getAllDistricts();
@@ -409,7 +411,7 @@ export default function BrowsePage() {
                     <div className="px-4 space-y-4">
                       {group.constituencies.map((c, i) => {
                         const celeb = celebSeats.find((cs) => cs.no === c.no);
-                        return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onOpenDetail={setDetailConstituency} />;
+                        return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onCandidateClick={setDetailCandidate} />;
                       })}
                     </div>
                   </section>
@@ -419,7 +421,7 @@ export default function BrowsePage() {
               <div className="px-4 space-y-4 pt-2">
                 {filteredConstituencies.map((c, i) => {
                   const celeb = celebSeats.find((cs) => cs.no === c.no);
-                  return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onOpenDetail={setDetailConstituency} />;
+                  return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onCandidateClick={setDetailCandidate} />;
                 })}
               </div>
             )}
@@ -546,16 +548,10 @@ export default function BrowsePage() {
         </div>
       </nav>
 
-      {/* ── Constituency Detail Modal ── */}
-      <ConstituencyDetailModal
-        constituency={detailConstituency}
-        isCelebrity={detailConstituency ? celebNos.has(detailConstituency.no) : false}
-        celebrityNote={
-          detailConstituency
-            ? celebSeats.find((cs) => cs.no === detailConstituency.no)?.note
-            : undefined
-        }
-        onClose={() => setDetailConstituency(null)}
+      {/* ── Candidate Detail Modal ── */}
+      <CandidateDetailModal
+        candidate={detailCandidate}
+        onClose={() => setDetailCandidate(null)}
       />
     </div>
   );

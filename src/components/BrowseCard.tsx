@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Flame, Users, ChevronRight } from "lucide-react";
+import { MapPin, Flame, Users } from "lucide-react";
 import type { Constituency, OtherCandidate, PartyCandidate } from "@/lib/data";
 import { getPartyFullName } from "@/lib/data";
 import { getCandidatePhoto } from "@/lib/candidateImages";
 import Tag from "./Tag";
+import type { DetailCandidate } from "./CandidateDetailModal";
 
 const ALLIANCE = {
   ldf: { label: "LDF", color: "#dc2626", pill: "bg-red-500/90 text-white" },
@@ -26,20 +27,44 @@ function CandidateRow({
   candidate,
   alliance,
   constituencyName,
+  constituencyNo,
+  district,
   isWinner,
+  onClick,
 }: {
   candidate: PartyCandidate;
   alliance: "ldf" | "udf" | "nda";
   constituencyName: string;
+  constituencyNo: number;
+  district: string;
   isWinner?: boolean;
+  onClick?: (c: DetailCandidate) => void;
 }) {
   const theme = ALLIANCE[alliance];
   const photo = getCandidatePhoto(candidate.candidate, constituencyName, theme.color);
   const fullParty = getPartyFullName(candidate.party);
 
+  function handleClick() {
+    onClick?.({
+      name: candidate.candidate,
+      party: candidate.party,
+      alliance,
+      constituency: constituencyName,
+      constituencyNo,
+      district,
+      age: candidate.age,
+      education: candidate.education,
+      profession: candidate.profession,
+      assets: candidate.assets,
+      assets_value: candidate.assets_value,
+      criminal_cases: candidate.criminal_cases,
+    });
+  }
+
   return (
-    <div
-      className="py-3.5 last:border-none"
+    <button
+      onClick={handleClick}
+      className="w-full py-3.5 last:border-none text-left cursor-pointer transition-colors hover:opacity-90"
       style={{ borderBottom: "1px solid var(--theme-border)" }}
     >
       <div className="flex gap-3.5">
@@ -100,12 +125,24 @@ function CandidateRow({
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 
 /* ── Other candidate row ── */
-function OtherCandidateRow({ candidate }: { candidate: OtherCandidate }) {
+function OtherCandidateRow({
+  candidate,
+  constituencyName,
+  constituencyNo,
+  district,
+  onClick,
+}: {
+  candidate: OtherCandidate;
+  constituencyName: string;
+  constituencyNo: number;
+  district: string;
+  onClick?: (c: DetailCandidate) => void;
+}) {
   const initials = candidate.candidate
     .split(" ")
     .map((w) => w[0])
@@ -113,9 +150,27 @@ function OtherCandidateRow({ candidate }: { candidate: OtherCandidate }) {
     .slice(0, 2)
     .join("");
 
+  function handleClick() {
+    onClick?.({
+      name: candidate.candidate,
+      party: candidate.party,
+      alliance: "oth",
+      constituency: constituencyName,
+      constituencyNo,
+      district,
+      age: candidate.age,
+      education: candidate.education,
+      profession: candidate.profession,
+      assets: candidate.assets,
+      assets_value: candidate.assets_value,
+      criminal_cases: candidate.criminal_cases,
+    });
+  }
+
   return (
-    <div
-      className="flex items-start gap-3 py-2.5 last:border-none"
+    <button
+      onClick={handleClick}
+      className="w-full flex items-start gap-3 py-2.5 last:border-none text-left cursor-pointer transition-colors hover:opacity-90"
       style={{ borderBottom: "1px solid var(--theme-border)" }}
     >
       <div
@@ -145,7 +200,7 @@ function OtherCandidateRow({ candidate }: { candidate: OtherCandidate }) {
           )}
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 
@@ -154,7 +209,7 @@ interface Props {
   isCelebrity?: boolean;
   celebrityNote?: string;
   index: number;
-  onOpenDetail?: (c: Constituency) => void;
+  onCandidateClick?: (c: DetailCandidate) => void;
 }
 
 export default function BrowseCard({
@@ -162,7 +217,7 @@ export default function BrowseCard({
   isCelebrity,
   celebrityNote,
   index,
-  onOpenDetail,
+  onCandidateClick,
 }: Props) {
   const [showOthers, setShowOthers] = useState(false);
   const othersCount = constituency.others?.length ?? 0;
@@ -179,10 +234,7 @@ export default function BrowseCard({
       }}
       className="w-full"
     >
-      <div
-        className="theme-card overflow-hidden cursor-pointer transition-transform hover:scale-[1.01] active:scale-[0.99]"
-        onClick={() => onOpenDetail?.(constituency)}
-      >
+      <div className="theme-card overflow-hidden">
         {/* ═══════ Header — everything LEFT-aligned ═══════ */}
         <div className="px-5 pt-5 pb-3">
           <div className="flex items-center gap-2 flex-wrap">
@@ -251,18 +303,18 @@ export default function BrowseCard({
               candidate={constituency[a]}
               alliance={a}
               constituencyName={constituency.name}
+              constituencyNo={constituency.no}
+              district={constituency.district}
+              onClick={onCandidateClick}
             />
           ))}
         </div>
 
-        {/* ═══════ Bottom row: +X OTHERS + View More ═══════ */}
-        <div className="px-5 pt-1 pb-4 flex items-center justify-between gap-3">
-          {othersCount > 0 ? (
+        {/* ═══════ +X OTHERS toggle ═══════ */}
+        {othersCount > 0 && (
+          <div className="px-5 pt-1 pb-4">
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowOthers(!showOthers);
-              }}
+              onClick={() => setShowOthers(!showOthers)}
               className="theme-text-muted text-[11px] font-semibold tracking-wider uppercase hover:underline cursor-pointer transition-opacity"
             >
               {showOthers ? (
@@ -271,25 +323,10 @@ export default function BrowseCard({
                 <span>+ {othersCount} OTHER{othersCount > 1 ? "S" : ""}</span>
               )}
             </button>
-          ) : (
-            <span />
-          )}
+          </div>
+        )}
 
-          {/* View More link → opens detail modal */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onOpenDetail?.(constituency);
-            }}
-            className="theme-text-muted text-[11px] font-semibold tracking-wider uppercase hover:underline cursor-pointer flex items-center gap-0.5"
-            style={{ color: "var(--theme-accent)", opacity: 0.7 }}
-          >
-            VIEW MORE
-            <ChevronRight className="w-3 h-3" />
-          </button>
-        </div>
-
-        {/* Expanded others list (inline) */}
+        {/* Expanded others list */}
         <AnimatePresence>
           {showOthers && othersCount > 0 && (
             <motion.div
@@ -306,7 +343,14 @@ export default function BrowseCard({
                   </p>
                 </div>
                 {constituency.others.map((o, i) => (
-                  <OtherCandidateRow key={i} candidate={o} />
+                  <OtherCandidateRow
+                    key={i}
+                    candidate={o}
+                    constituencyName={constituency.name}
+                    constituencyNo={constituency.no}
+                    district={constituency.district}
+                    onClick={onCandidateClick}
+                  />
                 ))}
               </div>
             </motion.div>
