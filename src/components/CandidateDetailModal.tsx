@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import * as htmlToImage from "html-to-image";
 import {
   X,
   MapPin,
@@ -12,6 +13,7 @@ import {
   AlertTriangle,
   Calendar,
   Vote,
+  Loader2,
 } from "lucide-react";
 import { getPartyFullName } from "@/lib/data";
 import { getCandidatePhoto } from "@/lib/candidateImages";
@@ -85,6 +87,9 @@ interface Props {
 }
 
 export default function CandidateDetailModal({ candidate, onClose }: Props) {
+  const shareableRef = useRef<HTMLDivElement>(null);
+  const [sharing, setSharing] = useState(false);
+
   // Lock body scroll
   useEffect(() => {
     if (candidate) {
@@ -110,16 +115,49 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
   const photo = getCandidatePhoto(candidate.name, candidate.constituency, theme.color);
   const fullParty = getPartyFullName(candidate.party);
 
-  function handleShare() {
-    if (!candidate) return;
-    const text = `${candidate.name} (${candidate.age || "?"})\n${candidate.party} · ${candidate.alliance.toUpperCase()}\nContesting from ${candidate.constituency}, ${candidate.district}\n\n📚 ${candidate.education || "—"}\n💼 ${candidate.profession || "—"}\n💰 Net Worth: ${formatAssets(candidate.assets_value, candidate.assets)}\n⚖️ Criminal Cases: ${candidate.criminal_cases}\n\n#KeralaElection2026 #ElectionPulse`;
-    if (navigator.share) {
-      navigator.share({
-        title: `${candidate.name} — Kerala 2026`,
-        text,
+  async function handleShare() {
+    if (!candidate || !shareableRef.current) return;
+    setSharing(true);
+
+    try {
+      // Capture the shareable card as PNG
+      const dataUrl = await htmlToImage.toPng(shareableRef.current, {
+        quality: 1,
+        pixelRatio: 2,
+        cacheBust: true,
+        backgroundColor: "#0a0a0a",
       });
-    } else {
-      navigator.clipboard.writeText(text);
+
+      // Convert dataUrl → Blob → File
+      const blob = await (await fetch(dataUrl)).blob();
+      const file = new File([blob], `${candidate.name.replace(/\s+/g, "-")}-kerala2026.png`, {
+        type: "image/png",
+      });
+
+      const shareData: ShareData = {
+        title: `${candidate.name} — Kerala 2026`,
+        text: `${candidate.name} · ${candidate.party} · ${candidate.constituency}\n#KeralaElection2026`,
+        files: [file],
+      };
+
+      // Try native share with file
+      if (navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
+      } else if (navigator.share) {
+        // Fallback: text-only share
+        await navigator.share({ title: shareData.title, text: shareData.text });
+      } else {
+        // Final fallback: download the PNG
+        const link = document.createElement("a");
+        link.download = file.name;
+        link.href = dataUrl;
+        link.click();
+      }
+    } catch (err) {
+      // User cancelled or share failed — silently ignore
+      console.warn("Share failed:", err);
+    } finally {
+      setSharing(false);
     }
   }
 
@@ -294,19 +332,217 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
               >
                 <button
                   onClick={handleShare}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full font-bold text-sm cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-transform"
+                  disabled={sharing}
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-full font-bold text-sm cursor-pointer hover:scale-[1.02] active:scale-[0.98] transition-transform disabled:opacity-70 disabled:cursor-wait"
                   style={{
                     background: theme.color,
                     color: "#FFFFFF",
                     boxShadow: `0 4px 16px ${theme.color}40`,
                   }}
                 >
-                  <Share2 className="w-4 h-4" />
-                  Share {candidate.name.split(" ")[0]}&apos;s Profile
+                  {sharing ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Generating image…
+                    </>
+                  ) : (
+                    <>
+                      <Share2 className="w-4 h-4" />
+                      Share {candidate.name.split(" ")[0]}&apos;s Profile
+                    </>
+                  )}
                 </button>
               </div>
             </div>
           </motion.div>
+
+          {/* ═══════ Off-screen shareable card (for image capture) ═══════ */}
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: "-9999px",
+              pointerEvents: "none",
+            }}
+            aria-hidden="true"
+          >
+            <div
+              ref={shareableRef}
+              style={{
+                width: "1080px",
+                background: "linear-gradient(160deg, #0a0a0a 0%, #111b14 100%)",
+                color: "#f5f0e8",
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                padding: "60px 50px",
+              }}
+            >
+              {/* Brand header */}
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "40px" }}>
+                <div
+                  style={{
+                    width: "44px",
+                    height: "44px",
+                    borderRadius: "12px",
+                    background: "#d4a843",
+                    color: "#060e09",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "24px",
+                    fontWeight: 900,
+                  }}
+                >
+                  K
+                </div>
+                <div>
+                  <p style={{ fontSize: "11px", letterSpacing: "0.2em", color: "rgba(255,255,255,0.4)", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>
+                    Kerala Election Pulse
+                  </p>
+                  <p style={{ fontSize: "16px", color: "#d4a843", fontWeight: 700, margin: 0 }}>
+                    Assembly Elections 2026
+                  </p>
+                </div>
+                <div style={{ marginLeft: "auto", padding: "8px 16px", borderRadius: "999px", background: theme.color, color: "#fff", fontSize: "14px", fontWeight: 900, letterSpacing: "0.1em" }}>
+                  {theme.label}
+                </div>
+              </div>
+
+              {/* Photo + name */}
+              <div style={{ display: "flex", gap: "30px", alignItems: "center", marginBottom: "40px" }}>
+                <div
+                  style={{
+                    width: "200px",
+                    height: "200px",
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    flexShrink: 0,
+                    boxShadow: `0 0 0 8px ${theme.color}25, 0 12px 40px ${theme.color}55`,
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={photo.src}
+                    alt={candidate.name}
+                    crossOrigin="anonymous"
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <h1 style={{ fontSize: "56px", fontWeight: 900, lineHeight: 1.05, margin: 0, color: "#fff" }}>
+                    {candidate.name}
+                  </h1>
+                  {candidate.age && (
+                    <p style={{ fontSize: "20px", color: "rgba(255,255,255,0.5)", margin: "8px 0 0 0" }}>
+                      {candidate.age} years old
+                    </p>
+                  )}
+                  <div style={{ marginTop: "16px", display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+                    <span style={{ fontSize: "20px", color: "#fff", fontWeight: 600 }}>{candidate.party}</span>
+                    {fullParty !== candidate.party && (
+                      <span style={{ fontSize: "16px", color: "rgba(255,255,255,0.4)" }}>· {fullParty}</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Constituency banner */}
+              <div
+                style={{
+                  padding: "18px 24px",
+                  borderRadius: "16px",
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  marginBottom: "30px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                }}
+              >
+                <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.15em" }}>
+                  Contesting from
+                </div>
+                <div style={{ fontSize: "24px", color: "#fff", fontWeight: 800 }}>
+                  {candidate.constituency}
+                </div>
+                <div style={{ fontSize: "16px", color: "rgba(255,255,255,0.5)" }}>
+                  · {candidate.district}
+                </div>
+                <div style={{ marginLeft: "auto", fontSize: "20px", fontWeight: 900, fontFamily: "monospace", color: "#d4a843", opacity: 0.7 }}>
+                  #{String(candidate.constituencyNo).padStart(3, "0")}
+                </div>
+              </div>
+
+              {/* Stats grid */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "30px" }}>
+                <div style={{ padding: "24px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px" }}>
+                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+                    Education
+                  </p>
+                  <p style={{ fontSize: "20px", color: "#fff", fontWeight: 700, marginTop: "8px", marginBottom: 0 }}>
+                    {candidate.education || "Not declared"}
+                  </p>
+                </div>
+                <div style={{ padding: "24px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px" }}>
+                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+                    Profession
+                  </p>
+                  <p style={{ fontSize: "20px", color: "#fff", fontWeight: 700, marginTop: "8px", marginBottom: 0 }}>
+                    {candidate.profession || "Not declared"}
+                  </p>
+                </div>
+                <div style={{ padding: "24px", background: "rgba(212,168,67,0.08)", border: "1px solid rgba(212,168,67,0.2)", borderRadius: "20px" }}>
+                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+                    Net Worth
+                  </p>
+                  <p style={{ fontSize: "26px", color: "#d4a843", fontWeight: 800, marginTop: "8px", marginBottom: 0 }}>
+                    {formatAssets(candidate.assets_value, candidate.assets)}
+                  </p>
+                </div>
+                <div
+                  style={{
+                    padding: "24px",
+                    background: candidate.criminal_cases > 0 ? "rgba(220,38,38,0.1)" : "rgba(5,150,105,0.1)",
+                    border: `1px solid ${candidate.criminal_cases > 0 ? "rgba(220,38,38,0.25)" : "rgba(5,150,105,0.25)"}`,
+                    borderRadius: "20px",
+                  }}
+                >
+                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+                    Criminal Cases
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "26px",
+                      color: candidate.criminal_cases > 0 ? "#dc2626" : "#059669",
+                      fontWeight: 800,
+                      marginTop: "8px",
+                      marginBottom: 0,
+                    }}
+                  >
+                    {candidate.criminal_cases > 0 ? `${candidate.criminal_cases} pending` : "Clean record"}
+                  </p>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div
+                style={{
+                  marginTop: "40px",
+                  paddingTop: "24px",
+                  borderTop: "1px solid rgba(255,255,255,0.08)",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", margin: 0 }}>
+                  Data: MyNeta.info · Election Commission of India
+                </p>
+                <p style={{ fontSize: "13px", color: "#d4a843", fontWeight: 700, margin: 0 }}>
+                  kerala-election-pulse.vercel.app
+                </p>
+              </div>
+            </div>
+          </div>
         </>
       )}
     </AnimatePresence>
