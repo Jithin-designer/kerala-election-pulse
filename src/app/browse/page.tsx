@@ -31,6 +31,7 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import CandidateDetailModal, {
   type DetailCandidate,
 } from "@/components/CandidateDetailModal";
+import ConstituencyShareCard from "@/components/ConstituencyShareCard";
 
 /* ── Tab types ── */
 type Tab = "constituencies" | "cases" | "networth" | "party";
@@ -140,6 +141,47 @@ function LeaderboardRow({
   );
 }
 
+/* ── Party filter strip used at top of Cases / Net Worth tabs ── */
+function PartyFilterStrip({
+  parties,
+  selected,
+  onSelect,
+}: {
+  parties: [string, number][];
+  selected: string | null;
+  onSelect: (p: string | null) => void;
+}) {
+  return (
+    <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 mb-3">
+      <div className="flex gap-1.5 w-max">
+        <button
+          onClick={() => onSelect(null)}
+          className={`px-3.5 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
+            selected === null ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
+          }`}
+        >
+          All parties
+        </button>
+        {parties.map(([party, count]) => {
+          const active = selected === party;
+          return (
+            <button
+              key={party}
+              onClick={() => onSelect(active ? null : party)}
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
+                active ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
+              }`}
+            >
+              {party}
+              <span className={`text-[10px] ${active ? "text-white/50" : "text-white/20"}`}>{count}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 /* ── Party Card ── */
 function PartySection({
   party,
@@ -208,6 +250,8 @@ function BrowsePageInner() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [detailCandidate, setDetailCandidate] = useState<DetailCandidate | null>(null);
+  const [shareConstituency, setShareConstituency] = useState<Constituency | null>(null);
+  const [partyFilter, setPartyFilter] = useState<string | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const districts = getAllDistricts();
@@ -242,14 +286,36 @@ function BrowsePageInner() {
     }));
   }, [selectedDistrict, searchQuery, districts]);
 
-  // Leaderboards
-  const casesLeaderboard = useMemo(
-    () => allCandidates.filter((c) => c.criminal_cases > 0).sort((a, b) => b.criminal_cases - a.criminal_cases).slice(0, 20),
+  // Leaderboards (full unfiltered, used for party-option lists)
+  const casesAll = useMemo(
+    () => allCandidates.filter((c) => c.criminal_cases > 0).sort((a, b) => b.criminal_cases - a.criminal_cases),
     [allCandidates]
   );
-  const networthLeaderboard = useMemo(
-    () => allCandidates.filter((c) => c.assets_value > 0).sort((a, b) => b.assets_value - a.assets_value).slice(0, 20),
+  const networthAll = useMemo(
+    () => allCandidates.filter((c) => c.assets_value > 0).sort((a, b) => b.assets_value - a.assets_value),
     [allCandidates]
+  );
+
+  // Party options per leaderboard tab — only parties that have at least one entry
+  const casesParties = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const c of casesAll) m.set(c.party, (m.get(c.party) ?? 0) + 1);
+    return Array.from(m.entries()).sort((a, b) => b[1] - a[1]);
+  }, [casesAll]);
+  const networthParties = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const c of networthAll) m.set(c.party, (m.get(c.party) ?? 0) + 1);
+    return Array.from(m.entries()).sort((a, b) => b[1] - a[1]);
+  }, [networthAll]);
+
+  // Filtered leaderboards (apply party filter, then top-20)
+  const casesLeaderboard = useMemo(
+    () => (partyFilter ? casesAll.filter((c) => c.party === partyFilter) : casesAll).slice(0, 20),
+    [casesAll, partyFilter]
+  );
+  const networthLeaderboard = useMemo(
+    () => (partyFilter ? networthAll.filter((c) => c.party === partyFilter) : networthAll).slice(0, 20),
+    [networthAll, partyFilter]
   );
 
   // Party grouping
@@ -272,6 +338,7 @@ function BrowsePageInner() {
     setSelectedConstituency(null);
     setSearchQuery("");
     setShowSearch(false);
+    setPartyFilter(null);
   }
 
   const hasActiveFilter = selectedDistrict || selectedConstituency || searchQuery;
@@ -423,7 +490,7 @@ function BrowsePageInner() {
                     <div className="px-4 space-y-4">
                       {group.constituencies.map((c, i) => {
                         const celeb = celebSeats.find((cs) => cs.no === c.no);
-                        return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onCandidateClick={setDetailCandidate} />;
+                        return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onCandidateClick={setDetailCandidate} onShare={setShareConstituency} />;
                       })}
                     </div>
                   </section>
@@ -433,7 +500,7 @@ function BrowsePageInner() {
               <div className="px-4 space-y-4 pt-2">
                 {filteredConstituencies.map((c, i) => {
                   const celeb = celebSeats.find((cs) => cs.no === c.no);
-                  return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onCandidateClick={setDetailCandidate} />;
+                  return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onCandidateClick={setDetailCandidate} onShare={setShareConstituency} />;
                 })}
               </div>
             )}
@@ -453,9 +520,12 @@ function BrowsePageInner() {
               <AlertTriangle className="w-5 h-5 text-red-400" />
               <div>
                 <h2 className="text-white font-bold text-lg">Cases Leaderboard</h2>
-                <p className="text-white/25 text-xs">Candidates with most pending criminal cases</p>
+                <p className="text-white/25 text-xs">
+                  {partyFilter ? `${partyFilter} candidates` : "Candidates with most pending criminal cases"}
+                </p>
               </div>
             </div>
+            <PartyFilterStrip parties={casesParties} selected={partyFilter} onSelect={setPartyFilter} />
             <div className="rounded-2xl bg-white/[0.03] border border-white/[0.06] overflow-hidden px-3">
               {casesLeaderboard.map((c, i) => (
                 <LeaderboardRow
@@ -480,9 +550,12 @@ function BrowsePageInner() {
               <IndianRupee className="w-5 h-5 text-emerald-glow" />
               <div>
                 <h2 className="text-white font-bold text-lg">Net Worth Leaderboard</h2>
-                <p className="text-white/25 text-xs">Wealthiest candidates by declared assets</p>
+                <p className="text-white/25 text-xs">
+                  {partyFilter ? `${partyFilter} candidates` : "Wealthiest candidates by declared assets"}
+                </p>
               </div>
             </div>
+            <PartyFilterStrip parties={networthParties} selected={partyFilter} onSelect={setPartyFilter} />
             <div className="rounded-2xl bg-white/[0.03] border border-white/[0.06] overflow-hidden px-3">
               {networthLeaderboard.map((c, i) => (
                 <LeaderboardRow
@@ -564,6 +637,12 @@ function BrowsePageInner() {
       <CandidateDetailModal
         candidate={detailCandidate}
         onClose={() => setDetailCandidate(null)}
+      />
+
+      {/* ── Constituency share controller (off-screen capture + native share) ── */}
+      <ConstituencyShareCard
+        constituency={shareConstituency}
+        onDone={() => setShareConstituency(null)}
       />
     </div>
   );

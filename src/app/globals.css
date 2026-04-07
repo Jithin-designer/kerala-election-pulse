@@ -38,23 +38,24 @@
 
 /* ═══════════════════════════════════════════════════
    THEME 1: Emerald Night (default / dark)
+   Contrast tightened for older / low-vision users (WCAG AA+).
    ═══════════════════════════════════════════════════ */
 [data-theme="emerald"],
 :root {
   --theme-bg: #060e09;
   --theme-surface: #111b14;
   --theme-surface-hover: #1a2b1e;
-  --theme-border: rgba(255,255,255,0.08);
-  --theme-text: #f5f0e8;
-  --theme-text-secondary: #b8b0a0;
-  --theme-text-muted: rgba(184,176,160,0.4);
-  --theme-accent: #d4a843;
-  --theme-accent-light: #e8c86a;
+  --theme-border: rgba(255,255,255,0.12);
+  --theme-text: #ffffff;
+  --theme-text-secondary: #e6dfd0;
+  --theme-text-muted: rgba(245,240,232,0.72);
+  --theme-accent: #f5c547;
+  --theme-accent-light: #ffda6e;
   --theme-accent-contrast: #060e09;
   --theme-glow: #147a52;
   --theme-card-shadow: 0 4px 24px rgba(0,0,0,0.3);
   --theme-card-radius: 20px;
-  --theme-card-border: 1px solid rgba(255,255,255,0.08);
+  --theme-card-border: 1px solid rgba(255,255,255,0.12);
   color-scheme: dark;
 }
 
@@ -69,18 +70,18 @@
 [data-theme="fluent"] {
   --theme-bg: #f5f5f5;
   --theme-surface: #ffffff;
-  --theme-surface-hover: #f3f2f1;
-  --theme-border: #e1dfdd;
-  --theme-text: #242424;
-  --theme-text-secondary: #616161;
-  --theme-text-muted: #8a8886;
-  --theme-accent: #6264a7;
-  --theme-accent-light: #7b7eb4;
+  --theme-surface-hover: #f0eff0;
+  --theme-border: #c8c6c4;
+  --theme-text: #1b1b1b;
+  --theme-text-secondary: #3b3a39;
+  --theme-text-muted: #595959;
+  --theme-accent: #4e51a0;
+  --theme-accent-light: #6264a7;
   --theme-accent-contrast: #ffffff;
-  --theme-glow: #6264a7;
-  --theme-card-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.08);
+  --theme-glow: #4e51a0;
+  --theme-card-shadow: 0 2px 4px rgba(0,0,0,0.10), 0 0 2px rgba(0,0,0,0.12);
   --theme-card-radius: 4px;
-  --theme-card-border: 1px solid #e1dfdd;
+  --theme-card-border: 1px solid #c8c6c4;
   color-scheme: light;
   font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
 }
@@ -88,12 +89,58 @@
   font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* ── Base ── */
+/* ════════════════════════════════════════════════════════════
+   ACCESSIBILITY BASE
+   Mobile-first, optimized for older / low-vision readers.
+   ──────────────────────────────────────────────────────────── */
+html {
+  /* Global rem scale: bumps every rem-based size by 25%.
+     Tailwind tokens are rem-based → entire UI scales up. */
+  font-size: 125%;
+  /* Prevent iOS Safari from auto-shrinking text in landscape */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
   background-color: var(--theme-bg);
   color: var(--theme-text);
+  /* Heavier baseline weight for readability */
+  font-weight: 500;
+  /* Improved hinting on macOS / iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Pixel-literal text overrides — enforce a 14px floor ── */
+.text-\[9px\]   { font-size: 14px !important; font-weight: 700 !important; }
+.text-\[10px\]  { font-size: 14px !important; font-weight: 700 !important; }
+.text-\[11px\]  { font-size: 14px !important; font-weight: 600 !important; }
+.text-\[12px\]  { font-size: 15px !important; font-weight: 600 !important; }
+.text-\[13px\]  { font-size: 15px !important; font-weight: 600 !important; }
+.text-\[14px\]  { font-size: 15px !important; }
+.text-\[15px\]  { font-size: 16px !important; }
+
+/* ── Bump tiny Tailwind sizes a notch heavier for legibility ── */
+.text-xs    { font-weight: 600; }
+.text-\[10px\],
+.text-\[11px\],
+.text-\[12px\] { letter-spacing: 0.005em; }
+
+/* ── Touch targets: WCAG 2.5.5 minimum 44x44 CSS px ──
+   Only enlarge actual <button> elements — leave decorative
+   div avatars (e.g. candidate initials) at their original size. */
+button.w-9.h-9 { min-width: 44px !important; min-height: 44px !important; width: 44px !important; height: 44px !important; }
+button.w-8.h-8 { min-width: 44px !important; min-height: 44px !important; width: 44px !important; height: 44px !important; }
+
+/* All <button> elements should be tappable — minimum 44px tall on mobile.
+   Exception: leaderboard rows already exceed 44 via row padding. */
+@media (max-width: 768px) {
+  button:not(.no-min-target) {
+    min-height: 44px;
+  }
 }
 
 /* ── Theme-aware card ── */

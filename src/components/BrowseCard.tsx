@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Flame, Users } from "lucide-react";
+import { MapPin, Flame, Users, Share2 } from "lucide-react";
 import type { Constituency, OtherCandidate, PartyCandidate } from "@/lib/data";
 import { getPartyFullName } from "@/lib/data";
 import { getCandidatePhoto } from "@/lib/candidateImages";
@@ -210,6 +210,7 @@ interface Props {
   celebrityNote?: string;
   index: number;
   onCandidateClick?: (c: DetailCandidate) => void;
+  onShare?: (c: Constituency) => void;
 }
 
 export default function BrowseCard({
@@ -218,6 +219,7 @@ export default function BrowseCard({
   celebrityNote,
   index,
   onCandidateClick,
+  onShare,
 }: Props) {
   const [showOthers, setShowOthers] = useState(false);
   const othersCount = constituency.others?.length ?? 0;
@@ -235,21 +237,22 @@ export default function BrowseCard({
       className="w-full"
     >
       <div className="theme-card overflow-hidden">
-        {/* ═══════ Header — everything LEFT-aligned ═══════ */}
-        <div className="px-5 pt-5 pb-3">
-          <div className="flex items-center gap-2 flex-wrap">
-            <h3 className="theme-text text-xl font-black leading-tight">
-              {constituency.name}
-            </h3>
-            {isCelebrity && (
-              <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-pink-500/20 to-orange-400/20 border border-pink-500/30">
-                <Flame className="w-3 h-3 text-orange-400" />
-                <span className="text-orange-300 text-[10px] font-bold tracking-wider">
-                  HOT
+        {/* ═══════ Header — name LEFT, share button RIGHT ═══════ */}
+        <div className="px-5 pt-5 pb-3 flex items-start gap-3">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h3 className="theme-text text-xl font-black leading-tight">
+                {constituency.name}
+              </h3>
+              {isCelebrity && (
+                <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-pink-500/20 to-orange-400/20 border border-pink-500/30">
+                  <Flame className="w-3 h-3 text-orange-400" />
+                  <span className="text-orange-300 text-[10px] font-bold tracking-wider">
+                    HOT
+                  </span>
                 </span>
-              </span>
-            )}
-          </div>
+              )}
+            </div>
 
           {/* Constituency number + count grouped under name */}
           <div className="flex items-center gap-2 mt-1.5">
@@ -281,17 +284,37 @@ export default function BrowseCard({
             </span>
           </div>
 
-          {celebrityNote && (
-            <p
-              className="text-[11px] italic pl-2 mt-2"
-              style={{
-                color: "var(--theme-accent-light)",
-                opacity: 0.6,
-                borderLeft: "2px solid var(--theme-accent)",
+            {celebrityNote && (
+              <p
+                className="text-[11px] italic pl-2 mt-2"
+                style={{
+                  color: "var(--theme-accent-light)",
+                  opacity: 0.6,
+                  borderLeft: "2px solid var(--theme-accent)",
+                }}
+              >
+                {celebrityNote}
+              </p>
+            )}
+          </div>
+
+          {/* Share button — top right of card header */}
+          {onShare && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onShare(constituency);
               }}
+              className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95"
+              style={{
+                background: "var(--theme-border)",
+                color: "var(--theme-accent)",
+              }}
+              aria-label={`Share ${constituency.name}`}
+              title={`Share ${constituency.name}`}
             >
-              {celebrityNote}
-            </p>
+              <Share2 className="w-4 h-4" />
+            </button>
           )}
         </div>
 
