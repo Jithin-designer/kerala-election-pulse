@@ -305,7 +305,7 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
                   />
                   <Stat
                     icon={<AlertTriangle className="w-2.5 h-2.5" />}
-                    label="Criminal Cases"
+                    label="Cases"
                     value={
                       candidate.criminal_cases > 0
                         ? `${candidate.criminal_cases} pending`
@@ -369,54 +369,68 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
             <div
               ref={shareableRef}
               style={{
-                width: "1080px",
-                background: "linear-gradient(160deg, #0a0a0a 0%, #111b14 100%)",
+                width: "900px",
+                background: "linear-gradient(180deg, #0a0a0a 0%, #0d1410 100%)",
                 color: "#f5f0e8",
                 fontFamily: "system-ui, -apple-system, sans-serif",
-                padding: "60px 50px",
+                padding: "48px 44px",
+                borderRadius: "32px",
+                border: "1px solid rgba(255,255,255,0.06)",
               }}
             >
-              {/* Brand header */}
-              <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "40px" }}>
+              {/* ── Brand Header ── */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "32px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "12px",
+                      background: "#d4a843",
+                      color: "#060e09",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "26px",
+                      fontWeight: 900,
+                    }}
+                  >
+                    K
+                  </div>
+                  <div>
+                    <p style={{ fontSize: "11px", letterSpacing: "0.18em", color: "rgba(255,255,255,0.4)", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>
+                      Kerala Election Pulse
+                    </p>
+                    <p style={{ fontSize: "16px", color: "#d4a843", fontWeight: 700, margin: "2px 0 0 0" }}>
+                      Assembly Elections 2026
+                    </p>
+                  </div>
+                </div>
                 <div
                   style={{
-                    width: "44px",
-                    height: "44px",
-                    borderRadius: "12px",
-                    background: "#d4a843",
-                    color: "#060e09",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "24px",
+                    padding: "10px 22px",
+                    borderRadius: "999px",
+                    background: theme.color,
+                    color: "#fff",
+                    fontSize: "16px",
                     fontWeight: 900,
+                    letterSpacing: "0.1em",
                   }}
                 >
-                  K
-                </div>
-                <div>
-                  <p style={{ fontSize: "11px", letterSpacing: "0.2em", color: "rgba(255,255,255,0.4)", fontWeight: 700, margin: 0, textTransform: "uppercase" }}>
-                    Kerala Election Pulse
-                  </p>
-                  <p style={{ fontSize: "16px", color: "#d4a843", fontWeight: 700, margin: 0 }}>
-                    Assembly Elections 2026
-                  </p>
-                </div>
-                <div style={{ marginLeft: "auto", padding: "8px 16px", borderRadius: "999px", background: theme.color, color: "#fff", fontSize: "14px", fontWeight: 900, letterSpacing: "0.1em" }}>
                   {theme.label}
                 </div>
               </div>
 
-              {/* Photo + name */}
-              <div style={{ display: "flex", gap: "30px", alignItems: "center", marginBottom: "40px" }}>
+              {/* ── Photo + Name (matches modal layout: photo left, name stacked right) ── */}
+              <div style={{ display: "flex", gap: "28px", alignItems: "center", marginBottom: "32px", padding: "8px 4px" }}>
                 <div
                   style={{
-                    width: "200px",
-                    height: "200px",
+                    width: "180px",
+                    height: "180px",
                     borderRadius: "50%",
                     overflow: "hidden",
                     flexShrink: 0,
-                    boxShadow: `0 0 0 8px ${theme.color}25, 0 12px 40px ${theme.color}55`,
+                    boxShadow: `0 0 0 6px ${theme.color}25, 0 12px 40px ${theme.color}50`,
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -428,94 +442,128 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
                   />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <h1 style={{ fontSize: "56px", fontWeight: 900, lineHeight: 1.05, margin: 0, color: "#fff" }}>
+                  <h1 style={{ fontSize: "44px", fontWeight: 900, lineHeight: 1.1, margin: 0, color: "#fff", letterSpacing: "-0.01em" }}>
                     {candidate.name}
                   </h1>
                   {candidate.age && (
-                    <p style={{ fontSize: "20px", color: "rgba(255,255,255,0.5)", margin: "8px 0 0 0" }}>
+                    <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.45)", margin: "8px 0 0 0", display: "flex", alignItems: "center", gap: "6px" }}>
+                      <span style={{ display: "inline-block", width: "12px", height: "12px", borderRadius: "2px", border: "1.5px solid currentColor", boxSizing: "border-box" }} />
                       {candidate.age} years old
                     </p>
                   )}
-                  <div style={{ marginTop: "16px", display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
-                    <span style={{ fontSize: "20px", color: "#fff", fontWeight: 600 }}>{candidate.party}</span>
-                    {fullParty !== candidate.party && (
-                      <span style={{ fontSize: "16px", color: "rgba(255,255,255,0.4)" }}>· {fullParty}</span>
-                    )}
+                  <div style={{ marginTop: "16px", display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+                    <span style={{ fontSize: "16px", color: "#fff", fontWeight: 700 }}>
+                      {candidate.party}
+                    </span>
                   </div>
+                  {fullParty !== candidate.party && (
+                    <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", margin: "4px 0 0 0" }}>
+                      {fullParty}
+                    </p>
+                  )}
                 </div>
               </div>
 
-              {/* Constituency banner */}
+              {/* ── Constituency Banner ── */}
               <div
                 style={{
-                  padding: "18px 24px",
+                  padding: "18px 22px",
                   borderRadius: "16px",
-                  background: "rgba(255,255,255,0.05)",
+                  background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
-                  marginBottom: "30px",
+                  marginBottom: "20px",
                   display: "flex",
                   alignItems: "center",
-                  gap: "12px",
+                  gap: "14px",
                 }}
               >
-                <div style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.15em" }}>
-                  Contesting from
+                <div
+                  style={{
+                    width: "32px",
+                    height: "32px",
+                    borderRadius: "8px",
+                    background: "rgba(212,168,67,0.15)",
+                    border: "1px solid rgba(212,168,67,0.3)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <div style={{ width: "14px", height: "14px", border: "2px solid #d4a843", borderRadius: "2px" }} />
                 </div>
-                <div style={{ fontSize: "24px", color: "#fff", fontWeight: 800 }}>
-                  {candidate.constituency}
+                <div style={{ flex: 1, display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+                  <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                    Contesting from
+                  </span>
+                  <span style={{ fontSize: "20px", color: "#fff", fontWeight: 800 }}>
+                    {candidate.constituency}
+                  </span>
+                  <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.5)" }}>
+                    · {candidate.district}
+                  </span>
                 </div>
-                <div style={{ fontSize: "16px", color: "rgba(255,255,255,0.5)" }}>
-                  · {candidate.district}
-                </div>
-                <div style={{ marginLeft: "auto", fontSize: "20px", fontWeight: 900, fontFamily: "monospace", color: "#d4a843", opacity: 0.7 }}>
+                <div style={{ fontSize: "16px", fontWeight: 900, fontFamily: "monospace", color: "#d4a843" }}>
                   #{String(candidate.constituencyNo).padStart(3, "0")}
                 </div>
               </div>
 
-              {/* Stats grid */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "30px" }}>
-                <div style={{ padding: "24px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px" }}>
-                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+              {/* ── Profile Details Header ── */}
+              <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.18em", fontWeight: 700, margin: "0 0 12px 4px" }}>
+                Profile Details
+              </p>
+
+              {/* ── Stats Grid (2x2 — matches modal exactly) ── */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "32px" }}>
+                {/* Education */}
+                <div style={{ padding: "20px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px" }}>
+                  <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: "0 0 10px 0" }}>
                     Education
                   </p>
-                  <p style={{ fontSize: "20px", color: "#fff", fontWeight: 700, marginTop: "8px", marginBottom: 0 }}>
+                  <p style={{ fontSize: "20px", color: "#fff", fontWeight: 800, margin: 0, lineHeight: 1.2 }}>
                     {candidate.education || "Not declared"}
                   </p>
                 </div>
-                <div style={{ padding: "24px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px" }}>
-                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+
+                {/* Profession */}
+                <div style={{ padding: "20px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "20px" }}>
+                  <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: "0 0 10px 0" }}>
                     Profession
                   </p>
-                  <p style={{ fontSize: "20px", color: "#fff", fontWeight: 700, marginTop: "8px", marginBottom: 0 }}>
+                  <p style={{ fontSize: "20px", color: "#fff", fontWeight: 800, margin: 0, lineHeight: 1.2 }}>
                     {candidate.profession || "Not declared"}
                   </p>
                 </div>
-                <div style={{ padding: "24px", background: "rgba(212,168,67,0.08)", border: "1px solid rgba(212,168,67,0.2)", borderRadius: "20px" }}>
-                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
+
+                {/* Net Worth */}
+                <div style={{ padding: "20px", background: "rgba(212,168,67,0.06)", border: "1px solid rgba(212,168,67,0.18)", borderRadius: "20px" }}>
+                  <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: "0 0 10px 0" }}>
                     Net Worth
                   </p>
-                  <p style={{ fontSize: "26px", color: "#d4a843", fontWeight: 800, marginTop: "8px", marginBottom: 0 }}>
+                  <p style={{ fontSize: "24px", color: "#d4a843", fontWeight: 900, margin: 0, lineHeight: 1.2 }}>
                     {formatAssets(candidate.assets_value, candidate.assets)}
                   </p>
                 </div>
+
+                {/* Cases */}
                 <div
                   style={{
-                    padding: "24px",
-                    background: candidate.criminal_cases > 0 ? "rgba(220,38,38,0.1)" : "rgba(5,150,105,0.1)",
-                    border: `1px solid ${candidate.criminal_cases > 0 ? "rgba(220,38,38,0.25)" : "rgba(5,150,105,0.25)"}`,
+                    padding: "20px",
+                    background: candidate.criminal_cases > 0 ? "rgba(220,38,38,0.08)" : "rgba(5,150,105,0.08)",
+                    border: `1px solid ${candidate.criminal_cases > 0 ? "rgba(220,38,38,0.22)" : "rgba(5,150,105,0.22)"}`,
                     borderRadius: "20px",
                   }}
                 >
-                  <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: 0 }}>
-                    Criminal Cases
+                  <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.15em", fontWeight: 700, margin: "0 0 10px 0" }}>
+                    Cases
                   </p>
                   <p
                     style={{
-                      fontSize: "26px",
-                      color: candidate.criminal_cases > 0 ? "#dc2626" : "#059669",
-                      fontWeight: 800,
-                      marginTop: "8px",
-                      marginBottom: 0,
+                      fontSize: "24px",
+                      color: candidate.criminal_cases > 0 ? "#ef4444" : "#10b981",
+                      fontWeight: 900,
+                      margin: 0,
+                      lineHeight: 1.2,
                     }}
                   >
                     {candidate.criminal_cases > 0 ? `${candidate.criminal_cases} pending` : "Clean record"}
@@ -523,21 +571,20 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
                 </div>
               </div>
 
-              {/* Footer */}
+              {/* ── Footer ── */}
               <div
                 style={{
-                  marginTop: "40px",
-                  paddingTop: "24px",
-                  borderTop: "1px solid rgba(255,255,255,0.08)",
+                  paddingTop: "20px",
+                  borderTop: "1px solid rgba(255,255,255,0.06)",
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
                 }}
               >
-                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.35)", margin: 0 }}>
+                <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)", margin: 0 }}>
                   Data: MyNeta.info · Election Commission of India
                 </p>
-                <p style={{ fontSize: "13px", color: "#d4a843", fontWeight: 700, margin: 0 }}>
+                <p style={{ fontSize: "12px", color: "#d4a843", fontWeight: 700, margin: 0 }}>
                   kerala-election-pulse.vercel.app
                 </p>
               </div>

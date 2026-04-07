@@ -452,7 +452,7 @@ function BrowsePageInner() {
             <div className="flex items-center gap-2 mb-4 px-1">
               <AlertTriangle className="w-5 h-5 text-red-400" />
               <div>
-                <h2 className="text-white font-bold text-lg">Criminal Cases Leaderboard</h2>
+                <h2 className="text-white font-bold text-lg">Cases Leaderboard</h2>
                 <p className="text-white/25 text-xs">Candidates with most pending criminal cases</p>
               </div>
             </div>
