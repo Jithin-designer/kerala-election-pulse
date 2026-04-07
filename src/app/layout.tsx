@@ -27,8 +27,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="fluent"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Synchronous theme bootstrap — runs before paint to prevent FOUC */}
+        <script src="/theme-init.js" />
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
       </body>

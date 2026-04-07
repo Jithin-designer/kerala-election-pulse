@@ -20,11 +20,12 @@ const THEMES = [
 type ThemeId = (typeof THEMES)[number]["id"];
 
 function getStoredTheme(): ThemeId {
-  if (typeof window === "undefined") return "emerald";
+  if (typeof window === "undefined") return "fluent";
   const stored = localStorage.getItem("theme");
   // Migrate retired themes to fluent (the closest light option)
   if (stored === "swiss" || stored === "brutal") return "fluent";
-  return (stored as ThemeId) || "emerald";
+  if (stored === "emerald" || stored === "fluent") return stored;
+  return "fluent";
 }
 
 interface Props {
@@ -33,7 +34,7 @@ interface Props {
 }
 
 export default function ThemeSwitcher({ compact = false }: Props) {
-  const [theme, setTheme] = useState<ThemeId>("emerald");
+  const [theme, setTheme] = useState<ThemeId>("fluent");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

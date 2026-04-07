@@ -37,11 +37,33 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   THEME 1: Emerald Night (default / dark)
+   DEFAULT (:root) — Fluent UI light theme
+   Applied before any data-theme attribute exists, so the
+   first paint is always white, never dark.
+   ═══════════════════════════════════════════════════ */
+:root {
+  --theme-bg: #f5f5f5;
+  --theme-surface: #ffffff;
+  --theme-surface-hover: #f0eff0;
+  --theme-border: #c8c6c4;
+  --theme-text: #1b1b1b;
+  --theme-text-secondary: #3b3a39;
+  --theme-text-muted: #595959;
+  --theme-accent: #4e51a0;
+  --theme-accent-light: #6264a7;
+  --theme-accent-contrast: #ffffff;
+  --theme-glow: #4e51a0;
+  --theme-card-shadow: 0 2px 4px rgba(0,0,0,0.10), 0 0 2px rgba(0,0,0,0.12);
+  --theme-card-radius: 4px;
+  --theme-card-border: 1px solid #c8c6c4;
+  color-scheme: light;
+}
+
+/* ═══════════════════════════════════════════════════
+   THEME 1: Emerald Night (dark, opt-in)
    Contrast tightened for older / low-vision users (WCAG AA+).
    ═══════════════════════════════════════════════════ */
-[data-theme="emerald"],
-:root {
+[data-theme="emerald"] {
   --theme-bg: #060e09;
   --theme-surface: #111b14;
   --theme-surface-hover: #1a2b1e;
