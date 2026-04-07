@@ -116,7 +116,7 @@
    WhatsApp / Instagram-style density. 15px root, tight metrics.
    ──────────────────────────────────────────────────────────── */
 html {
-  font-size: 15px;
+  font-size: 16.5px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
