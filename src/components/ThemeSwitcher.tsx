@@ -11,9 +11,9 @@ const THEMES = [
     colors: ["#060e09", "#d4a843", "#147a52"],
   },
   {
-    id: "swiss",
-    label: "Swiss Modern",
-    colors: ["#F5F5F5", "#DC2626", "#000000"],
+    id: "fluent",
+    label: "Fluent UI",
+    colors: ["#f5f5f5", "#6264a7", "#e1dfdd"],
   },
 ] as const;
 
@@ -22,8 +22,8 @@ type ThemeId = (typeof THEMES)[number]["id"];
 function getStoredTheme(): ThemeId {
   if (typeof window === "undefined") return "emerald";
   const stored = localStorage.getItem("theme");
-  // Migrate old "brutal" theme to emerald
-  if (stored === "brutal") return "emerald";
+  // Migrate retired themes to fluent (the closest light option)
+  if (stored === "swiss" || stored === "brutal") return "fluent";
   return (stored as ThemeId) || "emerald";
 }
 

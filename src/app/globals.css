@@ -59,24 +59,33 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   THEME 2: Swiss Modernism 2.0 (light, clean)
+   THEME 2: Fluent UI (Microsoft Teams · light)
+   Real Fluent v9 light theme tokens.
+   - Brand: Teams purple #6264a7
+   - Neutrals: #f5f5f5 / #fff / #e1dfdd / #242424 / #616161
+   - Strict 4px corner radius (Fluent rule)
+   - Segoe UI font with system fallback
    ═══════════════════════════════════════════════════ */
-[data-theme="swiss"] {
-  --theme-bg: #F5F5F5;
-  --theme-surface: #FFFFFF;
-  --theme-surface-hover: #FAFAFA;
-  --theme-border: rgba(0,0,0,0.08);
-  --theme-text: #000000;
-  --theme-text-secondary: #334155;
-  --theme-text-muted: rgba(0,0,0,0.35);
-  --theme-accent: #DC2626;
-  --theme-accent-light: #EF4444;
-  --theme-accent-contrast: #FFFFFF;
-  --theme-glow: #DC2626;
-  --theme-card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+[data-theme="fluent"] {
+  --theme-bg: #f5f5f5;
+  --theme-surface: #ffffff;
+  --theme-surface-hover: #f3f2f1;
+  --theme-border: #e1dfdd;
+  --theme-text: #242424;
+  --theme-text-secondary: #616161;
+  --theme-text-muted: #8a8886;
+  --theme-accent: #6264a7;
+  --theme-accent-light: #7b7eb4;
+  --theme-accent-contrast: #ffffff;
+  --theme-glow: #6264a7;
+  --theme-card-shadow: 0 2px 4px rgba(0,0,0,0.06), 0 0 2px rgba(0,0,0,0.08);
   --theme-card-radius: 4px;
-  --theme-card-border: 1px solid rgba(0,0,0,0.1);
+  --theme-card-border: 1px solid #e1dfdd;
   color-scheme: light;
+  font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
+}
+[data-theme="fluent"] body {
+  font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ── Base ── */
@@ -106,13 +115,13 @@ body {
 .theme-bg { background-color: var(--theme-bg); }
 .theme-surface { background-color: var(--theme-surface); }
 
-/* ── Emerald-only utilities (still work as fallback) ── */
+/* ── Emerald glass card (dark-only utility) ── */
 .glass-card {
   background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
 }
-[data-theme="swiss"] .glass-card {
+[data-theme="fluent"] .glass-card {
   background: var(--theme-surface);
   border: var(--theme-card-border);
   backdrop-filter: none;
@@ -126,78 +135,6 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* ── Neubrutalism overrides ── */
-[data-theme="brutal"] .rounded-full { border-radius: 4px !important; }
-[data-theme="brutal"] .rounded-2xl,
-[data-theme="brutal"] .rounded-3xl,
-[data-theme="brutal"] [class*="rounded-["] { border-radius: 0px !important; }
-[data-theme="brutal"] img.rounded-full { border-radius: 4px !important; }
-
-/* ── Light theme text color overrides ── */
-[data-theme="swiss"] .text-white,
-[data-theme="brutal"] .text-white { color: var(--theme-text) !important; }
-[data-theme="swiss"] .text-white\/60,
-[data-theme="brutal"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
-[data-theme="swiss"] .text-white\/70,
-[data-theme="brutal"] .text-white\/70 { color: var(--theme-text-secondary) !important; }
-[data-theme="swiss"] .text-white\/50,
-[data-theme="brutal"] .text-white\/50 { color: var(--theme-text-muted) !important; }
-[data-theme="swiss"] .text-white\/40,
-[data-theme="brutal"] .text-white\/40 { color: var(--theme-text-muted) !important; }
-[data-theme="swiss"] .text-white\/30,
-[data-theme="brutal"] .text-white\/30 { color: var(--theme-text-muted) !important; }
-[data-theme="swiss"] .text-white\/25,
-[data-theme="brutal"] .text-white\/25 { color: var(--theme-text-muted) !important; }
-[data-theme="swiss"] .text-white\/20,
-[data-theme="brutal"] .text-white\/20 { color: var(--theme-text-muted) !important; }
-[data-theme="swiss"] .text-white\/15,
-[data-theme="brutal"] .text-white\/15 { color: var(--theme-text-muted) !important; }
-[data-theme="swiss"] .text-white\/10,
-[data-theme="brutal"] .text-white\/10 { color: var(--theme-text-muted) !important; }
-
-/* Light theme gold → accent */
-[data-theme="swiss"] .text-gold,
-[data-theme="brutal"] .text-gold { color: var(--theme-accent) !important; }
-[data-theme="swiss"] .text-gold-light,
-[data-theme="brutal"] .text-gold-light { color: var(--theme-accent-light) !important; }
-
-/* Light theme bg overrides */
-[data-theme="swiss"] .bg-black,
-[data-theme="brutal"] .bg-black { background-color: var(--theme-bg) !important; }
-[data-theme="swiss"] .bg-black\/80,
-[data-theme="brutal"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 80%, transparent) !important; }
-[data-theme="swiss"] .bg-white\/\[0\.04\],
-[data-theme="swiss"] .bg-white\/\[0\.05\],
-[data-theme="swiss"] .bg-white\/\[0\.06\],
-[data-theme="swiss"] .bg-white\/\[0\.08\] { background-color: rgba(0,0,0,0.03) !important; }
-[data-theme="brutal"] .bg-white\/\[0\.04\],
-[data-theme="brutal"] .bg-white\/\[0\.05\],
-[data-theme="brutal"] .bg-white\/\[0\.06\],
-[data-theme="brutal"] .bg-white\/\[0\.08\] { background-color: rgba(0,0,0,0.04) !important; }
-
-/* Light theme border overrides */
-[data-theme="swiss"] .border-white\/5,
-[data-theme="swiss"] .border-white\/\[0\.04\],
-[data-theme="swiss"] .border-white\/\[0\.06\],
-[data-theme="swiss"] .border-white\/\[0\.08\] { border-color: rgba(0,0,0,0.08) !important; }
-[data-theme="brutal"] .border-white\/5,
-[data-theme="brutal"] .border-white\/\[0\.04\],
-[data-theme="brutal"] .border-white\/\[0\.06\],
-[data-theme="brutal"] .border-white\/\[0\.08\] { border-color: #000000 !important; }
-
-/* Ivory text → theme text in light modes */
-[data-theme="swiss"] .text-ivory,
-[data-theme="brutal"] .text-ivory { color: var(--theme-text) !important; }
-[data-theme="swiss"] .text-ivory-dark\/50,
-[data-theme="swiss"] .text-ivory-dark\/40,
-[data-theme="brutal"] .text-ivory-dark\/50,
-[data-theme="brutal"] .text-ivory-dark\/40 { color: var(--theme-text-muted) !important; }
-
-/* ── Swiss overrides ── */
-[data-theme="swiss"] .rounded-2xl,
-[data-theme="swiss"] .rounded-3xl,
-[data-theme="swiss"] [class*="rounded-["] { border-radius: 4px !important; }
 
 /* ── Scrollbar hide ── */
 .scrollbar-hide {
@@ -218,3 +155,64 @@ body {
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ═══════════════════════════════════════════════════
+   FLUENT (Microsoft Teams) — light-theme overrides
+   Mirrors the swiss override pattern: remap dark-theme
+   utility classes (text-white/X, bg-white/X, etc.) to
+   Fluent's neutral palette so existing components look
+   right without rewriting every Tailwind class.
+   ═══════════════════════════════════════════════════ */
+[data-theme="fluent"] .text-white { color: var(--theme-text) !important; }
+[data-theme="fluent"] .text-white\/70,
+[data-theme="fluent"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
+[data-theme="fluent"] .text-white\/50,
+[data-theme="fluent"] .text-white\/40,
+[data-theme="fluent"] .text-white\/30,
+[data-theme="fluent"] .text-white\/25,
+[data-theme="fluent"] .text-white\/20,
+[data-theme="fluent"] .text-white\/15,
+[data-theme="fluent"] .text-white\/10 { color: var(--theme-text-muted) !important; }
+
+[data-theme="fluent"] .text-gold { color: var(--theme-accent) !important; }
+[data-theme="fluent"] .text-gold-light { color: var(--theme-accent-light) !important; }
+
+[data-theme="fluent"] .bg-black { background-color: var(--theme-bg) !important; }
+[data-theme="fluent"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 80%, transparent) !important; }
+[data-theme="fluent"] .bg-white\/\[0\.03\],
+[data-theme="fluent"] .bg-white\/\[0\.04\],
+[data-theme="fluent"] .bg-white\/\[0\.05\],
+[data-theme="fluent"] .bg-white\/\[0\.06\],
+[data-theme="fluent"] .bg-white\/\[0\.08\] { background-color: var(--theme-surface-hover) !important; }
+[data-theme="fluent"] .bg-white\/15 { background-color: var(--theme-accent) !important; color: var(--theme-accent-contrast) !important; }
+
+[data-theme="fluent"] .border-white\/5,
+[data-theme="fluent"] .border-white\/\[0\.03\],
+[data-theme="fluent"] .border-white\/\[0\.04\],
+[data-theme="fluent"] .border-white\/\[0\.06\],
+[data-theme="fluent"] .border-white\/\[0\.08\] { border-color: var(--theme-border) !important; }
+
+[data-theme="fluent"] .text-ivory { color: var(--theme-text) !important; }
+[data-theme="fluent"] .text-ivory-dark\/50,
+[data-theme="fluent"] .text-ivory-dark\/40 { color: var(--theme-text-muted) !important; }
+
+/* Strict Fluent corner-radius rule: 4px everywhere except pills */
+[data-theme="fluent"] .rounded-2xl,
+[data-theme="fluent"] .rounded-3xl,
+[data-theme="fluent"] .rounded-xl,
+[data-theme="fluent"] [class*="rounded-["] { border-radius: 4px !important; }
+[data-theme="fluent"] .rounded-lg { border-radius: 4px !important; }
+
+/* Fluent uses pure circular avatars and pill chips — keep .rounded-full */
+
+/* Fluent emerald-glow alliance accent → success green */
+[data-theme="fluent"] .text-emerald-glow,
+[data-theme="fluent"] .text-emerald-glow\/60 { color: #13a10e !important; }
+[data-theme="fluent"] .text-red-400,
+[data-theme="fluent"] .text-red-400\/60 { color: #c4314b !important; }
+[data-theme="fluent"] .text-blue-400 { color: #0078d4 !important; }
+[data-theme="fluent"] .text-amber-400 { color: #f7630c !important; }
+[data-theme="fluent"] .text-orange-400 { color: #f7630c !important; }
+
+/* Fluent header backdrop tweak — neutral instead of dark blur */
+[data-theme="fluent"] .backdrop-blur-xl { backdrop-filter: none !important; }
