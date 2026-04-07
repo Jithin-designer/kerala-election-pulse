@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect } from "react";
+import { Suspense, useState, useMemo, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
@@ -190,8 +191,19 @@ function PartySection({
 }
 
 export default function BrowsePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen" style={{ background: "var(--theme-bg)" }} />}>
+      <BrowsePageInner />
+    </Suspense>
+  );
+}
+
+function BrowsePageInner() {
+  const searchParams = useSearchParams();
+  const initialDistrict = searchParams.get("district");
+
   const [activeTab, setActiveTab] = useState<Tab>("constituencies");
-  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
+  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(initialDistrict);
   const [selectedConstituency, setSelectedConstituency] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);

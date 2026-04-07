@@ -124,7 +124,7 @@ export default function Home() {
 
             if (state.status === "live") {
               return (
-                <Link key={state.slug} href={`/browse`}>
+                <Link key={state.slug} href={`/${state.slug}`}>
                   {card}
                 </Link>
               );
