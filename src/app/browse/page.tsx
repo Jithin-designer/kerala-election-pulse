@@ -26,6 +26,8 @@ import {
   type PartyCandidate,
 } from "@/lib/data";
 import BrowseCard from "@/components/BrowseCard";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import ConstituencyDetailModal from "@/components/ConstituencyDetailModal";
 
 /* ── Tab types ── */
 type Tab = "constituencies" | "cases" | "networth" | "party";
@@ -191,6 +193,7 @@ export default function BrowsePage() {
   const [selectedConstituency, setSelectedConstituency] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
+  const [detailConstituency, setDetailConstituency] = useState<Constituency | null>(null);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const districts = getAllDistricts();
@@ -278,12 +281,16 @@ export default function BrowsePage() {
           <h1 className="theme-text font-black text-lg tracking-tight">
             Browse <span className="theme-accent">Battles</span>
           </h1>
-          <button
-            onClick={() => { setShowSearch(!showSearch); if (showSearch) setSearchQuery(""); }}
-            className="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-white/80 hover:bg-white/10 transition-all"
-          >
-            {showSearch ? <X className="w-4 h-4" /> : <Search className="w-4 h-4" />}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => { setShowSearch(!showSearch); if (showSearch) setSearchQuery(""); }}
+              className="w-9 h-9 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 active:scale-95 transition-transform"
+              style={{ background: "var(--theme-border)", color: "var(--theme-text-secondary)" }}
+            >
+              {showSearch ? <X className="w-4 h-4" /> : <Search className="w-4 h-4" />}
+            </button>
+            <ThemeSwitcher compact />
+          </div>
         </div>
 
         {/* Search */}
@@ -402,7 +409,7 @@ export default function BrowsePage() {
                     <div className="px-4 space-y-4">
                       {group.constituencies.map((c, i) => {
                         const celeb = celebSeats.find((cs) => cs.no === c.no);
-                        return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} />;
+                        return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onOpenDetail={setDetailConstituency} />;
                       })}
                     </div>
                   </section>
@@ -412,7 +419,7 @@ export default function BrowsePage() {
               <div className="px-4 space-y-4 pt-2">
                 {filteredConstituencies.map((c, i) => {
                   const celeb = celebSeats.find((cs) => cs.no === c.no);
-                  return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} />;
+                  return <BrowseCard key={c.no} constituency={c} index={i} isCelebrity={celebNos.has(c.no)} celebrityNote={celeb?.note} onOpenDetail={setDetailConstituency} />;
                 })}
               </div>
             )}
@@ -538,6 +545,18 @@ export default function BrowsePage() {
           })}
         </div>
       </nav>
+
+      {/* ── Constituency Detail Modal ── */}
+      <ConstituencyDetailModal
+        constituency={detailConstituency}
+        isCelebrity={detailConstituency ? celebNos.has(detailConstituency.no) : false}
+        celebrityNote={
+          detailConstituency
+            ? celebSeats.find((cs) => cs.no === detailConstituency.no)?.note
+            : undefined
+        }
+        onClose={() => setDetailConstituency(null)}
+      />
     </div>
   );
 }

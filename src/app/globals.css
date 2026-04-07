@@ -79,27 +79,6 @@
   color-scheme: light;
 }
 
-/* ═══════════════════════════════════════════════════
-   THEME 3: Neubrutalism (bold, Gen-Z)
-   ═══════════════════════════════════════════════════ */
-[data-theme="brutal"] {
-  --theme-bg: #FEF9C3;
-  --theme-surface: #FFFFFF;
-  --theme-surface-hover: #FEF3C7;
-  --theme-border: 3px solid #000000;
-  --theme-text: #000000;
-  --theme-text-secondary: #1a1a1a;
-  --theme-text-muted: rgba(0,0,0,0.45);
-  --theme-accent: #FF5252;
-  --theme-accent-light: #FF8A80;
-  --theme-accent-contrast: #FFFFFF;
-  --theme-glow: #2196F3;
-  --theme-card-shadow: 5px 5px 0px #000000;
-  --theme-card-radius: 0px;
-  --theme-card-border: 3px solid #000000;
-  color-scheme: light;
-}
-
 /* ── Base ── */
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -133,8 +112,7 @@ body {
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
 }
-[data-theme="swiss"] .glass-card,
-[data-theme="brutal"] .glass-card {
+[data-theme="swiss"] .glass-card {
   background: var(--theme-surface);
   border: var(--theme-card-border);
   backdrop-filter: none;
