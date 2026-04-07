@@ -8,24 +8,18 @@ interface State {
   name: string;
   slug: string;
   status: "live" | "soon";
-  electionYear?: string;
+  pollDate: string;
   flag: string;
-  totalSeats?: number;
+  totalSeats: number;
 }
 
+// Assembly Elections 2026 — only states going to polls in 2026
 const STATES: State[] = [
-  { name: "Kerala", slug: "kerala", status: "live", electionYear: "2026", flag: "🌴", totalSeats: 140 },
-  { name: "Tamil Nadu", slug: "tamil-nadu", status: "soon", electionYear: "2026", flag: "🌅", totalSeats: 234 },
-  { name: "West Bengal", slug: "west-bengal", status: "soon", electionYear: "2026", flag: "🐯", totalSeats: 294 },
-  { name: "Puducherry", slug: "puducherry", status: "soon", electionYear: "2026", flag: "⚓", totalSeats: 30 },
-  { name: "Assam", slug: "assam", status: "soon", electionYear: "2026", flag: "🦏", totalSeats: 126 },
-  { name: "Karnataka", slug: "karnataka", status: "soon", electionYear: "2028", flag: "🐘", totalSeats: 224 },
-  { name: "Maharashtra", slug: "maharashtra", status: "soon", electionYear: "2029", flag: "🛕", totalSeats: 288 },
-  { name: "Uttar Pradesh", slug: "uttar-pradesh", status: "soon", electionYear: "2027", flag: "🕌", totalSeats: 403 },
-  { name: "Bihar", slug: "bihar", status: "soon", electionYear: "2025", flag: "🪷", totalSeats: 243 },
-  { name: "Delhi", slug: "delhi", status: "soon", electionYear: "2025", flag: "🏛️", totalSeats: 70 },
-  { name: "Punjab", slug: "punjab", status: "soon", electionYear: "2027", flag: "🌾", totalSeats: 117 },
-  { name: "Gujarat", slug: "gujarat", status: "soon", electionYear: "2027", flag: "🦁", totalSeats: 182 },
+  { name: "Kerala", slug: "kerala", status: "live", pollDate: "9 April", flag: "🌴", totalSeats: 140 },
+  { name: "Tamil Nadu", slug: "tamil-nadu", status: "soon", pollDate: "23 April", flag: "🌅", totalSeats: 234 },
+  { name: "West Bengal", slug: "west-bengal", status: "soon", pollDate: "23 & 29 April", flag: "🐯", totalSeats: 294 },
+  { name: "Assam", slug: "assam", status: "soon", pollDate: "9 April", flag: "🦏", totalSeats: 126 },
+  { name: "Puducherry", slug: "puducherry", status: "soon", pollDate: "9 April", flag: "⚓", totalSeats: 30 },
 ];
 
 export default function Home() {
@@ -48,12 +42,17 @@ export default function Home() {
             <Vote className="w-7 h-7" />
           </div>
 
-          <h1 className="theme-text text-4xl md:text-5xl font-black tracking-tight leading-none mb-3">
-            Election{" "}
-            <span className="theme-accent">Pulse</span>
+          <p className="theme-text-muted text-xs uppercase tracking-[0.3em] font-bold mb-2">
+            Assembly Elections
+          </p>
+          <h1 className="theme-text text-5xl md:text-6xl font-black tracking-tight leading-none mb-3">
+            <span className="theme-accent">2026</span>
           </h1>
-          <p className="theme-text-secondary text-base max-w-md mx-auto">
-            Track candidates, criminal cases, assets and live results across India
+          <p className="theme-text-secondary text-sm max-w-md mx-auto">
+            Track candidates, criminal cases & assets across 5 states going to polls
+          </p>
+          <p className="theme-text-muted text-[11px] mt-2">
+            Counting · <span className="theme-accent font-semibold">4 May 2026</span>
           </p>
         </motion.div>
       </section>
@@ -105,14 +104,11 @@ export default function Home() {
                 </h3>
 
                 {/* Meta */}
-                <div className="theme-text-muted text-[10px] mt-1 flex items-center gap-1">
-                  {state.totalSeats && <span>{state.totalSeats} seats</span>}
-                  {state.electionYear && (
-                    <>
-                      <span>·</span>
-                      <span>{state.electionYear}</span>
-                    </>
-                  )}
+                <div className="theme-text-muted text-[10px] mt-1 leading-tight">
+                  <div>{state.totalSeats} seats</div>
+                  <div className="theme-accent font-semibold mt-0.5" style={{ opacity: 0.8 }}>
+                    Polls: {state.pollDate}
+                  </div>
                 </div>
 
                 {/* Arrow for live */}
