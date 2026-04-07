@@ -120,8 +120,8 @@ export default function Tag({ variant, text, size = "xs" }: Props) {
 
   const sizeClass =
     size === "xs"
-      ? "text-[10px] px-2 py-0.5 gap-1"
-      : "text-[11px] px-2.5 py-1 gap-1.5";
+      ? "text-[10px] px-1.5 py-px gap-0.5"
+      : "text-[11px] px-2 py-0.5 gap-1";
 
   const iconSize = size === "xs" ? "w-2.5 h-2.5" : "w-3 h-3";
 

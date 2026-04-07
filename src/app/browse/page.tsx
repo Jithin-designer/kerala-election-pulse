@@ -344,10 +344,10 @@ function BrowsePageInner() {
   const hasActiveFilter = selectedDistrict || selectedConstituency || searchQuery;
 
   const TABS: { key: Tab; label: string; icon: React.ReactNode }[] = [
-    { key: "constituencies", label: "All", icon: <MapPin className="w-3.5 h-3.5" /> },
-    { key: "cases", label: "Cases", icon: <AlertTriangle className="w-3.5 h-3.5" /> },
-    { key: "networth", label: "Net Worth", icon: <IndianRupee className="w-3.5 h-3.5" /> },
-    { key: "party", label: "By Party", icon: <Users className="w-3.5 h-3.5" /> },
+    { key: "constituencies", label: "All", icon: <MapPin className="w-6 h-6" /> },
+    { key: "cases", label: "Cases", icon: <AlertTriangle className="w-6 h-6" /> },
+    { key: "networth", label: "Net Worth", icon: <IndianRupee className="w-6 h-6" /> },
+    { key: "party", label: "By Party", icon: <Users className="w-6 h-6" /> },
   ];
 
   return (
@@ -359,7 +359,7 @@ function BrowsePageInner() {
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium hidden sm:inline">Home</span>
           </Link>
-          <h1 className="theme-text font-black text-lg tracking-tight">
+          <h1 className="theme-text font-bold text-[15px] tracking-tight">
             Browse <span className="theme-accent">Battles</span>
           </h1>
           <div className="flex items-center gap-2">
@@ -599,7 +599,7 @@ function BrowsePageInner() {
           paddingBottom: "env(safe-area-inset-bottom)",
         }}
       >
-        <div className="flex items-center justify-around max-w-2xl mx-auto px-2 py-2">
+        <div className="flex items-center justify-around max-w-2xl mx-auto px-2 py-1">
           {TABS.map((tab) => {
             const isActive = activeTab === tab.key;
             return (
@@ -610,21 +610,13 @@ function BrowsePageInner() {
                   clearFilters();
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className="flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer"
+                className="flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-md transition-colors cursor-pointer"
                 style={{
                   color: isActive ? "var(--theme-accent)" : "var(--theme-text-muted)",
                 }}
               >
-                <div
-                  className="flex items-center justify-center w-9 h-9 rounded-full transition-all"
-                  style={{
-                    background: isActive ? "var(--theme-accent)" : "transparent",
-                    color: isActive ? "var(--theme-accent-contrast)" : "var(--theme-text-muted)",
-                  }}
-                >
-                  {tab.icon}
-                </div>
-                <span className="text-[10px] font-bold tracking-wide">
+                {tab.icon}
+                <span className="text-[10px] font-semibold tracking-wide">
                   {tab.label}
                 </span>
               </button>

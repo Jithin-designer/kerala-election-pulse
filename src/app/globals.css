@@ -112,14 +112,11 @@
 }
 
 /* ════════════════════════════════════════════════════════════
-   ACCESSIBILITY BASE
-   Mobile-first, optimized for older / low-vision readers.
+   COMPACT MOBILE BASE
+   WhatsApp / Instagram-style density. 15px root, tight metrics.
    ──────────────────────────────────────────────────────────── */
 html {
-  /* Global rem scale: bumps every rem-based size by 25%.
-     Tailwind tokens are rem-based → entire UI scales up. */
-  font-size: 125%;
-  /* Prevent iOS Safari from auto-shrinking text in landscape */
+  font-size: 15px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -127,43 +124,14 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
   background-color: var(--theme-bg);
   color: var(--theme-text);
-  /* Heavier baseline weight for readability */
   font-weight: 500;
-  /* Improved hinting on macOS / iOS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ── Pixel-literal text overrides — enforce a 14px floor ── */
-.text-\[9px\]   { font-size: 14px !important; font-weight: 700 !important; }
-.text-\[10px\]  { font-size: 14px !important; font-weight: 700 !important; }
-.text-\[11px\]  { font-size: 14px !important; font-weight: 600 !important; }
-.text-\[12px\]  { font-size: 15px !important; font-weight: 600 !important; }
-.text-\[13px\]  { font-size: 15px !important; font-weight: 600 !important; }
-.text-\[14px\]  { font-size: 15px !important; }
-.text-\[15px\]  { font-size: 16px !important; }
-
-/* ── Bump tiny Tailwind sizes a notch heavier for legibility ── */
-.text-xs    { font-weight: 600; }
-.text-\[10px\],
-.text-\[11px\],
-.text-\[12px\] { letter-spacing: 0.005em; }
-
-/* ── Touch targets: WCAG 2.5.5 minimum 44x44 CSS px ──
-   Only enlarge actual <button> elements — leave decorative
-   div avatars (e.g. candidate initials) at their original size. */
-button.w-9.h-9 { min-width: 44px !important; min-height: 44px !important; width: 44px !important; height: 44px !important; }
-button.w-8.h-8 { min-width: 44px !important; min-height: 44px !important; width: 44px !important; height: 44px !important; }
-
-/* All <button> elements should be tappable — minimum 44px tall on mobile.
-   Exception: leaderboard rows already exceed 44 via row padding. */
-@media (max-width: 768px) {
-  button:not(.no-min-target) {
-    min-height: 44px;
-  }
-}
+/* Pixel literals stay at their authored size — no enforced floor. */
 
 /* ── Theme-aware card ── */
 .theme-card {

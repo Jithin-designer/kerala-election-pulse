@@ -64,12 +64,12 @@ function CandidateRow({
   return (
     <button
       onClick={handleClick}
-      className="w-full py-3.5 last:border-none text-left cursor-pointer transition-colors hover:opacity-90"
+      className="w-full py-2.5 last:border-none text-left cursor-pointer transition-colors hover:opacity-90"
       style={{ borderBottom: "1px solid var(--theme-border)" }}
     >
-      <div className="flex gap-3.5">
-        {/* Photo — no stroke/border */}
-        <div className="w-16 h-16 rounded-full shrink-0 overflow-hidden">
+      <div className="flex gap-3 items-start">
+        {/* Photo — WhatsApp-sized 48px */}
+        <div className="w-12 h-12 rounded-full shrink-0 overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={photo.src}
@@ -81,11 +81,11 @@ function CandidateRow({
 
         {/* Info */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 flex-wrap">
-            <p className="theme-text font-bold text-[15px] leading-tight truncate">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <p className="theme-text font-bold text-[13px] leading-tight truncate">
               {candidate.candidate}
               {candidate.age && (
-                <span className="theme-text-muted font-normal text-xs ml-1.5">
+                <span className="theme-text-muted font-normal text-[11px] ml-1">
                   {candidate.age}y
                 </span>
               )}
@@ -94,25 +94,23 @@ function CandidateRow({
           </div>
 
           {/* Affiliation */}
-          <div className="flex items-center gap-2 mt-1">
+          <div className="flex items-center gap-1.5 mt-0.5">
             <span
-              className={`px-2.5 py-0.5 rounded-md text-[10px] font-bold ${theme.pill}`}
+              className={`px-1.5 py-px rounded text-[9px] font-bold ${theme.pill}`}
             >
               {theme.label}
             </span>
             <span
               className="theme-text-secondary text-[11px] truncate"
-              style={{ opacity: 0.7 }}
+              style={{ opacity: 0.75 }}
             >
               {candidate.party}
-              {fullParty !== candidate.party ? ` · ${fullParty}` : ""}
             </span>
           </div>
 
           {/* Tag chips */}
-          <div className="flex flex-wrap gap-1.5 mt-2">
+          <div className="flex flex-wrap gap-1 mt-1.5">
             {candidate.education && <Tag variant="education" text={candidate.education} />}
-            {candidate.profession && <Tag variant="profession" text={candidate.profession} />}
             {candidate.assets_value > 0 && (
               <Tag variant="assets" text={formatAssets(candidate.assets_value)} />
             )}
@@ -236,60 +234,66 @@ export default function BrowseCard({
       }}
       className="w-full"
     >
-      <div className="theme-card overflow-hidden">
-        {/* ═══════ Header — name LEFT, share button RIGHT ═══════ */}
-        <div className="px-5 pt-5 pb-3 flex items-start gap-3">
+      <div
+        className="theme-card overflow-hidden"
+        style={{
+          borderRadius: "var(--theme-card-radius, 12px)",
+          boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+        }}
+      >
+        {/* ═══════ Header — name LEFT, share button TOP-RIGHT ═══════ */}
+        <div className="px-4 pt-3 pb-2 flex items-start gap-2">
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="theme-text text-xl font-black leading-tight">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <h3 className="theme-text text-[15px] font-bold leading-tight">
                 {constituency.name}
               </h3>
               {isCelebrity && (
-                <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-pink-500/20 to-orange-400/20 border border-pink-500/30">
-                  <Flame className="w-3 h-3 text-orange-400" />
-                  <span className="text-orange-300 text-[10px] font-bold tracking-wider">
+                <span className="flex items-center gap-0.5 px-1.5 py-px rounded bg-gradient-to-r from-pink-500/20 to-orange-400/20 border border-pink-500/30">
+                  <Flame className="w-2.5 h-2.5 text-orange-400" />
+                  <span className="text-orange-300 text-[9px] font-bold tracking-wider">
                     HOT
                   </span>
                 </span>
               )}
             </div>
 
-          {/* Constituency number + count grouped under name */}
-          <div className="flex items-center gap-2 mt-1.5">
-            <span
-              className="font-mono font-black text-xs"
-              style={{ color: "var(--theme-accent)", opacity: 0.5 }}
-            >
-              #{String(constituency.no).padStart(3, "0")}
-            </span>
-            <span className="theme-text-muted text-xs">·</span>
-            <span className="theme-text-muted text-xs flex items-center gap-1">
-              <MapPin className="w-3 h-3" />
-              {constituency.district}
-              {constituency.reserved && (
-                <span
-                  className="ml-1 px-1.5 py-0.5 rounded text-[9px]"
-                  style={{
-                    background: "var(--theme-border)",
-                    color: "var(--theme-accent)",
-                  }}
-                >
-                  {constituency.reserved}
-                </span>
-              )}
-            </span>
-            <span className="theme-text-muted text-xs">·</span>
-            <span className="theme-text-muted text-xs">
-              {totalCandidates} candidates
-            </span>
-          </div>
+            {/* Constituency number + count grouped under name */}
+            <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
+              <span
+                className="font-mono font-bold text-[11px]"
+                style={{ color: "var(--theme-accent)", opacity: 0.6 }}
+              >
+                #{String(constituency.no).padStart(3, "0")}
+              </span>
+              <span className="theme-text-muted text-[11px]">·</span>
+              <span className="theme-text-muted text-[11px] flex items-center gap-0.5">
+                <MapPin className="w-2.5 h-2.5" />
+                {constituency.district}
+                {constituency.reserved && (
+                  <span
+                    className="ml-1 px-1 py-px rounded text-[9px]"
+                    style={{
+                      background: "var(--theme-border)",
+                      color: "var(--theme-accent)",
+                    }}
+                  >
+                    {constituency.reserved}
+                  </span>
+                )}
+              </span>
+              <span className="theme-text-muted text-[11px]">·</span>
+              <span className="theme-text-muted text-[11px]">
+                {totalCandidates} candidates
+              </span>
+            </div>
 
             {celebrityNote && (
               <p
-                className="text-[11px] italic pl-2 mt-2"
+                className="text-[11px] italic pl-2 mt-1.5"
                 style={{
                   color: "var(--theme-accent-light)",
-                  opacity: 0.6,
+                  opacity: 0.7,
                   borderLeft: "2px solid var(--theme-accent)",
                 }}
               >
@@ -298,28 +302,28 @@ export default function BrowseCard({
             )}
           </div>
 
-          {/* Share button — top right of card header */}
+          {/* Share button — top right, tightly aligned */}
           {onShare && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 onShare(constituency);
               }}
-              className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95"
+              className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95 -mt-0.5 -mr-1"
               style={{
-                background: "var(--theme-border)",
-                color: "var(--theme-accent)",
+                background: "transparent",
+                color: "var(--theme-text-secondary)",
               }}
               aria-label={`Share ${constituency.name}`}
               title={`Share ${constituency.name}`}
             >
-              <Share2 className="w-4 h-4" />
+              <Share2 className="w-[18px] h-[18px]" />
             </button>
           )}
         </div>
 
         {/* ═══════ Main 3 candidates ═══════ */}
-        <div className="px-5">
+        <div className="px-4">
           {(["ldf", "udf", "nda"] as const).map((a) => (
             <CandidateRow
               key={a}
@@ -335,7 +339,7 @@ export default function BrowseCard({
 
         {/* ═══════ +X OTHERS toggle ═══════ */}
         {othersCount > 0 && (
-          <div className="px-5 pt-1 pb-4">
+          <div className="px-4 pt-1 pb-3">
             <button
               onClick={() => setShowOthers(!showOthers)}
               className="theme-text-muted text-[11px] font-semibold tracking-wider uppercase hover:underline cursor-pointer transition-opacity"
@@ -358,7 +362,7 @@ export default function BrowseCard({
               exit={{ height: 0, opacity: 0 }}
               className="overflow-hidden"
             >
-              <div className="px-5 pb-4">
+              <div className="px-4 pb-3">
                 <div className="flex items-center gap-2 mb-1">
                   <Users className="w-3 h-3 theme-text-muted" />
                   <p className="theme-text-muted text-[10px] font-bold uppercase tracking-widest">
