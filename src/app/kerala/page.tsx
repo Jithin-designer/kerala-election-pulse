@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowLeft, MapPin, ChevronRight, Vote } from "lucide-react";
+import { ArrowLeft, MapPin, ChevronRight, Vote, Flame } from "lucide-react";
 import {
   getAllDistricts,
   getConstituenciesByDistrict,
@@ -11,50 +11,15 @@ import {
 } from "@/lib/data";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
-/* Geographic ordering: North → South */
-const DISTRICT_ORDER = [
-  "Kasaragodu",
-  "Kannur",
-  "Wayanad",
-  "Kozhikode",
-  "Malappuram",
-  "Palakkad",
-  "Thrissur",
-  "Ernakulam",
-  "Idukki",
-  "Kottayam",
-  "Alappuzha",
-  "Pathanamthitta",
-  "Kollam",
-  "Thiruvananthapuram",
-];
-
-/* Friendly emoji per district */
-const DISTRICT_EMOJI: Record<string, string> = {
-  Kasaragodu: "🏖️",
-  Kannur: "🪔",
-  Wayanad: "🌿",
-  Kozhikode: "🥥",
-  Malappuram: "🕌",
-  Palakkad: "🌾",
-  Thrissur: "🐘",
-  Ernakulam: "🚢",
-  Idukki: "⛰️",
-  Kottayam: "📚",
-  Alappuzha: "🛶",
-  Pathanamthitta: "🛕",
-  Kollam: "🥔",
-  Thiruvananthapuram: "🏛️",
-};
-
 export default function KeralaDistrictsPage() {
   const districts = getAllDistricts();
   const celebSeats = useMemo(() => getCelebritySeats(), []);
   const celebNos = useMemo(() => new Set(celebSeats.map((c) => c.no)), [celebSeats]);
 
-  // Build district list with seat counts and hot seat counts
+  // Alphabetical order
   const districtList = useMemo(() => {
-    return DISTRICT_ORDER.filter((d) => districts.includes(d))
+    return [...districts]
+      .sort((a, b) => a.localeCompare(b))
       .map((district) => {
         const constituencies = getConstituenciesByDistrict(district);
         const hotSeats = constituencies.filter((c) => celebNos.has(c.no)).length;
@@ -97,27 +62,24 @@ export default function KeralaDistrictsPage() {
         </div>
       </header>
 
-      {/* ── Hero ── */}
-      <section className="px-5 pt-8 pb-6 text-center">
+      {/* ── Compact Hero ── */}
+      <section className="px-5 pt-5 pb-3">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.3 }}
         >
-          <p className="theme-text-muted text-[10px] uppercase tracking-[0.3em] font-bold mb-2">
-            Assembly Elections 2026
+          <p className="theme-text-muted text-[9px] uppercase tracking-[0.2em] font-bold">
+            Kerala · Assembly Elections 2026
           </p>
-          <h2 className="theme-text text-3xl md:text-4xl font-black tracking-tight leading-none mb-2">
-            Kerala&apos;s <span className="theme-accent">Battles</span>
+          <h2 className="theme-text text-xl font-black tracking-tight leading-none mt-1">
+            {totalSeats} Seats · {districtList.length} Districts
           </h2>
-          <p className="theme-text-secondary text-sm">
-            {totalSeats} constituencies across {districtList.length} districts
-          </p>
 
-          {/* Quick stats */}
-          <div className="flex justify-center gap-2 mt-4 flex-wrap">
+          {/* Quick stats chips */}
+          <div className="flex gap-2 mt-3 flex-wrap">
             <div
-              className="px-3 py-1.5 rounded-full text-xs flex items-center gap-1.5"
+              className="px-2.5 py-1 rounded-full text-[11px] flex items-center gap-1"
               style={{
                 background: "var(--theme-border)",
                 color: "var(--theme-text-secondary)",
@@ -127,31 +89,32 @@ export default function KeralaDistrictsPage() {
               <span className="font-bold">{totalSeats}</span> seats
             </div>
             <div
-              className="px-3 py-1.5 rounded-full text-xs flex items-center gap-1.5"
+              className="px-2.5 py-1 rounded-full text-[11px] flex items-center gap-1"
               style={{
                 background: "var(--theme-border)",
                 color: "var(--theme-text-secondary)",
               }}
             >
-              🔥 <span className="font-bold">{totalHotSeats}</span> hot seats
+              <Flame className="w-3 h-3 text-orange-400" />
+              <span className="font-bold">{totalHotSeats}</span> hot
             </div>
             <div
-              className="px-3 py-1.5 rounded-full text-xs"
+              className="px-2.5 py-1 rounded-full text-[11px] font-bold"
               style={{
                 background: "var(--theme-accent)",
                 color: "var(--theme-accent-contrast)",
               }}
             >
-              <span className="font-bold">9 Apr</span> · Polling
+              9 Apr · Polling
             </div>
           </div>
         </motion.div>
       </section>
 
-      {/* ── District Grid ── */}
-      <section className="px-4 pb-12 max-w-3xl mx-auto">
-        <div className="flex items-center justify-between mb-3 px-1">
-          <h3 className="theme-text font-bold text-sm uppercase tracking-wider">
+      {/* ── District List View (alphabetical) ── */}
+      <section className="px-4 pb-32 max-w-2xl mx-auto">
+        <div className="flex items-center justify-between mb-2 px-1 mt-2">
+          <h3 className="theme-text text-sm font-bold uppercase tracking-wider">
             Select District
           </h3>
           <Link
@@ -162,61 +125,65 @@ export default function KeralaDistrictsPage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="theme-card overflow-hidden">
           {districtList.map((d, i) => (
             <Link
               key={d.name}
               href={`/browse?district=${encodeURIComponent(d.name)}`}
             >
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.04, duration: 0.3 }}
-                className="theme-card p-4 cursor-pointer transition-transform hover:scale-[1.03] active:scale-[0.98] relative"
-                style={{ minHeight: "120px" }}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.025, duration: 0.25 }}
+                className="flex items-center gap-3 px-4 py-3.5 cursor-pointer transition-colors last:border-none hover:opacity-90"
+                style={{ borderBottom: "1px solid var(--theme-border)" }}
               >
-                {/* Hot seat badge */}
+                {/* Number */}
+                <span
+                  className="w-6 text-center font-mono font-bold text-xs shrink-0"
+                  style={{ color: "var(--theme-accent)", opacity: 0.5 }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                {/* Name + meta */}
+                <div className="flex-1 min-w-0">
+                  <p className="theme-text font-bold text-[15px] leading-tight">
+                    {d.name}
+                  </p>
+                  <p className="theme-text-muted text-[11px] flex items-center gap-1 mt-0.5">
+                    <MapPin className="w-2.5 h-2.5" />
+                    {d.seats} {d.seats === 1 ? "constituency" : "constituencies"}
+                  </p>
+                </div>
+
+                {/* Hot badge */}
                 {d.hotSeats > 0 && (
                   <span
-                    className="absolute top-2 right-2 px-1.5 py-0.5 rounded-full text-[9px] font-bold flex items-center gap-0.5"
+                    className="px-2 py-0.5 rounded-full text-[10px] font-bold flex items-center gap-0.5 shrink-0"
                     style={{
-                      background: "rgba(255,165,0,0.15)",
+                      background: "rgba(255,165,0,0.12)",
                       color: "#fb923c",
-                      border: "1px solid rgba(255,165,0,0.3)",
+                      border: "1px solid rgba(255,165,0,0.25)",
                     }}
                   >
-                    🔥 {d.hotSeats}
+                    <Flame className="w-2.5 h-2.5" />
+                    {d.hotSeats}
                   </span>
                 )}
 
-                {/* Emoji */}
-                <div className="text-3xl mb-1.5">
-                  {DISTRICT_EMOJI[d.name] || "📍"}
-                </div>
-
-                {/* Name */}
-                <h4 className="theme-text font-bold text-sm leading-tight mb-1">
-                  {d.name}
-                </h4>
-
-                {/* Seats */}
-                <div className="flex items-center justify-between">
-                  <p className="theme-text-muted text-[11px] flex items-center gap-1">
-                    <MapPin className="w-2.5 h-2.5" />
-                    {d.seats} seats
-                  </p>
-                  <ChevronRight
-                    className="w-3.5 h-3.5"
-                    style={{ color: "var(--theme-accent)", opacity: 0.5 }}
-                  />
-                </div>
+                {/* Arrow */}
+                <ChevronRight
+                  className="w-4 h-4 shrink-0"
+                  style={{ color: "var(--theme-accent)", opacity: 0.5 }}
+                />
               </motion.div>
             </Link>
           ))}
         </div>
 
         {/* Footer note */}
-        <p className="theme-text-muted text-center text-[11px] mt-8 px-6">
+        <p className="theme-text-muted text-center text-[10px] mt-4 px-6">
           Tap a district to explore all constituencies and candidates
         </p>
       </section>

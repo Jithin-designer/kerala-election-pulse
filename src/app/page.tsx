@@ -25,43 +25,43 @@ const STATES: State[] = [
 export default function Home() {
   return (
     <main className="min-h-screen" style={{ background: "var(--theme-bg)" }}>
-      {/* ── Hero ── */}
-      <section className="px-5 pt-12 pb-8 text-center">
+      {/* ── Compact Hero ── */}
+      <section className="px-5 pt-6 pb-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
+          className="flex items-center gap-3"
         >
           <div
-            className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5"
+            className="inline-flex items-center justify-center w-11 h-11 rounded-xl shrink-0"
             style={{
               background: "var(--theme-accent)",
               color: "var(--theme-accent-contrast)",
             }}
           >
-            <Vote className="w-7 h-7" />
+            <Vote className="w-5 h-5" />
           </div>
 
-          <p className="theme-text-muted text-xs uppercase tracking-[0.3em] font-bold mb-2">
-            Assembly Elections
-          </p>
-          <h1 className="theme-text text-5xl md:text-6xl font-black tracking-tight leading-none mb-3">
-            <span className="theme-accent">2026</span>
-          </h1>
-          <p className="theme-text-secondary text-sm max-w-md mx-auto">
-            Track candidates, criminal cases & assets across 5 states going to polls
-          </p>
-          <p className="theme-text-muted text-[11px] mt-2">
-            Counting · <span className="theme-accent font-semibold">4 May 2026</span>
-          </p>
+          <div className="flex-1 min-w-0">
+            <p className="theme-text-muted text-[9px] uppercase tracking-[0.2em] font-bold">
+              Assembly Elections
+            </p>
+            <h1 className="theme-text text-2xl font-black tracking-tight leading-none mt-0.5">
+              <span className="theme-accent">2026</span>
+              <span className="theme-text-muted text-[11px] font-medium ml-2">
+                · Counting 4 May
+              </span>
+            </h1>
+          </div>
         </motion.div>
       </section>
 
       {/* ── State Selection ── */}
       <section className="px-4 pb-32 max-w-3xl mx-auto">
-        <div className="flex items-center justify-between mb-4 px-1">
-          <h2 className="theme-text text-lg font-bold">Select Your State</h2>
-          <span className="theme-text-muted text-xs">{STATES.length} states</span>
+        <div className="flex items-center justify-between mb-3 px-1 mt-2">
+          <h2 className="theme-text text-sm font-bold uppercase tracking-wider">Select Your State</h2>
+          <span className="theme-text-muted text-xs">{STATES.length} going to polls</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
