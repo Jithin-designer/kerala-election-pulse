@@ -60,6 +60,98 @@
 }
 
 /* ═══════════════════════════════════════════════════
+   THEME 4: SaaS Mobile (High-Tech Boutique)
+   Electric-blue gradient buttons, Calistoga display face,
+   JetBrains Mono for data labels, soft iOS-style shadows.
+   Mapped from ui-ux-pro-max style #72.
+   ═══════════════════════════════════════════════════ */
+[data-theme="saas"] {
+  --theme-bg: #fafafa;               /* warm off-white canvas */
+  --theme-surface: #ffffff;          /* card */
+  --theme-surface-hover: #f1f5f9;    /* muted hover */
+  --theme-border: #e2e8f0;           /* slate-200 hairline */
+  --theme-text: #0f172a;             /* slate-900 foreground */
+  --theme-text-secondary: #475569;   /* slate-600 */
+  --theme-text-muted: #64748b;       /* slate-500 */
+  --theme-accent: #0052ff;           /* electric blue primary */
+  --theme-accent-light: #4d7cff;     /* gradient end */
+  --theme-accent-contrast: #ffffff;
+  --theme-glow: #0052ff;
+  --theme-card-shadow: 0 4px 10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
+  --theme-card-radius: 16px;         /* rounded per spec */
+  --theme-card-border: 1px solid #e2e8f0;
+  color-scheme: light;
+}
+[data-theme="saas"] body {
+  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+}
+/* Calistoga for display headlines */
+[data-theme="saas"] h1,
+[data-theme="saas"] h2,
+[data-theme="saas"] h3 {
+  font-family: var(--font-calistoga), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+/* JetBrains Mono for numeric data, stat values, and "#074"-style labels */
+[data-theme="saas"] .font-mono,
+[data-theme="saas"] [class*="font-mono"] {
+  font-family: var(--font-jetbrains), "SF Mono", Consolas, monospace !important;
+}
+
+/* Gradient accent on the ThemeSwitcher active button + any .theme-accent bg */
+[data-theme="saas"] .theme-card {
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--theme-border);
+  border-radius: 16px;
+}
+
+/* Bottom nav gets the signature glass / blur nav look */
+[data-theme="saas"] nav.backdrop-blur-xl {
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-top: 1px solid rgba(226, 232, 240, 0.6) !important;
+}
+
+/* Section badges / chips in SaaS style — electric blue with 5% bg, 20% border */
+[data-theme="saas"] .bg-white\/15 {
+  background: linear-gradient(135deg, #0052ff 0%, #4d7cff 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Remap dark-theme utility classes */
+[data-theme="saas"] .text-white { color: var(--theme-text) !important; }
+[data-theme="saas"] .text-white\/70,
+[data-theme="saas"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
+[data-theme="saas"] .text-white\/50,
+[data-theme="saas"] .text-white\/40,
+[data-theme="saas"] .text-white\/30,
+[data-theme="saas"] .text-white\/25,
+[data-theme="saas"] .text-white\/20,
+[data-theme="saas"] .text-white\/15,
+[data-theme="saas"] .text-white\/10 { color: var(--theme-text-muted) !important; }
+[data-theme="saas"] .text-gold { color: var(--theme-accent) !important; }
+[data-theme="saas"] .text-gold-light { color: var(--theme-accent-light) !important; }
+[data-theme="saas"] .bg-black { background-color: var(--theme-bg) !important; }
+[data-theme="saas"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 88%, transparent) !important; }
+[data-theme="saas"] .bg-white\/\[0\.03\],
+[data-theme="saas"] .bg-white\/\[0\.04\],
+[data-theme="saas"] .bg-white\/\[0\.05\],
+[data-theme="saas"] .bg-white\/\[0\.06\],
+[data-theme="saas"] .bg-white\/\[0\.08\] { background-color: var(--theme-surface-hover) !important; }
+[data-theme="saas"] .border-white\/5,
+[data-theme="saas"] .border-white\/\[0\.03\],
+[data-theme="saas"] .border-white\/\[0\.04\],
+[data-theme="saas"] .border-white\/\[0\.06\],
+[data-theme="saas"] .border-white\/\[0\.08\] { border-color: var(--theme-border) !important; }
+[data-theme="saas"] .text-ivory { color: var(--theme-text) !important; }
+[data-theme="saas"] .text-red-400 { color: #dc2626 !important; }
+[data-theme="saas"] .text-blue-400 { color: #0052ff !important; }
+[data-theme="saas"] .text-amber-400 { color: #d97706 !important; }
+[data-theme="saas"] .text-emerald-glow { color: #059669 !important; }
+
+/* ═══════════════════════════════════════════════════
    THEME 3: Editorial Grid / Magazine
    Newspaper-of-record aesthetic — Playfair Display serif
    headlines, ink-black on cream, NYT election-red accent.

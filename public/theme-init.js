@@ -9,7 +9,12 @@
   try {
     var stored = localStorage.getItem("theme");
     if (stored === "swiss" || stored === "brutal") stored = "fluent";
-    if (stored !== "emerald" && stored !== "fluent" && stored !== "editorial") {
+    if (
+      stored !== "emerald" &&
+      stored !== "fluent" &&
+      stored !== "editorial" &&
+      stored !== "saas"
+    ) {
       stored = "fluent";
     }
     document.documentElement.setAttribute("data-theme", stored);

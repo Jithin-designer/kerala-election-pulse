@@ -20,6 +20,11 @@ const THEMES = [
     label: "Editorial",
     colors: ["#f7f5ef", "#a4161a", "#1a1a1a"],
   },
+  {
+    id: "saas",
+    label: "SaaS Mobile",
+    colors: ["#fafafa", "#0052ff", "#4d7cff"],
+  },
 ] as const;
 
 type ThemeId = (typeof THEMES)[number]["id"];
@@ -29,7 +34,14 @@ function getStoredTheme(): ThemeId {
   const stored = localStorage.getItem("theme");
   // Migrate retired themes to fluent (the closest light option)
   if (stored === "swiss" || stored === "brutal") return "fluent";
-  if (stored === "emerald" || stored === "fluent" || stored === "editorial") return stored;
+  if (
+    stored === "emerald" ||
+    stored === "fluent" ||
+    stored === "editorial" ||
+    stored === "saas"
+  ) {
+    return stored;
+  }
   return "fluent";
 }
 

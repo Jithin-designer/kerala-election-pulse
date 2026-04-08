@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Playfair_Display,
+  Calistoga,
+  JetBrains_Mono,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,6 +27,22 @@ const playfairDisplay = Playfair_Display({
   display: "swap",
 });
 
+// SaaS Mobile theme — Calistoga for hero headlines (high-tech boutique)
+const calistoga = Calistoga({
+  variable: "--font-calistoga",
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+// SaaS Mobile theme — JetBrains Mono for data labels / stats
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Kerala Election Pulse 2026 | Live Candidate Tracker",
   description:
@@ -37,7 +59,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="fluent"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${calistoga.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
