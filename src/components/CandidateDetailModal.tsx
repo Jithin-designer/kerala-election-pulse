@@ -64,7 +64,7 @@ function Stat({
     <div
       className="p-3.5 rounded-2xl"
       style={{
-        background: "var(--theme-border)",
+        background: "var(--theme-fill)",
         border: "var(--theme-card-border)",
       }}
     >
@@ -262,7 +262,8 @@ export default function CandidateDetailModal({ candidate, onClose }: Props) {
                 <div
                   className="mx-5 px-3 py-2 rounded-xl flex items-center gap-2 text-xs"
                   style={{
-                    background: "var(--theme-border)",
+                    background: "var(--theme-fill)",
+                    border: "1px solid var(--theme-border)",
                     color: "var(--theme-text-secondary)",
                   }}
                 >

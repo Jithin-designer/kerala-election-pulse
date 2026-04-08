@@ -82,10 +82,10 @@ function CandidateRow({
         {/* Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1.5 flex-wrap">
-            <p className="theme-text font-bold text-[13px] leading-tight truncate">
+            <p className="theme-text font-bold text-[15px] leading-tight truncate">
               {candidate.candidate}
               {candidate.age && (
-                <span className="theme-text-muted font-normal text-[11px] ml-1">
+                <span className="theme-text-muted font-semibold text-[12px] ml-1.5">
                   {candidate.age}y
                 </span>
               )}
@@ -94,15 +94,15 @@ function CandidateRow({
           </div>
 
           {/* Affiliation */}
-          <div className="flex items-center gap-1.5 mt-0.5">
+          <div className="flex items-center gap-1.5 mt-1">
             <span
-              className={`px-1.5 py-px rounded text-[9px] font-bold ${theme.pill}`}
+              className={`px-2 py-0.5 rounded text-[10px] font-black tracking-wide ${theme.pill}`}
             >
               {theme.label}
             </span>
             <span
-              className="theme-text-secondary text-[11px] truncate"
-              style={{ opacity: 0.75 }}
+              className="text-[12px] font-semibold truncate"
+              style={{ color: "var(--theme-text-secondary)" }}
             >
               {candidate.party}
             </span>
@@ -173,7 +173,7 @@ function OtherCandidateRow({
     >
       <div
         className="w-9 h-9 rounded-full flex items-center justify-center theme-text-muted text-xs font-bold shrink-0 mt-0.5"
-        style={{ background: "var(--theme-border)" }}
+        style={{ background: "var(--theme-fill)" }}
       >
         {initials}
       </div>
@@ -245,13 +245,13 @@ export default function BrowseCard({
         <div className="px-4 pt-3 pb-2 flex items-start gap-2">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-1.5 flex-wrap">
-              <h3 className="theme-text text-[15px] font-bold leading-tight">
+              <h3 className="theme-text text-[17px] font-black leading-tight tracking-tight">
                 {constituency.name}
               </h3>
               {isCelebrity && (
                 <span className="flex items-center gap-0.5 px-1.5 py-px rounded bg-gradient-to-r from-pink-500/20 to-orange-400/20 border border-pink-500/30">
                   <Flame className="w-2.5 h-2.5 text-orange-400" />
-                  <span className="text-orange-300 text-[9px] font-bold tracking-wider">
+                  <span className="text-orange-300 text-[10px] font-bold tracking-wider">
                     HOT
                   </span>
                 </span>
@@ -259,22 +259,22 @@ export default function BrowseCard({
             </div>
 
             {/* Constituency number + count grouped under name */}
-            <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
+            <div className="flex items-center gap-1.5 mt-1 flex-wrap">
               <span
-                className="font-mono font-bold text-[11px]"
-                style={{ color: "var(--theme-accent)", opacity: 0.6 }}
+                className="font-mono font-bold text-[12px]"
+                style={{ color: "var(--theme-accent)" }}
               >
                 #{String(constituency.no).padStart(3, "0")}
               </span>
-              <span className="theme-text-muted text-[11px]">·</span>
-              <span className="theme-text-muted text-[11px] flex items-center gap-0.5">
-                <MapPin className="w-2.5 h-2.5" />
+              <span className="theme-text-muted text-[12px] font-semibold">·</span>
+              <span className="text-[12px] font-semibold flex items-center gap-0.5" style={{ color: "var(--theme-text-secondary)" }}>
+                <MapPin className="w-3 h-3" />
                 {constituency.district}
                 {constituency.reserved && (
                   <span
-                    className="ml-1 px-1 py-px rounded text-[9px]"
+                    className="ml-1 px-1.5 py-px rounded text-[10px] font-bold"
                     style={{
-                      background: "var(--theme-border)",
+                      background: "var(--theme-fill)",
                       color: "var(--theme-accent)",
                     }}
                   >
@@ -282,8 +282,8 @@ export default function BrowseCard({
                   </span>
                 )}
               </span>
-              <span className="theme-text-muted text-[11px]">·</span>
-              <span className="theme-text-muted text-[11px]">
+              <span className="theme-text-muted text-[12px] font-semibold">·</span>
+              <span className="text-[12px] font-semibold" style={{ color: "var(--theme-text-secondary)" }}>
                 {totalCandidates} candidates
               </span>
             </div>
@@ -309,10 +309,10 @@ export default function BrowseCard({
                 e.stopPropagation();
                 onShare(constituency);
               }}
-              className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95 -mt-0.5 -mr-1"
+              className="shrink-0 w-9 h-9 rounded-full flex items-center justify-center cursor-pointer transition-all hover:scale-105 active:scale-95 -mt-0.5 -mr-1"
               style={{
-                background: "transparent",
-                color: "var(--theme-text-secondary)",
+                background: "var(--theme-fill)",
+                color: "var(--theme-accent)",
               }}
               aria-label={`Share ${constituency.name}`}
               title={`Share ${constituency.name}`}

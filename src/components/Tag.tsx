@@ -50,7 +50,7 @@ function getVariantStyle(variant: TagVariant, text: string): VariantStyle {
         icon,
         className: "",
         style: {
-          background: "var(--theme-border)",
+          background: "var(--theme-fill)",
           color: "var(--theme-text-secondary)",
         },
       };
@@ -80,7 +80,7 @@ function getVariantStyle(variant: TagVariant, text: string): VariantStyle {
         icon: IndianRupee,
         className: "",
         style: {
-          background: "var(--theme-border)",
+          background: "var(--theme-fill)",
           color: "var(--theme-accent)",
         },
       };
@@ -99,7 +99,7 @@ function getVariantStyle(variant: TagVariant, text: string): VariantStyle {
         icon: Briefcase,
         className: "",
         style: {
-          background: "var(--theme-border)",
+          background: "var(--theme-fill)",
           color: "var(--theme-text-muted)",
         },
       };
@@ -108,7 +108,7 @@ function getVariantStyle(variant: TagVariant, text: string): VariantStyle {
         icon: BookOpen,
         className: "",
         style: {
-          background: "var(--theme-border)",
+          background: "var(--theme-fill)",
           color: "var(--theme-text-muted)",
         },
       };

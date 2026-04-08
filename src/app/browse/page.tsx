@@ -156,8 +156,8 @@ function PartyFilterStrip({
       <div className="flex gap-1.5 w-max">
         <button
           onClick={() => onSelect(null)}
-          className={`px-3.5 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
-            selected === null ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
+          className={`px-3.5 py-1.5 rounded-full text-[12px] font-bold whitespace-nowrap transition-all ${
+            selected === null ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/70 hover:bg-white/[0.08]"
           }`}
         >
           All parties
@@ -168,12 +168,12 @@ function PartyFilterStrip({
             <button
               key={party}
               onClick={() => onSelect(active ? null : party)}
-              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
-                active ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[12px] font-bold whitespace-nowrap transition-all ${
+                active ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/70 hover:bg-white/[0.08]"
               }`}
             >
               {party}
-              <span className={`text-[10px] ${active ? "text-white/50" : "text-white/20"}`}>{count}</span>
+              <span className={`text-[11px] font-semibold ${active ? "text-white/60" : "text-white/50"}`}>{count}</span>
             </button>
           );
         })}
@@ -359,7 +359,7 @@ function BrowsePageInner() {
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium hidden sm:inline">Home</span>
           </Link>
-          <h1 className="theme-text font-bold text-[15px] tracking-tight">
+          <h1 className="theme-text font-black text-[17px] tracking-tight">
             Browse <span className="theme-accent">Battles</span>
           </h1>
           <div className="flex items-center gap-2">
@@ -399,8 +399,8 @@ function BrowsePageInner() {
             <div className="flex gap-2 w-max">
               <button
                 onClick={clearFilters}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-                  !selectedDistrict ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-[13px] font-bold whitespace-nowrap transition-all ${
+                  !selectedDistrict ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/70 hover:bg-white/[0.08]"
                 }`}
               >
                 <Filter className="w-3 h-3" />
@@ -411,12 +411,12 @@ function BrowsePageInner() {
                 const isActive = selectedDistrict === d;
                 return (
                   <button key={d} onClick={() => { setSelectedDistrict(isActive ? null : d); setSelectedConstituency(null); setSearchQuery(""); setShowSearch(false); }}
-                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
-                      isActive ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/40 hover:bg-white/[0.08]"
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-[13px] font-bold whitespace-nowrap transition-all ${
+                      isActive ? "bg-white/15 text-white" : "bg-white/[0.04] text-white/70 hover:bg-white/[0.08]"
                     }`}
                   >
                     {d}
-                    <span className={`text-[10px] ${isActive ? "text-white/50" : "text-white/20"}`}>{count}</span>
+                    <span className={`text-[11px] font-semibold ${isActive ? "text-white/60" : "text-white/50"}`}>{count}</span>
                   </button>
                 );
               })}
@@ -451,8 +451,8 @@ function BrowsePageInner() {
       {/* ── Results summary ── */}
       {activeTab === "constituencies" && (
         <div className="px-5 pt-5 pb-2 flex items-center justify-between">
-          <p className="text-white/25 text-xs">
-            <span className="text-gold font-bold">
+          <p className="text-white/60 text-[12px] font-semibold">
+            <span className="text-gold font-black">
               {groupedByDistrict ? allConstituencies.length : filteredConstituencies.length}
             </span> constituencies
             {selectedDistrict && <span> in <span className="text-gold-light">{selectedDistrict}</span></span>}
@@ -478,7 +478,7 @@ function BrowsePageInner() {
                   <section key={group.district}>
                     <div className="flex items-center justify-between px-5 mb-4">
                       <div>
-                        <h2 className="text-white font-bold text-lg">{group.district}</h2>
+                        <h2 className="text-white font-black text-[17px] tracking-tight">{group.district}</h2>
                         <p className="text-white/20 text-xs">{group.constituencies.length} constituencies</p>
                       </div>
                       <button onClick={() => { setSelectedDistrict(group.district); window.scrollTo({ top: 0, behavior: "smooth" }); }}
@@ -519,8 +519,8 @@ function BrowsePageInner() {
             <div className="flex items-center gap-2 mb-4 px-1">
               <AlertTriangle className="w-5 h-5 text-red-400" />
               <div>
-                <h2 className="text-white font-bold text-lg">Cases Leaderboard</h2>
-                <p className="text-white/25 text-xs">
+                <h2 className="text-white font-black text-[17px] tracking-tight">Cases Leaderboard</h2>
+                <p className="text-white/60 text-[12px] font-semibold">
                   {partyFilter ? `${partyFilter} candidates` : "Candidates with most pending criminal cases"}
                 </p>
               </div>
@@ -549,8 +549,8 @@ function BrowsePageInner() {
             <div className="flex items-center gap-2 mb-4 px-1">
               <IndianRupee className="w-5 h-5 text-emerald-glow" />
               <div>
-                <h2 className="text-white font-bold text-lg">Net Worth Leaderboard</h2>
-                <p className="text-white/25 text-xs">
+                <h2 className="text-white font-black text-[17px] tracking-tight">Net Worth Leaderboard</h2>
+                <p className="text-white/60 text-[12px] font-semibold">
                   {partyFilter ? `${partyFilter} candidates` : "Wealthiest candidates by declared assets"}
                 </p>
               </div>
@@ -579,11 +579,23 @@ function BrowsePageInner() {
             <div className="flex items-center gap-2 mb-2 px-1">
               <Users className="w-5 h-5 text-gold" />
               <div>
-                <h2 className="text-white font-bold text-lg">Candidates by Party</h2>
-                <p className="text-white/25 text-xs">All parties contesting Kerala 2026</p>
+                <h2 className="text-white font-black text-[17px] tracking-tight">Candidates by Party</h2>
+                <p className="text-white/60 text-[12px] font-semibold">
+                  {partyFilter
+                    ? `${partyFilter} · ${byParty.find(([p]) => p === partyFilter)?.[1].length ?? 0} candidates`
+                    : `${byParty.length} parties contesting Kerala 2026`}
+                </p>
               </div>
             </div>
-            {byParty.map(([party, candidates]) => (
+            <PartyFilterStrip
+              parties={byParty.map(([party, list]) => [party, list.length] as [string, number])}
+              selected={partyFilter}
+              onSelect={setPartyFilter}
+            />
+            {(partyFilter
+              ? byParty.filter(([p]) => p === partyFilter)
+              : byParty
+            ).map(([party, candidates]) => (
               <PartySection key={party} party={party} candidates={candidates} />
             ))}
           </div>
