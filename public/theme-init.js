@@ -8,11 +8,13 @@
 (function () {
   try {
     var stored = localStorage.getItem("theme");
-    if (stored === "swiss" || stored === "brutal") stored = "fluent";
+    if (stored === "swiss" || stored === "brutal" || stored === "editorial") {
+      stored = "fluent";
+    }
     if (
       stored !== "emerald" &&
+      stored !== "emerald-day" &&
       stored !== "fluent" &&
-      stored !== "editorial" &&
       stored !== "saas"
     ) {
       stored = "fluent";

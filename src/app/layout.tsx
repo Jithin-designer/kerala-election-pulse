@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {
   Geist,
   Geist_Mono,
-  Playfair_Display,
   Calistoga,
   JetBrains_Mono,
 } from "next/font/google";
@@ -16,15 +15,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-// Editorial theme display serif — NYT / Bloomberg style
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-  style: ["normal", "italic"],
-  display: "swap",
 });
 
 // SaaS Mobile theme — Calistoga for hero headlines (high-tech boutique)
@@ -59,7 +49,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="fluent"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${calistoga.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${calistoga.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>

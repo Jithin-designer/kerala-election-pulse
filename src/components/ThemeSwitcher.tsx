@@ -11,14 +11,14 @@ const THEMES = [
     colors: ["#060e09", "#f5c547", "#147a52"],
   },
   {
+    id: "emerald-day",
+    label: "Emerald Day",
+    colors: ["#faf6ec", "#a07c2e", "#0a2818"],
+  },
+  {
     id: "fluent",
     label: "Fluent UI",
     colors: ["#f5f5f5", "#4e51a0", "#c8c6c4"],
-  },
-  {
-    id: "editorial",
-    label: "Editorial",
-    colors: ["#f7f5ef", "#a4161a", "#1a1a1a"],
   },
   {
     id: "saas",
@@ -33,11 +33,13 @@ function getStoredTheme(): ThemeId {
   if (typeof window === "undefined") return "fluent";
   const stored = localStorage.getItem("theme");
   // Migrate retired themes to fluent (the closest light option)
-  if (stored === "swiss" || stored === "brutal") return "fluent";
+  if (stored === "swiss" || stored === "brutal" || stored === "editorial") {
+    return "fluent";
+  }
   if (
     stored === "emerald" ||
+    stored === "emerald-day" ||
     stored === "fluent" ||
-    stored === "editorial" ||
     stored === "saas"
   ) {
     return stored;

@@ -152,93 +152,71 @@
 [data-theme="saas"] .text-emerald-glow { color: #059669 !important; }
 
 /* ═══════════════════════════════════════════════════
-   THEME 3: Editorial Grid / Magazine
-   Newspaper-of-record aesthetic — Playfair Display serif
-   headlines, ink-black on cream, NYT election-red accent.
-   Mapped from ui-ux-pro-max style #66.
+   THEME 3: Emerald Day (light mirror of Emerald Night)
+   Ivory / cream background, deep emerald ink, darkened
+   gold accent. Same brand DNA as Emerald Night, flipped.
    ═══════════════════════════════════════════════════ */
-[data-theme="editorial"] {
-  --theme-bg: #f7f5ef;               /* newsprint cream */
-  --theme-surface: #fffdf8;          /* paper white */
-  --theme-surface-hover: #f1ede2;
-  --theme-border: #1a1a1a;           /* ink-black hairline */
-  --theme-text: #111111;             /* ink body text */
-  --theme-text-secondary: #3a3836;
-  --theme-text-muted: #6b6863;
-  --theme-accent: #a4161a;           /* newspaper election red */
-  --theme-accent-light: #c7262b;
-  --theme-accent-contrast: #fffdf8;
-  --theme-glow: #a4161a;
-  --theme-card-shadow: none;
-  --theme-card-radius: 0;            /* sharp corners, like print */
-  --theme-card-border: 1px solid #1a1a1a;
+[data-theme="emerald-day"] {
+  --theme-bg: #faf6ec;               /* warm ivory cream */
+  --theme-surface: #ffffff;          /* clean card */
+  --theme-surface-hover: #f3ecd8;    /* deeper cream hover */
+  --theme-border: rgba(10, 40, 24, 0.10);
+  --theme-text: #0a2818;             /* deep emerald ink */
+  --theme-text-secondary: #2d4a36;   /* forest green */
+  --theme-text-muted: #5c6b5f;       /* muted sage */
+  --theme-accent: #a07c2e;           /* darkened gold (AA on cream) */
+  --theme-accent-light: #c29a48;
+  --theme-accent-contrast: #ffffff;
+  --theme-glow: #147a52;
+  --theme-card-shadow: 0 2px 8px rgba(10, 40, 24, 0.06), 0 1px 2px rgba(10, 40, 24, 0.04);
+  --theme-card-radius: 20px;
+  --theme-card-border: 1px solid rgba(10, 40, 24, 0.10);
   color-scheme: light;
 }
-[data-theme="editorial"] body {
-  font-family: var(--font-geist-sans), Georgia, "Times New Roman", serif;
+[data-theme="emerald-day"] .theme-card {
+  background: var(--theme-surface);
+  border: var(--theme-card-border);
+  box-shadow: var(--theme-card-shadow);
 }
-/* Editorial serif headlines — applied to BrowseCard constituency titles,
-   leaderboard headings, state selection hero, and section h2/h3 */
-[data-theme="editorial"] h1,
-[data-theme="editorial"] h2,
-[data-theme="editorial"] h3 {
-  font-family: var(--font-playfair), Georgia, "Times New Roman", serif;
-  font-weight: 900;
-  letter-spacing: -0.015em;
+/* Remap dark-theme utility classes to the light emerald palette */
+[data-theme="emerald-day"] .text-white { color: var(--theme-text) !important; }
+[data-theme="emerald-day"] .text-white\/70,
+[data-theme="emerald-day"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
+[data-theme="emerald-day"] .text-white\/50,
+[data-theme="emerald-day"] .text-white\/40,
+[data-theme="emerald-day"] .text-white\/30,
+[data-theme="emerald-day"] .text-white\/25,
+[data-theme="emerald-day"] .text-white\/20,
+[data-theme="emerald-day"] .text-white\/15,
+[data-theme="emerald-day"] .text-white\/10 { color: var(--theme-text-muted) !important; }
+[data-theme="emerald-day"] .text-gold { color: var(--theme-accent) !important; }
+[data-theme="emerald-day"] .text-gold-light { color: var(--theme-accent-light) !important; }
+[data-theme="emerald-day"] .bg-black { background-color: var(--theme-bg) !important; }
+[data-theme="emerald-day"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 88%, transparent) !important; }
+[data-theme="emerald-day"] .bg-white\/\[0\.03\],
+[data-theme="emerald-day"] .bg-white\/\[0\.04\],
+[data-theme="emerald-day"] .bg-white\/\[0\.05\],
+[data-theme="emerald-day"] .bg-white\/\[0\.06\],
+[data-theme="emerald-day"] .bg-white\/\[0\.08\] { background-color: rgba(10, 40, 24, 0.04) !important; }
+[data-theme="emerald-day"] .bg-white\/15 { background-color: var(--theme-accent) !important; color: var(--theme-accent-contrast) !important; }
+[data-theme="emerald-day"] .border-white\/5,
+[data-theme="emerald-day"] .border-white\/\[0\.03\],
+[data-theme="emerald-day"] .border-white\/\[0\.04\],
+[data-theme="emerald-day"] .border-white\/\[0\.06\],
+[data-theme="emerald-day"] .border-white\/\[0\.08\] { border-color: var(--theme-border) !important; }
+[data-theme="emerald-day"] .text-ivory { color: var(--theme-text) !important; }
+[data-theme="emerald-day"] .text-red-400 { color: #b91c1c !important; }
+[data-theme="emerald-day"] .text-blue-400 { color: #1d4ed8 !important; }
+[data-theme="emerald-day"] .text-amber-400 { color: #a07c2e !important; }
+[data-theme="emerald-day"] .text-emerald-glow { color: #147a52 !important; }
+[data-theme="emerald-day"] .backdrop-blur-xl { backdrop-filter: none !important; }
+[data-theme="emerald-day"] .glass-card {
+  background: var(--theme-surface);
+  border: var(--theme-card-border);
+  backdrop-filter: none;
+  box-shadow: var(--theme-card-shadow);
+  border-radius: var(--theme-card-radius);
 }
-/* Editorial-specific layout tweaks: zero border-radius, heavier dividers,
-   tighter letter-spacing on display text, small-caps on labels */
-[data-theme="editorial"] .rounded-2xl,
-[data-theme="editorial"] .rounded-3xl,
-[data-theme="editorial"] .rounded-xl,
-[data-theme="editorial"] .rounded-lg,
-[data-theme="editorial"] .rounded-md,
-[data-theme="editorial"] [class*="rounded-["] { border-radius: 0 !important; }
-/* Keep avatar circles round — only square the containers */
-[data-theme="editorial"] img.rounded-full,
-[data-theme="editorial"] .w-12.h-12.rounded-full,
-[data-theme="editorial"] .w-9.h-9.rounded-full,
-[data-theme="editorial"] .w-10.h-10.rounded-full,
-[data-theme="editorial"] .w-8.h-8.rounded-full { border-radius: 9999px !important; }
-/* Pills (alliance labels) become sharp rectangles in editorial style */
-[data-theme="editorial"] .rounded-full:not(img):not([class*="w-"]) { border-radius: 0 !important; }
-/* Editorial dividers are 1px ink-black, no subtle grays */
-[data-theme="editorial"] .theme-card {
-  border: 2px solid #1a1a1a !important;
-  box-shadow: 4px 4px 0 0 #1a1a1a;   /* subtle "stacked newspapers" shadow */
-}
-/* Remap dark-theme utility classes */
-[data-theme="editorial"] .text-white { color: var(--theme-text) !important; }
-[data-theme="editorial"] .text-white\/70,
-[data-theme="editorial"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
-[data-theme="editorial"] .text-white\/50,
-[data-theme="editorial"] .text-white\/40,
-[data-theme="editorial"] .text-white\/30,
-[data-theme="editorial"] .text-white\/25,
-[data-theme="editorial"] .text-white\/20,
-[data-theme="editorial"] .text-white\/15,
-[data-theme="editorial"] .text-white\/10 { color: var(--theme-text-muted) !important; }
-[data-theme="editorial"] .text-gold { color: var(--theme-accent) !important; }
-[data-theme="editorial"] .text-gold-light { color: var(--theme-accent-light) !important; }
-[data-theme="editorial"] .bg-black { background-color: var(--theme-bg) !important; }
-[data-theme="editorial"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 88%, transparent) !important; }
-[data-theme="editorial"] .bg-white\/\[0\.03\],
-[data-theme="editorial"] .bg-white\/\[0\.04\],
-[data-theme="editorial"] .bg-white\/\[0\.05\],
-[data-theme="editorial"] .bg-white\/\[0\.06\],
-[data-theme="editorial"] .bg-white\/\[0\.08\] { background-color: #f1ede2 !important; }
-[data-theme="editorial"] .bg-white\/15 { background-color: var(--theme-text) !important; color: var(--theme-bg) !important; }
-[data-theme="editorial"] .border-white\/5,
-[data-theme="editorial"] .border-white\/\[0\.03\],
-[data-theme="editorial"] .border-white\/\[0\.04\],
-[data-theme="editorial"] .border-white\/\[0\.06\],
-[data-theme="editorial"] .border-white\/\[0\.08\] { border-color: #1a1a1a !important; }
-[data-theme="editorial"] .text-ivory { color: var(--theme-text) !important; }
-[data-theme="editorial"] .text-red-400 { color: var(--theme-accent) !important; }
-[data-theme="editorial"] .text-blue-400 { color: #0b3d91 !important; }
-[data-theme="editorial"] .text-amber-400 { color: #9a6700 !important; }
-[data-theme="editorial"] .text-emerald-glow { color: #1a5a1a !important; }
-[data-theme="editorial"] .backdrop-blur-xl { backdrop-filter: none !important; }
 
 /* ═══════════════════════════════════════════════════
    THEME 1: Emerald Night (dark, opt-in)
