@@ -2,9 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Palette } from "lucide-react";
+import { Palette, Monitor } from "lucide-react";
 
 const THEMES = [
+  {
+    id: "auto",
+    label: "System Default",
+    colors: [] as string[], // special: no color dots, shows monitor icon
+  },
   {
     id: "emerald",
     label: "Emerald Night",
@@ -29,39 +34,59 @@ const THEMES = [
 
 type ThemeId = (typeof THEMES)[number]["id"];
 
-function getStoredTheme(): ThemeId {
+/** Resolve "auto" to a concrete theme based on system preference. */
+function resolveAuto(): Exclude<ThemeId, "auto"> {
   if (typeof window === "undefined") return "fluent";
+  const isDark =
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return isDark ? "emerald" : "fluent";
+}
+
+function getStoredTheme(): ThemeId {
+  if (typeof window === "undefined") return "auto";
   const stored = localStorage.getItem("theme");
-  // Migrate retired themes to fluent (the closest light option)
+  // Migrate retired themes → auto
   if (stored === "swiss" || stored === "brutal" || stored === "editorial") {
-    return "fluent";
+    localStorage.removeItem("theme");
+    return "auto";
   }
-  if (
-    stored === "emerald" ||
-    stored === "emerald-day" ||
-    stored === "fluent" ||
-    stored === "saas"
-  ) {
-    return stored;
-  }
-  return "fluent";
+  if (!stored) return "auto";
+  // Validate
+  const valid = new Set(THEMES.map((t) => t.id));
+  return valid.has(stored as ThemeId) ? (stored as ThemeId) : "auto";
+}
+
+function applyTheme(id: ThemeId) {
+  const resolved = id === "auto" ? resolveAuto() : id;
+  document.documentElement.setAttribute("data-theme", resolved);
 }
 
 interface Props {
-  /** Compact mode for header placement */
   compact?: boolean;
 }
 
 export default function ThemeSwitcher({ compact = false }: Props) {
-  const [theme, setTheme] = useState<ThemeId>("fluent");
+  const [theme, setTheme] = useState<ThemeId>("auto");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
+  // Initialise from storage
   useEffect(() => {
     const saved = getStoredTheme();
     setTheme(saved);
-    document.documentElement.setAttribute("data-theme", saved);
+    applyTheme(saved);
   }, []);
+
+  // Listen for system theme changes (only matters when in "auto" mode)
+  useEffect(() => {
+    if (theme !== "auto") return;
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    function onChange() {
+      applyTheme("auto");
+    }
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, [theme]);
 
   // Click outside to close
   useEffect(() => {
@@ -76,8 +101,12 @@ export default function ThemeSwitcher({ compact = false }: Props) {
 
   function switchTheme(id: ThemeId) {
     setTheme(id);
-    document.documentElement.setAttribute("data-theme", id);
-    localStorage.setItem("theme", id);
+    applyTheme(id);
+    if (id === "auto") {
+      localStorage.removeItem("theme");
+    } else {
+      localStorage.setItem("theme", id);
+    }
     setOpen(false);
   }
 
@@ -92,7 +121,7 @@ export default function ThemeSwitcher({ compact = false }: Props) {
             initial={{ opacity: 0, y: compact ? -8 : 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: compact ? -8 : 10, scale: 0.9 }}
-            className={`absolute ${compact ? "top-11 right-0" : "bottom-16 right-0"} w-48 p-1.5 shadow-2xl overflow-hidden z-[100]`}
+            className={`absolute ${compact ? "top-11 right-0" : "bottom-16 right-0"} w-52 p-1.5 shadow-2xl overflow-hidden z-[100]`}
             style={{
               background: "var(--theme-surface)",
               border: "var(--theme-card-border)",
@@ -117,15 +146,19 @@ export default function ThemeSwitcher({ compact = false }: Props) {
                   borderRadius: "var(--theme-card-radius, 6px)",
                 }}
               >
-                <div className="flex gap-0.5">
-                  {t.colors.map((c, i) => (
-                    <span
-                      key={i}
-                      className="w-2.5 h-2.5 rounded-full border border-black/10"
-                      style={{ background: c }}
-                    />
-                  ))}
-                </div>
+                {t.id === "auto" ? (
+                  <Monitor className="w-4 h-4" />
+                ) : (
+                  <div className="flex gap-0.5">
+                    {t.colors.map((c, i) => (
+                      <span
+                        key={i}
+                        className="w-2.5 h-2.5 rounded-full border border-black/10"
+                        style={{ background: c }}
+                      />
+                    ))}
+                  </div>
+                )}
                 <span className="text-xs font-semibold">{t.label}</span>
               </button>
             ))}
@@ -139,7 +172,7 @@ export default function ThemeSwitcher({ compact = false }: Props) {
         style={
           compact
             ? {
-                background: "var(--theme-border)",
+                background: "var(--theme-fill, var(--theme-border))",
                 color: "var(--theme-text-secondary)",
               }
             : {

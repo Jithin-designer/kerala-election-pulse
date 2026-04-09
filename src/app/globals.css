@@ -226,21 +226,21 @@
    Contrast tightened for older / low-vision users (WCAG AA+).
    ═══════════════════════════════════════════════════ */
 [data-theme="emerald"] {
-  --theme-bg: #060e09;
-  --theme-surface: #111b14;
-  --theme-surface-hover: #1a2b1e;
-  --theme-border: rgba(255,255,255,0.12);
-  --theme-fill: rgba(255,255,255,0.06);
+  --theme-bg: #000000;                  /* pure black canvas (Shazam / iOS) */
+  --theme-surface: #1c1c1e;             /* iOS systemGray6 — the Shazam card bg */
+  --theme-surface-hover: #2c2c2e;       /* iOS systemGray5 */
+  --theme-border: rgba(255,255,255,0.06); /* barely-there dividers */
+  --theme-fill: rgba(255,255,255,0.08);
   --theme-text: #ffffff;
   --theme-text-secondary: #e6dfd0;
-  --theme-text-muted: rgba(245,240,232,0.72);
+  --theme-text-muted: rgba(235,235,245,0.6); /* iOS secondaryLabel */
   --theme-accent: #f5c547;
   --theme-accent-light: #ffda6e;
-  --theme-accent-contrast: #060e09;
+  --theme-accent-contrast: #000000;
   --theme-glow: #147a52;
-  --theme-card-shadow: 0 4px 24px rgba(0,0,0,0.3);
-  --theme-card-radius: 20px;
-  --theme-card-border: 1px solid rgba(255,255,255,0.12);
+  --theme-card-shadow: none;             /* Shazam: no shadow in dark mode */
+  --theme-card-radius: 14px;             /* iOS grouped table radius */
+  --theme-card-border: none;             /* Shazam: no visible border, just surface contrast */
   color-scheme: dark;
 }
 
@@ -297,13 +297,51 @@ body {
 
 /* Pixel literals stay at their authored size — no enforced floor. */
 
-/* ── Theme-aware card ── */
+/* ── Accessibility: reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Mobile: prevent accidental pull-to-refresh ── */
+body {
+  overscroll-behavior: contain;
+}
+
+/* ── Global site width constraint ──
+   80% max-width on desktop, centered. Full-width on mobile.
+   Matches the district list width from the Kerala page. */
+.site-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .site-container {
+    width: 80%;
+  }
+  /* Fixed nav bar also respects container width on desktop */
+  nav.fixed {
+    max-width: 900px;
+    width: 80%;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* ── Theme-aware card (Shazam / iOS grouped-table style) ── */
 .theme-card {
   background: var(--theme-surface);
-  border: var(--theme-card-border);
-  border-radius: var(--theme-card-radius);
-  box-shadow: var(--theme-card-shadow);
-  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+  border: var(--theme-card-border, none);
+  border-radius: var(--theme-card-radius, 14px);
+  box-shadow: var(--theme-card-shadow, none);
+  transition: background 0.2s ease, border 0.2s ease, box-shadow 0.2s ease, border-radius 0.2s ease;
+  overflow: hidden;
 }
 
 /* ── Theme-aware text ── */

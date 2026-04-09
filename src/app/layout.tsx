@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="fluent"
+      data-theme=""
       className={`${geistSans.variable} ${geistMono.variable} ${calistoga.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -57,7 +57,9 @@ export default function RootLayout({
         <script src="/theme-init.js" />
       </head>
       <body className="min-h-full flex flex-col">
-        {children}
+        <div className="site-container">
+          {children}
+        </div>
       </body>
     </html>
   );

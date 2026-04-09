@@ -112,7 +112,7 @@ export default function KeralaDistrictsPage() {
       </section>
 
       {/* ── District List View (alphabetical) ── */}
-      <section className="px-4 pb-32 max-w-2xl mx-auto">
+      <section className="px-4 pb-32">
         <div className="flex items-center justify-between mb-2 px-1 mt-2">
           <h3 className="theme-text text-sm font-bold uppercase tracking-wider">
             Select District
