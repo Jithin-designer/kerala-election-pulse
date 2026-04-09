@@ -30,6 +30,11 @@ const THEMES = [
     label: "SaaS Mobile",
     colors: ["#fafafa", "#0052ff", "#4d7cff"],
   },
+  {
+    id: "aurora",
+    label: "Aurora",
+    colors: ["#050510", "#00e5ff", "#7c4dff"],
+  },
 ] as const;
 
 type ThemeId = (typeof THEMES)[number]["id"];

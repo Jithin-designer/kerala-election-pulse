@@ -222,6 +222,136 @@
 }
 
 /* ═══════════════════════════════════════════════════
+   THEME: Aurora (dark, animated gradient mesh + glassmorphism)
+   Combines "Aurora UI" and "Motion-Driven" styles from
+   ui-ux-pro-max #10 + #14. Northern lights on black canvas,
+   frosted glass cards, enhanced entrance animations.
+   ═══════════════════════════════════════════════════ */
+[data-theme="aurora"] {
+  --theme-bg: #050510;
+  --theme-surface: rgba(255, 255, 255, 0.06);
+  --theme-surface-hover: rgba(255, 255, 255, 0.10);
+  --theme-border: rgba(255, 255, 255, 0.10);
+  --theme-fill: rgba(255, 255, 255, 0.08);
+  --theme-text: #ffffff;
+  --theme-text-secondary: rgba(235, 235, 245, 0.85);
+  --theme-text-muted: rgba(235, 235, 245, 0.5);
+  --theme-accent: #00e5ff;
+  --theme-accent-light: #64ffda;
+  --theme-accent-contrast: #050510;
+  --theme-glow: #7c4dff;
+  --theme-card-shadow: 0 4px 30px rgba(0, 229, 255, 0.06), 0 0 1px rgba(255,255,255,0.1);
+  --theme-card-radius: 16px;
+  --theme-card-border: 1px solid rgba(255, 255, 255, 0.10);
+  color-scheme: dark;
+}
+
+/* Aurora animated background */
+[data-theme="aurora"] body {
+  position: relative;
+  background: #050510;
+}
+[data-theme="aurora"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(0, 229, 255, 0.25), transparent 70%),
+    radial-gradient(ellipse 60% 60% at 80% 20%, rgba(124, 77, 255, 0.2), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 50% 80%, rgba(0, 255, 102, 0.15), transparent 65%),
+    radial-gradient(ellipse 40% 50% at 70% 60%, rgba(255, 0, 255, 0.1), transparent 50%);
+  filter: blur(80px);
+  animation: auroraFlow 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes auroraFlow {
+  0% { transform: translateX(0) translateY(0) scale(1); }
+  33% { transform: translateX(-5%) translateY(3%) scale(1.05); }
+  66% { transform: translateX(3%) translateY(-2%) scale(0.98); }
+  100% { transform: translateX(-2%) translateY(4%) scale(1.02); }
+}
+
+/* Glassmorphism cards */
+[data-theme="aurora"] .theme-card {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 0 4px 30px rgba(0, 229, 255, 0.06), 0 0 1px rgba(255,255,255,0.1) !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure content sits above aurora bg */
+[data-theme="aurora"] .site-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Aurora glassmorphism on fixed navs */
+[data-theme="aurora"] nav.fixed,
+[data-theme="aurora"] header.sticky {
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  background: rgba(5, 5, 16, 0.65) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Aurora accent glow on active elements */
+[data-theme="aurora"] .theme-accent {
+  color: var(--theme-accent) !important;
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+/* Aurora-specific stat card fill */
+[data-theme="aurora"] .bg-white\/\[0\.03\],
+[data-theme="aurora"] .bg-white\/\[0\.04\],
+[data-theme="aurora"] .bg-white\/\[0\.05\],
+[data-theme="aurora"] .bg-white\/\[0\.06\],
+[data-theme="aurora"] .bg-white\/\[0\.08\] { background-color: rgba(255,255,255,0.06) !important; }
+[data-theme="aurora"] .bg-white\/15 { background: linear-gradient(135deg, #00e5ff 0%, #7c4dff 100%) !important; color: #fff !important; }
+
+[data-theme="aurora"] .border-white\/5,
+[data-theme="aurora"] .border-white\/\[0\.03\],
+[data-theme="aurora"] .border-white\/\[0\.04\],
+[data-theme="aurora"] .border-white\/\[0\.06\],
+[data-theme="aurora"] .border-white\/\[0\.08\] { border-color: rgba(255,255,255,0.08) !important; }
+
+/* Aurora gradient on gold text */
+[data-theme="aurora"] .text-gold {
+  background: linear-gradient(135deg, #00e5ff, #64ffda, #7c4dff) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+[data-theme="aurora"] .text-gold-light { color: var(--theme-accent-light) !important; }
+
+/* Alliance color mappings — neon versions */
+[data-theme="aurora"] .text-red-400 { color: #ff5252 !important; }
+[data-theme="aurora"] .text-blue-400 { color: #448aff !important; }
+[data-theme="aurora"] .text-amber-400 { color: #ffd740 !important; }
+[data-theme="aurora"] .text-orange-400 { color: #ffab40 !important; }
+[data-theme="aurora"] .text-emerald-glow { color: #64ffda !important; }
+
+/* Glass-card override for light-mode utility fallback */
+[data-theme="aurora"] .glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+}
+
+/* Enhanced motion: bolder entrance animations when aurora active */
+@media (prefers-reduced-motion: no-preference) {
+  [data-theme="aurora"] [style*="opacity: 0"] {
+    transition-duration: 450ms !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
    THEME 1: Emerald Night (dark, opt-in)
    Contrast tightened for older / low-vision users (WCAG AA+).
    ═══════════════════════════════════════════════════ */

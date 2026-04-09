@@ -7,7 +7,7 @@
  *      macOS/iOS light mode → "fluent"  (light theme)
  */
 (function () {
-  var VALID = { emerald: 1, "emerald-day": 1, fluent: 1, saas: 1 };
+  var VALID = { emerald: 1, "emerald-day": 1, fluent: 1, saas: 1, aurora: 1 };
   try {
     var stored = localStorage.getItem("theme");
     // Migrate retired themes
