@@ -8,12 +8,12 @@ const THEMES = [
   {
     id: "auto",
     label: "System Default",
-    colors: [] as string[], // special: no color dots, shows monitor icon
+    colors: [] as string[],
   },
   {
     id: "emerald",
     label: "Emerald Night",
-    colors: ["#060e09", "#f5c547", "#147a52"],
+    colors: ["#000000", "#f5c547", "#1c1c1e"],
   },
   {
     id: "emerald-day",
@@ -21,19 +21,14 @@ const THEMES = [
     colors: ["#faf6ec", "#a07c2e", "#0a2818"],
   },
   {
-    id: "fluent",
-    label: "Fluent UI",
-    colors: ["#f5f5f5", "#4e51a0", "#c8c6c4"],
-  },
-  {
-    id: "saas",
-    label: "SaaS Mobile",
-    colors: ["#fafafa", "#0052ff", "#4d7cff"],
-  },
-  {
     id: "aurora",
-    label: "Aurora",
+    label: "Aurora Dark",
     colors: ["#050510", "#00e5ff", "#7c4dff"],
+  },
+  {
+    id: "aurora-light",
+    label: "Aurora Light",
+    colors: ["#f0f4ff", "#0070cc", "#7c4dff"],
   },
 ] as const;
 
@@ -41,22 +36,21 @@ type ThemeId = (typeof THEMES)[number]["id"];
 
 /** Resolve "auto" to a concrete theme based on system preference. */
 function resolveAuto(): Exclude<ThemeId, "auto"> {
-  if (typeof window === "undefined") return "fluent";
+  if (typeof window === "undefined") return "aurora-light";
   const isDark =
     window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  return isDark ? "emerald" : "fluent";
+  return isDark ? "emerald" : "aurora-light";
 }
 
 function getStoredTheme(): ThemeId {
   if (typeof window === "undefined") return "auto";
   const stored = localStorage.getItem("theme");
   // Migrate retired themes → auto
-  if (stored === "swiss" || stored === "brutal" || stored === "editorial") {
+  if (stored === "swiss" || stored === "brutal" || stored === "editorial" || stored === "fluent" || stored === "saas") {
     localStorage.removeItem("theme");
     return "auto";
   }
   if (!stored) return "auto";
-  // Validate
   const valid = new Set(THEMES.map((t) => t.id));
   return valid.has(stored as ThemeId) ? (stored as ThemeId) : "auto";
 }

@@ -37,121 +37,28 @@
 }
 
 /* ═══════════════════════════════════════════════════
-   DEFAULT (:root) — Fluent UI light theme
+   DEFAULT (:root) — Aurora Light
    Applied before any data-theme attribute exists, so the
-   first paint is always white, never dark.
+   first paint is always the light aurora canvas.
    ═══════════════════════════════════════════════════ */
 :root {
-  --theme-bg: #f5f5f5;
-  --theme-surface: #ffffff;
-  --theme-surface-hover: #f0eff0;
-  --theme-border: #e1dfdd;
-  --theme-fill: #f3f2f1;
-  --theme-text: #1b1b1b;
-  --theme-text-secondary: #3b3a39;
-  --theme-text-muted: #595959;
-  --theme-accent: #4e51a0;
-  --theme-accent-light: #6264a7;
+  --theme-bg: #f0f4ff;
+  --theme-surface: rgba(255, 255, 255, 0.85);
+  --theme-surface-hover: rgba(255, 255, 255, 0.95);
+  --theme-border: rgba(0, 100, 200, 0.10);
+  --theme-fill: rgba(0, 100, 200, 0.05);
+  --theme-text: #0a1628;
+  --theme-text-secondary: #2d3f5e;
+  --theme-text-muted: #5a6b87;
+  --theme-accent: #0070cc;
+  --theme-accent-light: #00a3ff;
   --theme-accent-contrast: #ffffff;
-  --theme-glow: #4e51a0;
-  --theme-card-shadow: 0 2px 4px rgba(0,0,0,0.10), 0 0 2px rgba(0,0,0,0.12);
-  --theme-card-radius: 4px;
-  --theme-card-border: 1px solid #e1dfdd;
+  --theme-glow: #7c4dff;
+  --theme-card-shadow: 0 4px 24px rgba(0, 100, 200, 0.08), 0 0 1px rgba(0,0,0,0.06);
+  --theme-card-radius: 16px;
+  --theme-card-border: 1px solid rgba(0, 100, 200, 0.10);
   color-scheme: light;
 }
-
-/* ═══════════════════════════════════════════════════
-   THEME 4: SaaS Mobile (High-Tech Boutique)
-   Electric-blue gradient buttons, Calistoga display face,
-   JetBrains Mono for data labels, soft iOS-style shadows.
-   Mapped from ui-ux-pro-max style #72.
-   ═══════════════════════════════════════════════════ */
-[data-theme="saas"] {
-  --theme-bg: #fafafa;               /* warm off-white canvas */
-  --theme-surface: #ffffff;          /* card */
-  --theme-surface-hover: #f1f5f9;    /* muted hover */
-  --theme-border: #e2e8f0;           /* slate-200 hairline */
-  --theme-fill: #eff3f9;              /* NEW: cool slate tint for fill blocks */
-  --theme-text: #0f172a;             /* slate-900 foreground */
-  --theme-text-secondary: #475569;   /* slate-600 */
-  --theme-text-muted: #64748b;       /* slate-500 */
-  --theme-accent: #0052ff;           /* electric blue primary */
-  --theme-accent-light: #4d7cff;     /* gradient end */
-  --theme-accent-contrast: #ffffff;
-  --theme-glow: #0052ff;
-  --theme-card-shadow: 0 4px 10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
-  --theme-card-radius: 16px;         /* rounded per spec */
-  --theme-card-border: 1px solid #e2e8f0;
-  color-scheme: light;
-}
-[data-theme="saas"] body {
-  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
-}
-/* Calistoga for display headlines */
-[data-theme="saas"] h1,
-[data-theme="saas"] h2,
-[data-theme="saas"] h3 {
-  font-family: var(--font-calistoga), Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
-/* JetBrains Mono for numeric data, stat values, and "#074"-style labels */
-[data-theme="saas"] .font-mono,
-[data-theme="saas"] [class*="font-mono"] {
-  font-family: var(--font-jetbrains), "SF Mono", Consolas, monospace !important;
-}
-
-/* Gradient accent on the ThemeSwitcher active button + any .theme-accent bg */
-[data-theme="saas"] .theme-card {
-  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.06);
-  border: 1px solid var(--theme-border);
-  border-radius: 16px;
-}
-
-/* Bottom nav gets the signature glass / blur nav look */
-[data-theme="saas"] nav.backdrop-blur-xl {
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  background: rgba(255, 255, 255, 0.72) !important;
-  border-top: 1px solid rgba(226, 232, 240, 0.6) !important;
-}
-
-/* Section badges / chips in SaaS style — electric blue with 5% bg, 20% border */
-[data-theme="saas"] .bg-white\/15 {
-  background: linear-gradient(135deg, #0052ff 0%, #4d7cff 100%) !important;
-  color: #ffffff !important;
-}
-
-/* Remap dark-theme utility classes */
-[data-theme="saas"] .text-white { color: var(--theme-text) !important; }
-[data-theme="saas"] .text-white\/70,
-[data-theme="saas"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
-[data-theme="saas"] .text-white\/50,
-[data-theme="saas"] .text-white\/40,
-[data-theme="saas"] .text-white\/30,
-[data-theme="saas"] .text-white\/25,
-[data-theme="saas"] .text-white\/20,
-[data-theme="saas"] .text-white\/15,
-[data-theme="saas"] .text-white\/10 { color: var(--theme-text-muted) !important; }
-[data-theme="saas"] .text-gold { color: var(--theme-accent) !important; }
-[data-theme="saas"] .text-gold-light { color: var(--theme-accent-light) !important; }
-[data-theme="saas"] .bg-black { background-color: var(--theme-bg) !important; }
-[data-theme="saas"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 88%, transparent) !important; }
-[data-theme="saas"] .bg-white\/\[0\.03\],
-[data-theme="saas"] .bg-white\/\[0\.04\],
-[data-theme="saas"] .bg-white\/\[0\.05\],
-[data-theme="saas"] .bg-white\/\[0\.06\],
-[data-theme="saas"] .bg-white\/\[0\.08\] { background-color: var(--theme-surface-hover) !important; }
-[data-theme="saas"] .border-white\/5,
-[data-theme="saas"] .border-white\/\[0\.03\],
-[data-theme="saas"] .border-white\/\[0\.04\],
-[data-theme="saas"] .border-white\/\[0\.06\],
-[data-theme="saas"] .border-white\/\[0\.08\] { border-color: var(--theme-border) !important; }
-[data-theme="saas"] .text-ivory { color: var(--theme-text) !important; }
-[data-theme="saas"] .text-red-400 { color: #dc2626 !important; }
-[data-theme="saas"] .text-blue-400 { color: #0052ff !important; }
-[data-theme="saas"] .text-amber-400 { color: #d97706 !important; }
-[data-theme="saas"] .text-emerald-glow { color: #059669 !important; }
 
 /* ═══════════════════════════════════════════════════
    THEME 3: Emerald Day (light mirror of Emerald Night)
@@ -352,6 +259,101 @@
 }
 
 /* ═══════════════════════════════════════════════════
+   THEME: Aurora Light (light, subtle aurora tints + glass)
+   Same family as Aurora dark — cyan/purple accents,
+   glassmorphism cards — but on a warm light canvas.
+   ═══════════════════════════════════════════════════ */
+[data-theme="aurora-light"] {
+  --theme-bg: #f0f4ff;
+  --theme-surface: rgba(255, 255, 255, 0.85);
+  --theme-surface-hover: rgba(255, 255, 255, 0.95);
+  --theme-border: rgba(0, 100, 200, 0.10);
+  --theme-fill: rgba(0, 100, 200, 0.05);
+  --theme-text: #0a1628;
+  --theme-text-secondary: #2d3f5e;
+  --theme-text-muted: #5a6b87;
+  --theme-accent: #0070cc;
+  --theme-accent-light: #00a3ff;
+  --theme-accent-contrast: #ffffff;
+  --theme-glow: #7c4dff;
+  --theme-card-shadow: 0 4px 24px rgba(0, 100, 200, 0.08), 0 0 1px rgba(0,0,0,0.06);
+  --theme-card-radius: 16px;
+  --theme-card-border: 1px solid rgba(0, 100, 200, 0.10);
+  color-scheme: light;
+}
+[data-theme="aurora-light"] body {
+  position: relative;
+  background: #f0f4ff;
+}
+[data-theme="aurora-light"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 30%, rgba(0, 150, 255, 0.2), transparent 70%),
+    radial-gradient(ellipse 60% 60% at 80% 20%, rgba(124, 77, 255, 0.12), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 50% 80%, rgba(0, 200, 150, 0.1), transparent 65%);
+  filter: blur(100px);
+  animation: auroraFlow 25s ease-in-out infinite alternate;
+  will-change: transform;
+}
+[data-theme="aurora-light"] .site-container { position: relative; z-index: 1; }
+[data-theme="aurora-light"] .theme-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(0, 100, 200, 0.10) !important;
+  box-shadow: 0 4px 24px rgba(0, 100, 200, 0.06) !important;
+}
+[data-theme="aurora-light"] nav.fixed,
+[data-theme="aurora-light"] header.sticky {
+  backdrop-filter: blur(20px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+  background: rgba(240, 244, 255, 0.75) !important;
+}
+/* Light aurora text remaps */
+[data-theme="aurora-light"] .text-white { color: var(--theme-text) !important; }
+[data-theme="aurora-light"] .text-white\/70,
+[data-theme="aurora-light"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
+[data-theme="aurora-light"] .text-white\/50,
+[data-theme="aurora-light"] .text-white\/40,
+[data-theme="aurora-light"] .text-white\/30,
+[data-theme="aurora-light"] .text-white\/25,
+[data-theme="aurora-light"] .text-white\/20,
+[data-theme="aurora-light"] .text-white\/15,
+[data-theme="aurora-light"] .text-white\/10 { color: var(--theme-text-muted) !important; }
+[data-theme="aurora-light"] .text-gold { color: var(--theme-accent) !important; }
+[data-theme="aurora-light"] .text-gold-light { color: var(--theme-accent-light) !important; }
+[data-theme="aurora-light"] .bg-black { background-color: var(--theme-bg) !important; }
+[data-theme="aurora-light"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 85%, transparent) !important; }
+[data-theme="aurora-light"] .bg-white\/\[0\.03\],
+[data-theme="aurora-light"] .bg-white\/\[0\.04\],
+[data-theme="aurora-light"] .bg-white\/\[0\.05\],
+[data-theme="aurora-light"] .bg-white\/\[0\.06\],
+[data-theme="aurora-light"] .bg-white\/\[0\.08\] { background-color: rgba(0,100,200,0.04) !important; }
+[data-theme="aurora-light"] .bg-white\/15 { background: linear-gradient(135deg, #0070cc, #7c4dff) !important; color: #fff !important; }
+[data-theme="aurora-light"] .border-white\/5,
+[data-theme="aurora-light"] .border-white\/\[0\.03\],
+[data-theme="aurora-light"] .border-white\/\[0\.04\],
+[data-theme="aurora-light"] .border-white\/\[0\.06\],
+[data-theme="aurora-light"] .border-white\/\[0\.08\] { border-color: rgba(0,100,200,0.08) !important; }
+[data-theme="aurora-light"] .text-ivory { color: var(--theme-text) !important; }
+[data-theme="aurora-light"] .text-red-400 { color: #dc2626 !important; }
+[data-theme="aurora-light"] .text-blue-400 { color: #0070cc !important; }
+[data-theme="aurora-light"] .text-amber-400 { color: #d97706 !important; }
+[data-theme="aurora-light"] .text-emerald-glow { color: #059669 !important; }
+[data-theme="aurora-light"] .backdrop-blur-xl { backdrop-filter: blur(16px) !important; }
+[data-theme="aurora-light"] .glass-card {
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(0,100,200,0.10);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
+
+/* ═══════════════════════════════════════════════════
    THEME 1: Emerald Night (dark, opt-in)
    Contrast tightened for older / low-vision users (WCAG AA+).
    ═══════════════════════════════════════════════════ */
@@ -372,37 +374,6 @@
   --theme-card-radius: 14px;             /* iOS grouped table radius */
   --theme-card-border: none;             /* Shazam: no visible border, just surface contrast */
   color-scheme: dark;
-}
-
-/* ═══════════════════════════════════════════════════
-   THEME 2: Fluent UI (Microsoft Teams · light)
-   Real Fluent v9 light theme tokens.
-   - Brand: Teams purple #6264a7
-   - Neutrals: #f5f5f5 / #fff / #e1dfdd / #242424 / #616161
-   - Strict 4px corner radius (Fluent rule)
-   - Segoe UI font with system fallback
-   ═══════════════════════════════════════════════════ */
-[data-theme="fluent"] {
-  --theme-bg: #f5f5f5;
-  --theme-surface: #ffffff;
-  --theme-surface-hover: #f0eff0;
-  --theme-border: #e1dfdd;         /* soft hairline (was #c8c6c4 — too dark as stroke) */
-  --theme-fill: #f3f2f1;            /* NEW: fill color for stat blocks & banners (was using border → ugly grey) */
-  --theme-text: #1b1b1b;
-  --theme-text-secondary: #3b3a39;
-  --theme-text-muted: #595959;
-  --theme-accent: #4e51a0;
-  --theme-accent-light: #6264a7;
-  --theme-accent-contrast: #ffffff;
-  --theme-glow: #4e51a0;
-  --theme-card-shadow: 0 2px 4px rgba(0,0,0,0.10), 0 0 2px rgba(0,0,0,0.12);
-  --theme-card-radius: 4px;
-  --theme-card-border: 1px solid #e1dfdd;
-  color-scheme: light;
-  font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
-}
-[data-theme="fluent"] body {
-  font-family: "Segoe UI Variable", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ════════════════════════════════════════════════════════════
@@ -490,13 +461,6 @@ body {
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(12px);
 }
-[data-theme="fluent"] .glass-card {
-  background: var(--theme-surface);
-  border: var(--theme-card-border);
-  backdrop-filter: none;
-  box-shadow: var(--theme-card-shadow);
-  border-radius: var(--theme-card-radius);
-}
 
 .gold-shimmer {
   background: linear-gradient(90deg, var(--theme-accent), var(--theme-accent-light), var(--theme-accent));
@@ -526,62 +490,9 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════
-   FLUENT (Microsoft Teams) — light-theme overrides
    Mirrors the swiss override pattern: remap dark-theme
    utility classes (text-white/X, bg-white/X, etc.) to
    Fluent's neutral palette so existing components look
    right without rewriting every Tailwind class.
    ═══════════════════════════════════════════════════ */
-[data-theme="fluent"] .text-white { color: var(--theme-text) !important; }
-[data-theme="fluent"] .text-white\/70,
-[data-theme="fluent"] .text-white\/60 { color: var(--theme-text-secondary) !important; }
-[data-theme="fluent"] .text-white\/50,
-[data-theme="fluent"] .text-white\/40,
-[data-theme="fluent"] .text-white\/30,
-[data-theme="fluent"] .text-white\/25,
-[data-theme="fluent"] .text-white\/20,
-[data-theme="fluent"] .text-white\/15,
-[data-theme="fluent"] .text-white\/10 { color: var(--theme-text-muted) !important; }
 
-[data-theme="fluent"] .text-gold { color: var(--theme-accent) !important; }
-[data-theme="fluent"] .text-gold-light { color: var(--theme-accent-light) !important; }
-
-[data-theme="fluent"] .bg-black { background-color: var(--theme-bg) !important; }
-[data-theme="fluent"] .bg-black\/80 { background-color: color-mix(in srgb, var(--theme-bg) 80%, transparent) !important; }
-[data-theme="fluent"] .bg-white\/\[0\.03\],
-[data-theme="fluent"] .bg-white\/\[0\.04\],
-[data-theme="fluent"] .bg-white\/\[0\.05\],
-[data-theme="fluent"] .bg-white\/\[0\.06\],
-[data-theme="fluent"] .bg-white\/\[0\.08\] { background-color: var(--theme-surface-hover) !important; }
-[data-theme="fluent"] .bg-white\/15 { background-color: var(--theme-accent) !important; color: var(--theme-accent-contrast) !important; }
-
-[data-theme="fluent"] .border-white\/5,
-[data-theme="fluent"] .border-white\/\[0\.03\],
-[data-theme="fluent"] .border-white\/\[0\.04\],
-[data-theme="fluent"] .border-white\/\[0\.06\],
-[data-theme="fluent"] .border-white\/\[0\.08\] { border-color: var(--theme-border) !important; }
-
-[data-theme="fluent"] .text-ivory { color: var(--theme-text) !important; }
-[data-theme="fluent"] .text-ivory-dark\/50,
-[data-theme="fluent"] .text-ivory-dark\/40 { color: var(--theme-text-muted) !important; }
-
-/* Strict Fluent corner-radius rule: 4px everywhere except pills */
-[data-theme="fluent"] .rounded-2xl,
-[data-theme="fluent"] .rounded-3xl,
-[data-theme="fluent"] .rounded-xl,
-[data-theme="fluent"] [class*="rounded-["] { border-radius: 4px !important; }
-[data-theme="fluent"] .rounded-lg { border-radius: 4px !important; }
-
-/* Fluent uses pure circular avatars and pill chips — keep .rounded-full */
-
-/* Fluent emerald-glow alliance accent → success green */
-[data-theme="fluent"] .text-emerald-glow,
-[data-theme="fluent"] .text-emerald-glow\/60 { color: #13a10e !important; }
-[data-theme="fluent"] .text-red-400,
-[data-theme="fluent"] .text-red-400\/60 { color: #c4314b !important; }
-[data-theme="fluent"] .text-blue-400 { color: #0078d4 !important; }
-[data-theme="fluent"] .text-amber-400 { color: #f7630c !important; }
-[data-theme="fluent"] .text-orange-400 { color: #f7630c !important; }
-
-/* Fluent header backdrop tweak — neutral instead of dark blur */
-[data-theme="fluent"] .backdrop-blur-xl { backdrop-filter: none !important; }
