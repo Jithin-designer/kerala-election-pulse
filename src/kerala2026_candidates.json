@@ -122,11 +122,11 @@
       "ldf": {
         "party": "IND",
         "candidate": "Shanavas Padhoor",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 46,
+        "education": "12th Pass",
+        "profession": "Social Political Activist",
+        "assets": "Rs 3,84,87,640",
+        "assets_value": 38487640,
         "criminal_cases": 0
       },
       "udf": {
@@ -170,20 +170,20 @@
         "party": "INC",
         "candidate": "K. Neelakandan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Social Worker",
+        "assets": "Rs 1,78,82,320",
+        "assets_value": 17882320,
+        "criminal_cases": 5
       },
       "nda": {
         "party": "BJP",
         "candidate": "Manulal Meloth",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 39,
+        "education": "Graduate",
+        "profession": "Self Employed",
+        "assets": "Rs 24,18,402",
+        "assets_value": 2418402,
         "criminal_cases": 0
       },
       "others": []
@@ -244,21 +244,21 @@
         "party": "INC",
         "candidate": "Sandeep Varier",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Others",
+        "profession": "Agriculture",
+        "assets": "Rs 6,61,26,828",
+        "assets_value": 66126828,
+        "criminal_cases": 14
       },
       "nda": {
         "party": "TTP",
         "candidate": "Ravi Kulangara",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Post Graduate",
+        "profession": "Business, Agriculture",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "others": []
     },
@@ -270,31 +270,31 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "T. I. Madhusoodanan",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 65,
+        "education": "Graduate",
+        "profession": "Nil",
+        "assets": "Rs 1,93,43,271",
+        "assets_value": 19343271,
+        "criminal_cases": 3
       },
       "udf": {
         "party": "IND",
         "candidate": "V. Kunjikrishnan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Others",
+        "profession": "Retired Employee",
+        "assets": "Rs 4,00,00,000",
+        "assets_value": 40000000,
         "criminal_cases": 0
       },
       "nda": {
         "party": "BJP",
         "candidate": "A. P. Gangadharan",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 62,
+        "education": "10th Pass",
+        "profession": "Flour mill work",
+        "assets": "Rs 66,08,000",
+        "assets_value": 6608000,
         "criminal_cases": 0
       },
       "others": []
@@ -307,22 +307,22 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "M. Vijin",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 36,
+        "education": "Post Graduate",
+        "profession": "Presently member of Kerala Legislative  Assembly",
+        "assets": "Rs 77,64,285",
+        "assets_value": 7764285,
+        "criminal_cases": 5
       },
       "udf": {
         "party": "INC",
         "candidate": "Rajeevan Kappachery",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Post Graduate",
+        "profession": "Advocate",
+        "assets": "Rs 99,07,741",
+        "assets_value": 9907741,
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
@@ -345,31 +345,31 @@
         "party": "CPI(M)",
         "candidate": "P. K. Shyamala",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate Professional",
+        "profession": "Pensioner",
+        "assets": "Rs 1,80,12,467",
+        "assets_value": 18012467,
+        "criminal_cases": 2
       },
       "udf": {
         "party": "IND",
         "candidate": "T. K. Govindan",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 71,
+        "education": "Literate",
+        "profession": "No occupation",
+        "assets": "Rs 20,48,851",
+        "assets_value": 2048851,
         "criminal_cases": 0
       },
       "nda": {
         "party": "BJP",
         "candidate": "N. Haridas",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 58,
+        "education": "Graduate",
+        "profession": "Business",
+        "assets": "Rs 1,21,07,679",
+        "assets_value": 12107679,
+        "criminal_cases": 1
       },
       "others": [
         {
@@ -412,11 +412,11 @@
       "ldf": {
         "party": "KC(M)",
         "candidate": "Mathew Kunnapally",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 66,
+        "education": "Graduate Professional",
+        "profession": "Business",
+        "assets": "Rs 47,25,38,348",
+        "assets_value": 472538348,
         "criminal_cases": 0
       },
       "udf": {
@@ -432,12 +432,12 @@
       "nda": {
         "party": "TTP",
         "candidate": "Srinath Padmanabhan",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 34,
+        "education": "Post Graduate",
+        "profession": "Teacher",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 2
       },
       "others": [
         {
@@ -566,31 +566,31 @@
         "party": "CPI(M)",
         "candidate": "Pinarayi Vijayan",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "12th Pass",
+        "profession": "Politician, at present Chief Minister of Kerala",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 6
       },
       "udf": {
         "party": "INC",
         "candidate": "Abdul Rasheed",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate Professional",
+        "profession": "Lawyer",
+        "assets": "Rs 42,45,114",
+        "assets_value": 4245114,
+        "criminal_cases": 20
       },
       "nda": {
         "party": "BJP",
         "candidate": "K. Ranjith",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Social Worker",
+        "assets": "Rs 4,70,82,440",
+        "assets_value": 47082440,
+        "criminal_cases": 9
       },
       "others": []
     },
@@ -613,20 +613,20 @@
         "party": "INC",
         "candidate": "K. P. Saju",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Pension",
+        "assets": "Rs 1,95,18,074",
+        "assets_value": 19518074,
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
         "candidate": "O. Nidheesh",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Graduate",
+        "profession": "Self Employed",
+        "assets": "Rs 2,66,237",
+        "assets_value": 266237,
         "criminal_cases": 0
       },
       "others": [
@@ -651,8 +651,8 @@
         "party": "RJD",
         "candidate": "P. K. Praveen",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Post Graduate",
+        "profession": "Pensioner, Business",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -688,21 +688,21 @@
         "party": "CPI(M)",
         "candidate": "V. K. Sanoj",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Post Graduate",
+        "profession": "Social Worker",
+        "assets": "Rs 1,00,00,000",
+        "assets_value": 10000000,
+        "criminal_cases": 1
       },
       "udf": {
         "party": "INC",
         "candidate": "Chandran Thillenkeri",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Private Tution",
+        "assets": "Rs 1,19,37,539",
+        "assets_value": 11937539,
+        "criminal_cases": 6
       },
       "nda": {
         "party": "BJP",
@@ -745,10 +745,10 @@
         "party": "BDJS",
         "candidate": "Paily Vathiatt",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Post Graduate",
+        "profession": "Pensioner, Farmer",
+        "assets": "Rs 9,45,28,356",
+        "assets_value": 94528356,
         "criminal_cases": 0
       },
       "others": [
@@ -793,31 +793,31 @@
         "party": "CPI(M)",
         "candidate": "O. R. Kelu",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "8th Pass",
+        "profession": "Public Servent",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "udf": {
         "party": "INC",
         "candidate": "Usha Vijayan",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Agriculture",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 3
       },
       "nda": {
         "party": "BJP",
         "candidate": "P. Shyam Raj",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate Professional",
+        "profession": "Farmer",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 3
       },
       "others": []
     },
@@ -829,29 +829,29 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "M. S. Viswanathan",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 54,
+        "education": "Others",
+        "profession": "Cooking Gas Distribition Business",
+        "assets": "Rs 5,89,11,791",
+        "assets_value": 58911791,
+        "criminal_cases": 4
       },
       "udf": {
         "party": "INC",
         "candidate": "I. C. Balakrishnan",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Social Work",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 5
       },
       "nda": {
         "party": "BJP",
         "candidate": "A. S. Kavitha",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 48,
+        "education": "Graduate",
+        "profession": "House Wife",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -867,11 +867,11 @@
         "party": "RJD",
         "candidate": "P. K. Anil Kumar",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Agriculture",
+        "assets": "Rs 14,38,852",
+        "assets_value": 1438852,
+        "criminal_cases": 5
       },
       "udf": {
         "party": "INC",
@@ -887,11 +887,11 @@
         "party": "BJP",
         "candidate": "Prashanth Malavayal",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Business",
+        "assets": "Rs 1,58,20,614",
+        "assets_value": 15820614,
+        "criminal_cases": 2
       },
       "others": [
         {
@@ -924,9 +924,9 @@
       "ldf": {
         "party": "RJD",
         "candidate": "M. K. Bhaskaran",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 66,
+        "education": "10th Pass",
+        "profession": "Pensioner/Personal Assistant of Former Minister For Education and Law",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -935,21 +935,21 @@
         "party": "RMPI",
         "candidate": "K. K. Rema",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate",
+        "profession": "Politician  At present MLA in Vadakara,(Manager Vadakara Rural Co-operative Bank Ltd-On Leave)",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
         "candidate": "K. Dileep",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 50,
+        "education": "Graduate Professional",
+        "profession": "Advocate",
+        "assets": "Rs 1,46,40,000",
+        "assets_value": 14640000,
+        "criminal_cases": 2
       },
       "others": []
     },
@@ -961,9 +961,9 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "K. P. Kunhammadkutty",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 62,
+        "education": "8th Pass",
+        "profession": "Business",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -972,20 +972,20 @@
         "party": "IUML",
         "candidate": "Parakkal Abdulla",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "8th Pass",
+        "profession": "Business",
+        "assets": "Rs 7,45,19,741",
+        "assets_value": 74519741,
+        "criminal_cases": 7
       },
       "nda": {
         "party": "BJP",
         "candidate": "Ramadas Manaleri",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Graduate",
+        "profession": "Pensioner",
+        "assets": "Rs 1,04,60,500",
+        "assets_value": 10460500,
         "criminal_cases": 0
       },
       "others": []
@@ -1047,21 +1047,21 @@
         "party": "CPI(M)",
         "candidate": "K. Dasan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "12th Pass",
+        "profession": "NIL",
+        "assets": "Rs 71,11,439",
+        "assets_value": 7111439,
         "criminal_cases": 0
       },
       "udf": {
         "party": "INC",
         "candidate": "K. Praveen Kumar",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 56,
+        "education": "Graduate Professional",
+        "profession": "Advocate and Social Worker",
+        "assets": "Rs 1,22,49,395",
+        "assets_value": 12249395,
+        "criminal_cases": 56
       },
       "nda": {
         "party": "BJP",
@@ -1083,12 +1083,12 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "T. P. Ramakrishnan",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 76,
+        "education": "10th Pass",
+        "profession": "Soical Worker",
+        "assets": "Rs 89,84,367",
+        "assets_value": 8984367,
+        "criminal_cases": 1
       },
       "udf": {
         "party": "IUML",
@@ -1103,11 +1103,11 @@
       "nda": {
         "party": "BJP",
         "candidate": "M. Mohanan Master",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 62,
+        "education": "Others",
+        "profession": "Unemployed",
+        "assets": "Rs 46,53,714",
+        "assets_value": 4653714,
         "criminal_cases": 0
       },
       "others": [
@@ -1161,22 +1161,22 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "K. M. Sachin Dev",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 32,
+        "education": "Graduate Professional",
+        "profession": "Advocate",
+        "assets": "Rs 4,07,14,467",
+        "assets_value": 40714467,
+        "criminal_cases": 14
       },
       "udf": {
         "party": "INC",
         "candidate": "V. T. Sooraj",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "12th Pass",
+        "profession": "Self Employment",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 42
       },
       "nda": {
         "party": "BJP",
@@ -1257,10 +1257,10 @@
         "party": "CPI(M)",
         "candidate": "Thottathil Ravindran",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "10th Pass",
+        "profession": "MLA SALARY",
+        "assets": "Rs 5,00,00,000",
+        "assets_value": 50000000,
         "criminal_cases": 0
       },
       "udf": {
@@ -1277,8 +1277,8 @@
         "party": "BJP",
         "candidate": "Navya Haridas",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate Professional",
+        "profession": "Corporation Counselor",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -1335,11 +1335,11 @@
         "party": "INL",
         "candidate": "Ahamed Devarkovil",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Business, Sitting MLA-028, Kozhikode South",
+        "assets": "Rs 6,73,18,159",
+        "assets_value": 67318159,
+        "criminal_cases": 1
       },
       "udf": {
         "party": "IUML",
@@ -1354,12 +1354,12 @@
       "nda": {
         "party": "BJP",
         "candidate": "T. Reneesh",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 39,
+        "education": "12th Pass",
+        "profession": "Corporation Councillor",
+        "assets": "Rs 73,52,000",
+        "assets_value": 7352000,
+        "criminal_cases": 2
       },
       "others": [
         {
@@ -1403,21 +1403,21 @@
         "party": "IND",
         "candidate": "P. V. Anvar",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "12th Pass",
+        "profession": "Industrial Enterprises",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 11
       },
       "nda": {
         "party": "BJP",
         "candidate": "K. P. Prakash Babu",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 47,
+        "education": "Post Graduate",
+        "profession": "Business",
+        "assets": "Rs 49,15,291",
+        "assets_value": 4915291,
+        "criminal_cases": 19
       },
       "others": [
         {
@@ -1490,12 +1490,12 @@
       "udf": {
         "party": "IUML",
         "candidate": "M. A. Razak Master",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 68,
+        "education": "10th Pass",
+        "profession": "Pensioner",
+        "assets": "Rs 89,14,659",
+        "assets_value": 8914659,
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
@@ -1539,21 +1539,21 @@
         "party": "IND",
         "candidate": "Saleem Madavoor",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Post Graduate",
+        "profession": "Teacher Markaz HSS for Boys Karauthur",
+        "assets": "Rs 78,08,886",
+        "assets_value": 7808886,
         "criminal_cases": 0
       },
       "udf": {
         "party": "IUML",
         "candidate": "P. K. Firos",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Post Graduate",
+        "profession": "Legal Consultant and Business",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 27
       },
       "nda": {
         "party": "BDJS",
@@ -1616,12 +1616,12 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "Linto Joseph",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 33,
+        "education": "Post Graduate",
+        "profession": "MLA",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 6
       },
       "udf": {
         "party": "IUML",
@@ -1636,12 +1636,12 @@
       "nda": {
         "party": "TTP",
         "candidate": "Sunny Thomas",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 64,
+        "education": "12th Pass",
+        "profession": "Business",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "others": [
         {
@@ -1674,12 +1674,12 @@
       "udf": {
         "party": "IUML",
         "candidate": "T. P. Ashrafali",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 43,
+        "education": "Post Graduate",
+        "profession": "Business",
+        "assets": "Rs 1,03,85,794",
+        "assets_value": 10385794,
+        "criminal_cases": 4
       },
       "nda": {
         "party": "BJP",
@@ -1713,8 +1713,8 @@
         "party": "CPI",
         "candidate": "Shafeer Kizhisery",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate Professional",
+        "profession": "Advocate.",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -1723,11 +1723,11 @@
         "party": "IUML",
         "candidate": "P. K. Basheer",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Agriculturalist",
+        "assets": "Rs 7,13,29,481",
+        "assets_value": 71329481,
+        "criminal_cases": 3
       },
       "nda": {
         "party": "BJP",
@@ -1771,10 +1771,10 @@
         "party": "IND",
         "candidate": "U. Sharafali",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Post Graduate",
+        "profession": "Retired Government Employee and Agricultural",
+        "assets": "Rs 7,00,00,000",
+        "assets_value": 70000000,
         "criminal_cases": 0
       },
       "udf": {
@@ -1829,8 +1829,8 @@
         "party": "CPI(M)",
         "candidate": "K. K. Damodaran",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Doctorate",
+        "profession": "No Job (Service Pensioner)",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -1838,21 +1838,21 @@
       "udf": {
         "party": "INC",
         "candidate": "A. P. Anil Kumar",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 61,
+        "education": "12th Pass",
+        "profession": "NIL",
+        "assets": "Rs 95,08,823",
+        "assets_value": 9508823,
         "criminal_cases": 0
       },
       "nda": {
         "party": "BJP",
         "candidate": "E. P. Kumaradas",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 70,
+        "education": "10th Pass",
+        "profession": "NIL",
+        "assets": "Rs 1,32,88,120",
+        "assets_value": 13288120,
         "criminal_cases": 0
       },
       "others": []
@@ -1866,10 +1866,10 @@
         "party": "IND",
         "candidate": "M. Mustafa",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "10th Pass",
+        "profession": "For Starting a New Business He Appliyed For The Licence In Manjeri Muncipality",
+        "assets": "Rs 65,00,000",
+        "assets_value": 6500000,
         "criminal_cases": 0
       },
       "udf": {
@@ -1934,11 +1934,11 @@
         "party": "IUML",
         "candidate": "Najeeb Kanthapuram",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate Professional",
+        "profession": "Politician, Social Work and Business",
+        "assets": "Rs 2,99,72,619",
+        "assets_value": 29972619,
+        "criminal_cases": 10
       },
       "nda": {
         "party": "BJP",
@@ -1991,12 +1991,12 @@
       "udf": {
         "party": "IUML",
         "candidate": "Manjalamkuzhi Ali",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 73,
+        "education": "12th Pass",
+        "profession": "Political & Social Worker",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
@@ -2029,20 +2029,20 @@
         "party": "IUML",
         "candidate": "P. K. Kunhalikutty",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate",
+        "profession": "Politician",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 3
       },
       "nda": {
         "party": "BJP",
         "candidate": "Aswathy Gupthakumar",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "12th Pass",
+        "profession": "Nill",
+        "assets": "Rs 2,65,301",
+        "assets_value": 265301,
         "criminal_cases": 0
       },
       "others": [
@@ -2119,9 +2119,9 @@
         "age": 53,
         "education": "8th Pass",
         "profession": "Attender, Kadirur S.C.B",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "assets": "Rs 3,81,93,491",
+        "assets_value": 38193491,
+        "criminal_cases": 5
       },
       "nda": {
         "party": "BJP",
@@ -2154,22 +2154,22 @@
       "ldf": {
         "party": "IND",
         "candidate": "C. P. Musthafa",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 59,
+        "education": "Graduate Professional",
+        "profession": "Advocate",
+        "assets": "Rs 2,17,41,263",
+        "assets_value": 21741263,
         "criminal_cases": 0
       },
       "udf": {
         "party": "IUML",
         "candidate": "T. V. Ibrahim",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 65,
+        "education": "Post Graduate",
+        "profession": "Retired Teacher",
+        "assets": "Rs 2,18,54,936",
+        "assets_value": 21854936,
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
@@ -2223,18 +2223,18 @@
         "party": "IUML",
         "candidate": "P. M. A. Sameer",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Post Graduate",
+        "profession": "Practicing Company Secretary",
+        "assets": "Rs 17,66,60,688",
+        "assets_value": 176660688,
+        "criminal_cases": 3
       },
       "nda": {
         "party": "BJP",
         "candidate": "Riju C Raghav",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Post Graduate",
+        "profession": "Bank Assistant",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2271,11 +2271,11 @@
         "party": "IUML",
         "candidate": "P. K. Navas",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Post Graduate",
+        "profession": "Business",
+        "assets": "Rs 2,96,09,077",
+        "assets_value": 29609077,
+        "criminal_cases": 10
       },
       "nda": {
         "party": "BJP",
@@ -2298,8 +2298,8 @@
         "party": "IND",
         "candidate": "V. Abdurahiman",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Business",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2307,12 +2307,12 @@
       "udf": {
         "party": "IUML",
         "candidate": "Kurukkoli Moideen",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 66,
+        "education": "8th Pass",
+        "profession": "Farmer and Currently the MLA",
+        "assets": "Rs 86,08,741",
+        "assets_value": 8608741,
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
@@ -2376,8 +2376,8 @@
         "party": "IND",
         "candidate": "Preethi Konchath",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Others",
+        "profession": "NA",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2444,11 +2444,11 @@
         "party": "BJP",
         "candidate": "Ravi Thelath",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Agriculture",
+        "assets": "Rs 1,23,28,585",
+        "assets_value": 12328585,
+        "criminal_cases": 2
       },
       "others": [
         {
@@ -2482,10 +2482,10 @@
         "party": "CPI(M)",
         "candidate": "M. K. Sakeer",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Post Graduate",
+        "profession": "Advocate",
+        "assets": "Rs 1,75,26,918",
+        "assets_value": 17526918,
         "criminal_cases": 0
       },
       "udf": {
@@ -2539,31 +2539,31 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "M. B. Rajesh",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 55,
+        "education": "Post Graduate",
+        "profession": "Social Work & Minister",
+        "assets": "Rs 1,21,04,714",
+        "assets_value": 12104714,
+        "criminal_cases": 8
       },
       "udf": {
         "party": "INC",
         "candidate": "V. T. Balram",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Post Graduate",
+        "profession": "Social Worker, Advocate",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 6
       },
       "nda": {
         "party": "BJP",
         "candidate": "V. Unnikrishnan Master",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Graduate",
+        "profession": "Retired Teacher",
+        "assets": "Rs 2,00,00,000",
+        "assets_value": 20000000,
         "criminal_cases": 0
       },
       "others": [
@@ -2607,19 +2607,19 @@
       "ldf": {
         "party": "CPI",
         "candidate": "Muhammed Muhsin",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 32,
+        "education": "12th Pass",
+        "profession": "Coolie",
+        "assets": "Rs 8,500",
+        "assets_value": 8500,
         "criminal_cases": 0
       },
       "udf": {
         "party": "INC",
         "candidate": "T. P. Shaji",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 56,
+        "education": "12th Pass",
+        "profession": "Muncipalty Chair Person, Business",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2656,8 +2656,8 @@
         "party": "CPI(M)",
         "candidate": "P. Mammikutty",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Social worker",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2666,11 +2666,11 @@
         "party": "INC",
         "candidate": "P. Harigovindan Master",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Pensioner",
+        "assets": "Rs 83,92,713",
+        "assets_value": 8392713,
+        "criminal_cases": 2
       },
       "nda": {
         "party": "BJP",
@@ -2714,21 +2714,21 @@
         "party": "INC",
         "candidate": "P. K. Sasi",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "12th Pass",
+        "profession": "Nil",
+        "assets": "Rs 9,71,02,005",
+        "assets_value": 97102005,
+        "criminal_cases": 1
       },
       "nda": {
         "party": "BJP",
         "candidate": "Major Ravi",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 68,
+        "education": "Graduate",
+        "profession": "Retd. Army Major, Line Artist,  Film Director",
+        "assets": "Rs 5,03,78,819",
+        "assets_value": 50378819,
+        "criminal_cases": 2
       },
       "others": [
         {
@@ -2751,9 +2751,9 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "K. Shanthakumari",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 55,
+        "education": "Graduate Professional",
+        "profession": "Advocate",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2772,11 +2772,11 @@
         "party": "BJP",
         "candidate": "Renu Suresh",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Business",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 3
       },
       "others": []
     },
@@ -2798,22 +2798,22 @@
       "udf": {
         "party": "IUML",
         "candidate": "N. Samsudheen",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 56,
+        "education": "Graduate Professional",
+        "profession": "Advocate",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 3
       },
       "nda": {
         "party": "BDJS",
         "candidate": "Issac Varghese",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Business",
+        "assets": "Rs 26,68,82,850",
+        "assets_value": 266882850,
+        "criminal_cases": 1
       },
       "others": []
     },
@@ -2825,9 +2825,9 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "E. Prabhakaran",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 74,
+        "education": "Graduate",
+        "profession": "Social worker and Agriculture",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2894,8 +2894,8 @@
         "party": "INC",
         "candidate": "Ramesh Pisharody",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "12th Pass",
+        "profession": "Cine Artist & Business (Partner of Ramesh Pisharody Entertainment Pvt.Ltd, Cheriya Spanner LLP Cake Manufacturing Company",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -2903,12 +2903,12 @@
       "nda": {
         "party": "BJP",
         "candidate": "Sobha Surendran",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 52,
+        "education": "Graduate",
+        "profession": "Bussiness",
+        "assets": "Rs 2,06,85,858",
+        "assets_value": 20685858,
+        "criminal_cases": 33
       },
       "others": []
     },
@@ -2920,32 +2920,32 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "P. P. Sumod",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 43,
+        "education": "Post Graduate",
+        "profession": "Social Work( Present MLA)",
+        "assets": "Rs 56,16,761",
+        "assets_value": 5616761,
+        "criminal_cases": 5
       },
       "udf": {
         "party": "INC",
         "candidate": "K. C. Subramanian",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 56,
+        "education": "Graduate Professional",
+        "profession": "Service Pension",
+        "assets": "Rs 2,08,86,843",
+        "assets_value": 20886843,
         "criminal_cases": 0
       },
       "nda": {
         "party": "BJP",
         "candidate": "Suresh Babu",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 41,
+        "education": "10th Pass",
+        "profession": "Business",
+        "assets": "Rs 27,50,000",
+        "assets_value": 2750000,
+        "criminal_cases": 3
       },
       "others": []
     },
@@ -2978,11 +2978,11 @@
         "party": "BJP",
         "candidate": "Pranesh Rajendran",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate Professional",
+        "profession": "Business",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 2
       },
       "others": []
     },
@@ -3042,12 +3042,12 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "T. M. Sasi",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 46,
+        "education": "Graduate",
+        "profession": "Social Worker and  Business",
+        "assets": "Rs 1,38,35,859",
+        "assets_value": 13835859,
+        "criminal_cases": 3
       },
       "udf": {
         "party": "INC",
@@ -3091,8 +3091,8 @@
         "party": "CPI(M)",
         "candidate": "U. R. Pradeep",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate",
+        "profession": "Social Service",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -3111,11 +3111,11 @@
         "party": "BJP",
         "candidate": "K. Balakrishnan",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "NHSS School Non Teaching Staff",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "others": []
     },
@@ -3138,10 +3138,10 @@
         "party": "INC",
         "candidate": "P. T. Ajay Mohan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "12th Pass",
+        "profession": "Social worker and Farmer",
+        "assets": "Rs 6,21,37,844",
+        "assets_value": 62137844,
         "criminal_cases": 0
       },
       "nda": {
@@ -3175,32 +3175,32 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "N. K. Akbar",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 56,
+        "education": "Graduate",
+        "profession": "Social Worker",
+        "assets": "Rs 96,78,372",
+        "assets_value": 9678372,
+        "criminal_cases": 1
       },
       "udf": {
         "party": "IUML",
         "candidate": "C. H. Rasheed",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Post Graduate",
+        "profession": "Social Service",
+        "assets": "Rs 83,09,732",
+        "assets_value": 8309732,
         "criminal_cases": 0
       },
       "nda": {
         "party": "BJP",
         "candidate": "B. Gopalakrishnan",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 64,
+        "education": "Graduate Professional",
+        "profession": "Advocate, Practicing at District Court Thrissur",
+        "assets": "Rs 3,63,52,204",
+        "assets_value": 36352204,
+        "criminal_cases": 35
       },
       "others": []
     },
@@ -3222,12 +3222,12 @@
       "udf": {
         "party": "INC",
         "candidate": "T. N. Prathapan",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 65,
+        "education": "12th Pass",
+        "profession": "Public Servent",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 15
       },
       "nda": {
         "party": "BJP",
@@ -3271,11 +3271,11 @@
         "party": "CPI(M)",
         "candidate": "Xavier Chittilappilly",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "8th Pass",
+        "profession": "Social Worker",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 6
       },
       "udf": {
         "party": "INC",
@@ -3377,20 +3377,20 @@
         "party": "INC",
         "candidate": "Rajan Pallan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Business",
+        "assets": "Rs 2,67,56,252",
+        "assets_value": 26756252,
+        "criminal_cases": 28
       },
       "nda": {
         "party": "BJP",
         "candidate": "Padmaja Venugopal",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Graduate",
+        "profession": "Nill",
+        "assets": "Rs 32,84,62,472",
+        "assets_value": 328462472,
         "criminal_cases": 0
       },
       "others": [
@@ -3415,30 +3415,30 @@
         "party": "CPI",
         "candidate": "Geetha Gopi",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "12th Pass",
+        "profession": "Social worker",
+        "assets": "Rs 2,57,83,877",
+        "assets_value": 25783877,
         "criminal_cases": 0
       },
       "udf": {
         "party": "INC",
         "candidate": "Sunil Lalur",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate Professional",
+        "profession": "Advocate",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 6
       },
       "nda": {
         "party": "BJP",
         "candidate": "C. C. Mukundan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "10th Pass",
+        "profession": "Pensioner",
+        "assets": "Rs 27,10,826",
+        "assets_value": 2710826,
         "criminal_cases": 0
       },
       "others": []
@@ -3520,31 +3520,31 @@
         "party": "CPI(M)",
         "candidate": "R. Bindu",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Doctorate",
+        "profession": "Retired College Teacher, Public Servant",
+        "assets": "Rs 2,17,79,283",
+        "assets_value": 21779283,
         "criminal_cases": 0
       },
       "udf": {
         "party": "KEC",
         "candidate": "Thomas Unniyadan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate Professional",
+        "profession": "Advocate Notary, Ex MLA",
+        "assets": "Rs 3,86,81,217",
+        "assets_value": 38681217,
+        "criminal_cases": 2
       },
       "nda": {
         "party": "BJP",
         "candidate": "Santhosh Cherkalam",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Business",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 4
       },
       "others": []
     },
@@ -3577,11 +3577,11 @@
         "party": "BJP",
         "candidate": "A. Nagesh",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "10th Pass",
+        "profession": "Agriculture, Social Work",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 34
       },
       "others": [
         {
@@ -3614,29 +3614,29 @@
       "ldf": {
         "party": "KC(M)",
         "candidate": "Biju Chirayath",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 59,
+        "education": "Graduate Professional",
+        "profession": "Lawyer",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 16
       },
       "udf": {
         "party": "INC",
         "candidate": "T. J. Saneesh Kumar Joseph",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "NIL",
+        "assets": "Rs 7,04,92,110",
+        "assets_value": 70492110,
+        "criminal_cases": 17
       },
       "nda": {
         "party": "TTP",
         "candidate": "Charly Paul",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 62,
+        "education": "Post Graduate",
+        "profession": "Advocate",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
@@ -3709,12 +3709,12 @@
       "udf": {
         "party": "INC",
         "candidate": "Manoj Moothedan",
-        "age": null,
-        "education": "",
-        "profession": "",
+        "age": 48,
+        "education": "Graduate",
+        "profession": "Insurance Agent",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 11
       },
       "nda": {
         "party": "TTP",
@@ -3758,30 +3758,30 @@
         "party": "CPI(M)",
         "candidate": "Saju Paul",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "10th Pass",
+        "profession": "Agriculture",
+        "assets": "Rs 6,66,91,338",
+        "assets_value": 66691338,
         "criminal_cases": 0
       },
       "udf": {
         "party": "INC",
         "candidate": "Roji M. John",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Post Graduate",
+        "profession": "Member of Legislative Assembly",
+        "assets": "Rs 3,94,34,163",
+        "assets_value": 39434163,
+        "criminal_cases": 6
       },
       "nda": {
         "party": "TTP",
         "candidate": "Promy Kuriakose",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Post Graduate",
+        "profession": "BUSINESS",
+        "assets": "Rs 4,69,67,200",
+        "assets_value": 46967200,
         "criminal_cases": 0
       },
       "others": [
@@ -3825,11 +3825,11 @@
       "nda": {
         "party": "BJP",
         "candidate": "M. A. Brahmaraj",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "age": 59,
+        "education": "10th Pass",
+        "profession": "Private Company Employee",
+        "assets": "Rs 84,51,260",
+        "assets_value": 8451260,
         "criminal_cases": 0
       },
       "others": [
@@ -3854,11 +3854,11 @@
         "party": "CPI(M)",
         "candidate": "P. Rajeeve",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate Professional",
+        "profession": "Cabinet Minister State of Kerala",
+        "assets": "Rs 7,57,20,431",
+        "assets_value": 75720431,
+        "criminal_cases": 2
       },
       "udf": {
         "party": "IUML",
@@ -3969,31 +3969,31 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "M. B. Shaini",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 44,
+        "education": "Graduate Professional",
+        "profession": "Advocate, High Court of Kerala, Standing Counsel Anapanthy Service Co Operative Bank, Panel Advocate, Kerala Bank Njarakkal Branch and Notary",
+        "assets": "Rs 2,73,37,108",
+        "assets_value": 27337108,
+        "criminal_cases": 2
       },
       "udf": {
         "party": "INC",
         "candidate": "Tony Chammany",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Graduate",
+        "profession": "Social Worker",
+        "assets": "Rs 5,00,00,000",
+        "assets_value": 50000000,
+        "criminal_cases": 15
       },
       "nda": {
         "party": "TTP",
         "candidate": "Anitha Thomas",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
+        "education": "Others",
+        "profession": "Business",
+        "assets": "Rs 1,56,09,942",
+        "assets_value": 15609942,
         "criminal_cases": 0
       },
       "others": []
@@ -4111,12 +4111,12 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "T. J. Vinod",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 63,
+        "education": "12th Pass",
+        "profession": "Social Workers",
+        "assets": "Rs 3,91,95,710",
+        "assets_value": 39195710,
+        "criminal_cases": 18
       },
       "udf": {
         "party": "INC",
@@ -4815,11 +4815,11 @@
         "party": "INC",
         "candidate": "Shanimol Usman",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "Post Graduate",
+        "profession": "Lawyer",
+        "assets": "Rs 1,74,48,493",
+        "assets_value": 17448493,
+        "criminal_cases": 11
       },
       "nda": {
         "party": "BJP",
@@ -4951,11 +4951,11 @@
         "party": "CPI(M)",
         "candidate": "P. P. Chitharanjan",
         "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "education": "10th Pass",
+        "profession": "Social worker",
+        "assets": "Rs 1,46,85,684",
+        "assets_value": 14685684,
+        "criminal_cases": 8
       },
       "udf": {
         "party": "INC",
@@ -5029,11 +5029,11 @@
         "party": "CPI(M)",
         "candidate": "H. Salam",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "12th Pass",
+        "profession": "Social Worker",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 9
       },
       "udf": {
         "party": "INC",
@@ -5198,11 +5198,11 @@
         "party": "CPI(M)",
         "candidate": "Saji Cherian",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate",
+        "profession": "Agriculture",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "udf": {
         "party": "INC",
@@ -5382,11 +5382,11 @@
         "party": "CPI(M)",
         "candidate": "Veena George",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Post Graduate",
+        "profession": "Member of Kerala Legislative Assembly, Minister For Health and Family Welfare, Women And Child Welfare State of Kerala",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 1
       },
       "udf": {
         "party": "INC",
@@ -5429,12 +5429,12 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "K. U. Jeneesh Kumar",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 42,
+        "education": "Graduate Professional",
+        "profession": "Member of Legislative Assembly",
+        "assets": "Rs 1,30,45,346",
+        "assets_value": 13045346,
+        "criminal_cases": 3
       },
       "udf": {
         "party": "INC",
@@ -5614,11 +5614,11 @@
         "party": "INC",
         "candidate": "P. C. Vishnunadh",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate",
+        "profession": "Political Activity, MLA",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 6
       },
       "nda": {
         "party": "BJP",
@@ -6861,11 +6861,11 @@
         "party": "CPI(M)",
         "candidate": "Kadakampally Surendran",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate",
+        "profession": "Social Worker",
         "assets": "",
         "assets_value": 0,
-        "criminal_cases": 0
+        "criminal_cases": 3
       },
       "udf": {
         "party": "INC",
@@ -7029,12 +7029,12 @@
       "ldf": {
         "party": "CPI(M)",
         "candidate": "I. B. Satheesh",
-        "age": null,
-        "education": "",
-        "profession": "",
-        "assets": "",
-        "assets_value": 0,
-        "criminal_cases": 0
+        "age": 55,
+        "education": "Graduate Professional",
+        "profession": "Advocate",
+        "assets": "Rs 1,45,59,857",
+        "assets_value": 14559857,
+        "criminal_cases": 3
       },
       "udf": {
         "party": "INC",
@@ -7314,8 +7314,8 @@
         "party": "CPI(M)",
         "candidate": "Thiruvanchoor Radhakrishnan",
         "age": null,
-        "education": "",
-        "profession": "",
+        "education": "Graduate Professional",
+        "profession": "Politician",
         "assets": "",
         "assets_value": 0,
         "criminal_cases": 0
